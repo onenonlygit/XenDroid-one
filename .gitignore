@@ -177,3 +177,4 @@ signing.properties
 credentials.json
 dist/
 __pycache__/
+.kotlin/

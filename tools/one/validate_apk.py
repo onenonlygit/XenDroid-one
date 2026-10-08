@@ -44,6 +44,9 @@ def inspect(apk, sdk, ndk, expected_cert=None):
     libs = {}
     readelf = ndk/'toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-readelf'
     with zipfile.ZipFile(apk) as z, tempfile.TemporaryDirectory() as td:
+        provenance = json.loads(z.read('assets/xendroid-one-core.json'))
+        assert provenance['edge_base'] == '84cf209221160590768f615a0369a9c4a1456bbf'
+        assert len(provenance['backports']) == 4, 'Missing core integration ledger'
         native = [n for n in z.namelist() if n.startswith('lib/') and n.endswith('.so')]
         assert native, 'No native libraries'
         assert all(n.startswith('lib/arm64-v8a/') for n in native), 'Non-ARM64 binary'
@@ -73,6 +76,7 @@ def inspect(apk, sdk, ndk, expected_cert=None):
     return {'apk': str(apk), 'sha256': hashlib.sha256(apk.read_bytes()).hexdigest(),
             'package': pkg, 'version_code': int(code), 'version_name': version,
             'certificate_sha256': cert, 'libraries': libs,
+            'core_provenance': provenance,
             'verification': 'static only; no device installation or gameplay implied'}
 
 if __name__ == '__main__':
