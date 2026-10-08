@@ -1,0 +1,1615 @@
+669b4266f5682e5169d42552fdf64f02880652a4 2026-10-07 [GPU] Implement getBCF by sampling with forced border colors
+3d06054b86d82a88f794d3953c455ca28abc32d9 2026-10-07 [XAM] Report controllers like xam while UI holds the input
+4d15111d84c9139286fda303f73f13fc2d708936 2026-10-07 [Emulator] Key shader storage by OG Xbox game and skip it for xbox.xex
+f11c262bef3e86892e8807b1daed2f9d42b069f7 2026-10-07 [Emulator] Tell xbox.xex apart from XeFu builds by its PE name
+4c60e0b2f78a97447d478a2ddff919842dfd5232 2026-10-07 [Memory] Set the changed bit of user mode page table entries
+41a01dbed629f2fd2d38873bc2eef8b41541f9db 2026-10-07 [Kernel] Keep RunBlockingIo's failed-poll park from ending on terminate
+ef6cebf6a3f2e6f8c0533e60561d35f7be8c41cc 2026-10-07 [XAM] Wait for XNetDnsLookup's resolver like synchronous file I/O
+8dc77b091eb499d42fa0fb3ea9711d3270b54b88 2026-10-07 [App] Detach the presenter before handing off to a new process
+dcd5bba81aff72ac5513e1536bf6e8526a24f2e7 2026-10-07 [UI] Log the unhandled exception report
+b8e8c356468245bca1e3fd4b52d7dc4298bf3642 2026-10-07 [App] Show OG Xbox game's title id and version in the title bar
+4905a1c3fad1b2ca3397dc40f0b465edf479539c 2026-10-07 [Emulator] Persist OG Xbox game location across out-of-process launches
+f39e557728d802379912b87f32a6a7af034bcc6a 2026-10-07 [Config] Keep OG Xbox per-game configs under their own title id
+e69277661ac1837c666121834775cb731d0d3491 2026-10-07 [Kernel] Run file operations off the dispatch thread
+d3f7ca3e046dc59a078dedfd9c9221e7944338fd 2026-10-07 [Emulator] Load a XeFu build's title data and report it when missing
+1df3d93fc1e705f2199e358712b1f82faa40d25f 2026-10-07 [Kernel] Place the trap frame's ctr, cr and xer where XeFu reads them
+dcc8d252f175e6df6a48829afe6e1aaffc533978 2026-10-07 [App] Translate the missing-title browse prompt as whole messages
+d33e440e5c3c2f9045148d032b1f98c2e0fd6953 2026-10-07 [Emulator] Check setup when relaunching and ignore launches meanwhile
+13bef013b6890350e9e709fe8447571dfb2a08cc 2026-10-07 [UI] Drop a title's notifications when it's torn down
+1019316797680ed20ca1bc775a6eab7ed34417f1 2026-10-07 [UI] Close a title's imgui dialogs as it's torn down
+9cdf7a32275fd3f67c96eb9d330908509fd6bc0d 2026-10-06 [App] Return to the game list when a launch or relaunch fails
+f7c90d0b5c012a531244e72583410e65ba16e30d 2026-10-06 [Emulator] Keep migrated headers until every copy of them succeeds
+7044f215fcd21d0b6ad234d58e02c4b721ffb947 2026-10-06 [App] Show the data migration result over the game list
+44fb000c7d488014b2e7dffbe86c45eebf603c75 2026-10-06 [App] Return to the game list windowed after a failed launch
+4bf7d089c1c7f62a68ad750cb90a39153e2b8ff6 2026-10-06 [App] Show launch failures over the game list
+c434702c8ce03c69a03e442049e933a0f2f71186 2026-10-06 [App] Scan for original Xbox games
+e23721bd4c0b8eb84286e1a70cb780c9f7065490 2026-10-06 [App] List original Xbox games as themselves
+59427fe60acd146c8e702bcdc2412bae9cd80022 2026-10-06 [VFS] Read original Xbox games' executables
+615c357ef7d647d19e356fd5eaf1e8a00b755039 2026-10-06 [Emulator] Run original Xbox games through XeFu
+13398ab9bc49a411d8e1e49e7d6e039b5aeb7d22 2026-10-06 [x64] Land a longjmp only in a frame of the function it lands in
+cdf5adebfd9b76b5ab4e11961af16af0f2d07904 2026-10-06 [x64] Return to host code from a branch to the host return address
+4d4b9fa07d8c4dd2d49c0ff7821227d1e300b5f9 2026-10-06 [VFS] Follow padding in GDF directory tables
+9f26a1b0e02fa49f91a8b290f0e5f05c47839880 2026-10-06 [PPC] Remove the dead register trace from the HIR builder
+125ad5d254375d661b3732b2a633a2ce954decc5 2026-10-06 [Base/win32] Wait on Win32 handles in the timer queue's dispatch thread
+97dbf7bc36f77511f80813b2a30df7cbbe760cfe 2026-10-06 [Kernel] Defer guest thread switches at DISPATCH_LEVEL
+e1e4851f7a1fba0c1ed3583f2faeb776cf763895 2026-10-05 [PPC] Decode the mtfsfi immediate from the top of the RB field
+1b0e9d00ea33e6148c3429234e44e8c364edbd7d 2026-10-05 [GPU] Drop cached primitive conversions a guest write overlaps
+fad70b50f0c859b0aefd1b17439d29282f0f3df1 2026-10-05 [CPU] Compile dynamic code again when a sweep lands during the compile
+a5532a0d193130af1b5dd821c8c83daec27f6d11 2026-10-05 [PPC] Clear only the exception bits in mcrfs
+2ab3083ef8a929faa1dba658f4ad4bd4ba7f4cda 2026-10-05 [Emulator] Stop host worker threads instead of terminating them
+58298b1fd002a0a8c0ead66fa459d378b0da23c5 2026-10-05 [Emulator] Serialize title launches and relaunches
+7646f6e683b362669456939b649d052e4cbc8f2c 2026-10-05 [Memory] Show kernel memory for a user entry with no frame
+fc46978664b369ded8d9379a1c208387469f4524 2026-10-05 [XAM] Sign in the XamUserLogon set slot by slot
+2b7d553c4d9fa9b46db3161a911ad41e84a32840 2026-10-05 [XAM] Implement XamLoaderLaunchTitleEx
+a0afe67b9365cd566fc0b1a958cb5c36b2680bf8 2026-10-05 [Kernel] Fix RSA bignum long division
+58e1db8e78e17bf3bbc84936ec432f2e79d14a0c 2026-10-05 [Kernel] Schedule the RC4 key with its own size
+6aa3406e80da4f61d66e9a096641a1c5b3a5c3b9 2026-10-05 [Kernel] Keep a trap frame for interrupted user mode code
+853e9332775a862fe004f1ad902a6073dd7338bd 2026-10-05 [Kernel] Show the Xbox title XeFu runs in the title bar
+19706836b8bd06861df2e1c76cd91642127cfdb6 2026-10-05 [Kernel] Decode LDI frames on a persistent LZX stream
+17c22494bf993928a63505a32038099599fae4ea 2026-10-05 [XAM] Return ERROR_EMPTY from XamInputGetKeystrokeEx with no keystroke
+a9fe61e0365cc19ea9d0b1b166e442dc7bf35fd0 2026-10-05 [Kernel] Implement MmLockAndMapSegmentArray
+90f47ed85ac3f5041ed29e725ac19bf77a1f9b2e 2026-10-04 [Kernel] Reject async file I/O without a byte offset
+b42d204e0a57ffcaee8589db9aff9519c0781627 2026-10-04 [Kernel] Strip the \??\ prefix from file paths
+1c45c016436b8ffe72bffa7377f7272a2e044d94 2026-10-04 [Kernel] Leave the target's IRQL alone on a host-thread APC insert
+7598c1779ac99155beb931ad5eead4b7aeabc577 2026-10-04 [Kernel] Queue I/O completion routines as kernel APCs
+fb1c5bf08b16dab5422136c44c593a9f516750f0 2026-10-04 [Kernel] Run a DPC targeted at another processor on that processor
+0e7e29aaee3aa9a1ee39b081c44ea28d75613bc1 2026-10-04 [Kernel] Run DPCs queued by a DPC after it returns
+54729c29fca95e71c26bc5f60209feaa327fa018 2026-10-04 [Kernel] Expire timers on the 1 ms clock tick
+2741af84302ed1403060ce22c93ff71da2afad45 2026-10-04 [Kernel] Implement KeSetTimerEx and KeCancelTimer
+02d8afd7eda8158e34c30464eced5917f3a1e80a 2026-10-04 [Memory] Let the user mode page table decide over kernel allocations
+b9fa366e52230c62140fabfad237ed3306a4cc6a 2026-10-04 [Memory] Fault on a missing 4 KB user mode entry next to present ones
+4c6992b3974702ad46b42f2908c8368294f80e7f 2026-10-04 [Memory] Show user mode pages in 4 KB views and honor PTE protection
+c30cab1ae6a384bdb040bd6d9de2cb9eb449e423 2026-10-04 [Memory] Map file views into single pages of a reserved range
+4773531a980fabc92bcf674eb398082af9cd71d9 2026-10-04 [x64] Invalidate only the dynamic call cache slots a small range maps to
+1342e40f1d602564f4b16eb2fce8969b894a427e 2026-10-04 [x64] Enlarge the dynamic call cache to 16384 entries
+123209cb03392da619ce6698d1baf34728a5d815 2026-10-04 [Kernel/CPU] Deliver an instruction fetch fault at a user mode call target
+723f5421294577b689a4f637be37f03616154ecc 2026-10-04 [CPU] Drop dynamic code compiled under another name for swept memory
+2317b554732e3a8e95d2cee018ed6acb218c78f0 2026-10-04 [CPU] Keep a swept span when a sweep patches one instruction inside it
+60b2e5a10f70c10b431df40ce695604e8387f8dc 2026-10-04 [x64] Cache dynamic code targets at return sites
+624459ffccab55ba4eaaba23bfc5dd0a62822f3a 2026-10-04 [x64] Cache dynamic code targets of direct calls
+b49ac8caca6219756d610048715fddd257e9124e 2026-10-04 [x64] Skip a conditional call with a near jump
+edf01c1e6b8fa9920ccf7e0a8c13d956d88f997a 2026-10-04 [CPU] Stop calls from reaching dropped dynamic code
+84d0266c26c8b8e40aa344b67cea9aa9e4c6a0f6 2026-10-04 [x64] Let a dynamic blr target take its caller's frame
+6e304ab86661199a0ff988077c31cfad4227b356 2026-10-04 [CPU] Never resolve a longjmp onto a function's first instruction
+c8f8e7bad0b7bb37cbc8a395c5fd7e442c9280fc 2026-10-04 [x64] Decline a longjmp resolve with no stackpoint to restore
+21e7fad85d4e1a98fdf9857c19d07244d5c128cf 2026-10-04 [x64] Bound the stack sync helper's walk at the oldest stackpoint
+4d83110dcd8a29c626434d81208201c05debad58 2026-10-04 [CPU] Judge XER[OV] on the low 32 bits
+7d7557f2f75b86d1c64ae39dea52229c60340b1d 2026-10-03 [CPU] Implement mtfsb0 and mtfsb1
+c5777398f188e2c848d454ce89b62aef9c558068 2026-10-03 [CPU] Implement PPCContext::set_cr
+0788c561e3689d23814224e95d6efc5b88fdc123 2026-10-03 [CPU] Bound dynamic code by swept range ending on any unconditional branch
+04c298a0dbe0ffa425782c13c293a42e6372d817 2026-10-03 [VFS] Mount the HDD compatibility partition when running XeFu
+856ebcdb3419b8b42ca4a0f89107b8e6e4d9fb74 2026-10-02 [Kernel] Give a user mode context with no stack part of the kernel stack
+43d796754faa7fa6104b7cc182053bc8e928777f 2026-10-02 [XAM] Poll select on guest scheduler fibers
+1bdece5250c47a4d8b88642af227fd566ed16530 2026-10-02 [XAM] Implement XHttpCrackUrl
+f16dcba84b32b17d07c85f8ccd6d6750007a0b86 2026-10-02 [XAM] Fix getsockname byte order and add getpeername
+5e1ae7db195017fffb5b006820f0d4ebcb0d91db 2026-10-02 [XAM] Implement XNetDnsLookup
+be780154b05986371cfd2f162733b0fefed06768 2026-10-02 [XAM] Implement XamNavigateBack
+cf3dff81c1d5c90fbfb967ab4a542e5a22fcfb6e 2026-10-02 [Kernel] Report device characteristics 2 for content package volumes
+b09650b1465cda984eebf3d7456c63fe3a64d2c7 2026-10-02 [Kernel] Reopen a file from its root directory handle
+70f1237cce1c13313111cbd51292148f02346d6c 2026-10-02 [Kernel] Implement the LDI decompression exports
+20b97ca61750ca0a081515b0184087ecf6f15644 2026-10-02 [Kernel] Implement ObSplitName
+db3cbc2c477acc9740ce3bab730348146c91b7c7 2026-10-02 [Kernel] Implement ObInsertObject for title-defined object types
+6a39ea68392f695de0fc44b7b8abaccfe633ae7e 2026-10-02 [Kernel] Implement KeContextToKframes and the user mode context flag
+2ea595d6c471941d0f273075e3b77fd6019e717e 2026-10-02 [Memory] Apply GPU write watches to the user mode views
+8358e0d5326fd975118297f15923657fe919da09 2026-10-02 [Memory] Emulate the kernel page table self-map
+f55adea3fe92a145e4ee54d0e1e8c39f258917c7 2026-10-02 [Memory] Drive every user mode segment from the page table
+7873b1ed9450a5855a153e59c5987edb1d0c1a75 2026-10-02 [Kernel/win32] Deliver user mode page faults to the guest
+492e1cc67b3d4919744af050324f0cc3d409109d 2026-10-02 [CPU] Read dynamic code through the physical view
+0492b38b2c53aa70bfb8d8c62b2c4add89336415 2026-10-02 [CPU] Bound dynamic code functions by the range the guest swept
+afbf8cf11894667b24b5de7a9cf7a0fda8173052 2026-10-02 [CPU] Commit the indirection table on demand
+a20f7bf6925d42bfdc2cd2ae30d76fb9a1931288 2026-10-02 [Emulator] Print LR in the guest crash dump
+f9479a91ceb99f8124cd04bdd4937ecd6896cd7c 2026-10-02 [Base] Share the fault diversion helper
+b5cc59e854020f8406c0b3a96eff6a3d036a514b 2026-10-01 [Memory] Translate user mode addresses through the guest page table
+cebb1d1abcf21c30a81e95d180728a6f61e7a87b 2026-10-01 [CPU] Invalidate compiled code when a guest sweeps the instruction cache
+10da45ea4073d0a2ca82dfcf25c57d83ea3d879f 2026-10-01 [CPU] Implement XER[OV] and XER[SO] for the PPC OE forms
+0525b974fb18ab790196d2aa59fabeafcc4ee35b 2026-10-01 [Emulator] Drop two stale device registration order notes
+95b14f55facf3d580cf1be19954c54788a83c80d 2026-10-01 [CPU] Keep host and guest FP modes apart around guest callbacks
+efbac5e9f6bb106282b30be2bce3613848f649ad 2026-10-01 [Base] Run exception handlers in the host FP mode
+984f4d3a51c45382cbf33218c992cf83e1514394 2026-10-01 [x64] Wrap guest addresses at 32 bits when the remap check is skipped
+c5b3c02e9b29a23aeadf56613e19dac5871021e4 2026-10-01 [A64] Share the guest FPCR table and assert DN/AH stay clear
+7a9788896252d2d4b239e279abbdb713687514fe 2026-10-01 [A64] Check vector liveness at CALL_EXTERN and remap misuse in tail code
+f6f9a03768b55e7a921509c92df8241ea9c8401f 2026-10-01 [CPU] Treat guest calls as reading all of CR
+39aa0bfc7de2c3f64323d971605c4a2ad7625354 2026-10-01 [CPU] Take the FPR denormal proof's edges from the branches themselves
+8f215424695bb9b1e836e787758e06259a9b8515 2026-10-01 [A64] Return in the Fpu mode the FPCR tracker assumes
+e0e1e58775a97049a420347e79ba72c5b94ab963 2026-10-01 [A64] Leave scalar moves, tests and exact conversions in the VMX mode
+df7d6d95d0b9dfec3b7ff8475e57f80729ae6c88 2026-10-01 [A64] Assume the Fpu mode where the tracker loses it in scalar-only code
+1bb7afe78202f5128cc6ca12c08ec8211a032a39 2026-10-01 [A64] Keep the physical remap bound across tail stubs and blocks
+0ffb0c2b2d499153919d0207d52df61ee18f7eee 2026-10-01 [A64] Branch in one instruction when the whole function is in reach
+aba5703fa0202381a1a284da1625c2e0a473de90 2026-10-01 [A64] Branch on a compare's flags instead of its boolean
+6bc0aa54f51168a345eca1493600c20075cbf015 2026-10-01 [A64] Store a call's return address from the register holding it
+7a5d9713a37087626a4204fb81edddc6de62d4d3 2026-10-01 [A64] Fold a vector access's alignment mask into its address
+6fc16d118d5cfdbb13bca08733c5adb3968936d7 2026-10-01 [A64] Load the fixed helper addresses from the backend context
+b416d19675303c9a80b2d1d3b76b8a97a0a6e596 2026-10-01 [A64] Cheaper call sequences and extern calls
+fc0ed6e81de29ac8f45bc8590180e919461819ed 2026-10-01 [A64] Track the FPCR mode across blocks and host transitions
+689590ba3c251c2a4099c3aa7ef04689d059e2b7 2026-10-01 [CPU] Eliminate dead condition-register stores with a liveness pass
+92bf74906ff6306b10b46bad3ed326e2b0536698 2026-10-01 [CPU] Prove guest FPRs non-denormal across blocks
+c496db01fee2c2a76e45f5ef8e26e61633df5f1a 2026-10-01 [CPU] Keep the lfs/stfs signaling-NaN fixups off the fast path
+078a07b530afcd0f913543bd5ee2e427b5294131 2026-10-01 [CPU] Fold the single-precision denormal quirk test into one opcode
+089473ccc429dc8b9ae12337960d11f2e2960f46 2026-10-01 [A64] Leave the scalar NaN rule to the hardware where it already agrees
+5f36967c5ada5514bc08b1bb08dd072df9de9172 2026-10-01 [A64] Keep the scalar FP NaN fixups out of line, and shorten them
+497bec2bbe0873a11a6287eb85f812cd9498ee29 2026-10-01 [A64] Gate the vector FMA NaN fixup on the result
+d88e3eaec4f63f0eb5b583e3bb6bb839310bc025 2026-10-01 [A64] Gate the scalar NaN fixups on the result
+882df3330f4c34270c4c851a34c3e4ce9b4ac6eb 2026-10-01 [A64] Skip a same-register truncation that only compares read
+968f1ef45921cff8794cbc0305bdf388c8dc3178 2026-10-01 [A64] Use REV32 and ZIP for byte-order permutes and merges
+ef4b3a4669e3b2def1ff86e424196ec594001c49 2026-10-01 [A64] Select into an aliased operand with BIT/BIF
+004ece768c0c8fa892a7280e21fbcf83472b5778 2026-10-01 [A64] Remap on the effective address and shorten guest addressing
+10c8ae7952081dc69860a0755ffe84177a04f9c1 2026-10-01 [x64] Enter host code with the default MXCSR
+6e5846d6397aa4a9aeee8fc7df894520c8350407 2026-10-01 [x64] Handle constant operands in float compares and MAX/MIN
+bef83c66d5e43f2ba80198419859c38d750bd6ae 2026-10-01 [A64] Follow VSCR.NJ in the software denormal flushes
+35d5c81d71fa62ba6b1f3eb71eaba8e00528548c 2026-10-01 [A64] Enter host code with the host FPCR, not the guest's
+6544934138f697c6b6a1eca4d37374e2230e515a 2026-10-01 [A64] Quiet signalling NaNs before the PACK clamps
+fcd8e58a3024e5def0fb75e01bf9f041ebfd75ad 2026-10-01 [A64] Load both constants in float MAX/MIN
+7d8c5c7d351093db93a6a0b5345fa4d0dc45c170 2026-10-01 [CPU] Test the scalar FP NaN rule over a value matrix
+75051d36df671feb475510235c4010329056de61 2026-10-01 [Testing/CPU] Adds host call tests
+2248561d80dade9f0f8994f74be561e2925a6730 2026-10-01 [Testing/Memory] Give the PhysicalHeap tests a Memory
+fa57fbdb5ff782f78fac5ca411fbd7383d140e77 2026-10-01 [A64] Forget the FPCR mode across CallNativeSafe
+cb86a688e1628b11bd07f6b945cb4f69b19c3333 2026-10-01 [x64] Clear the MXCSR mode bit when the host thunk restores mxcsr_fpu
+c1fb7f0c5396b07fbdbd4db6e1a8fd1d3243b32d 2026-10-01 [x64] Call a constant CALL_INDIRECT target through edx
+2802ae5231b207e269851000b03371dd3932d32c 2026-10-01 [x64] Forget the MXCSR mode after host calls
+df72008d9add132eba55a192d2b9e232bbb65b9d 2026-10-01 [PPC] Lower a direct call with no owning module as an indirect call
+eddcd8f31ebf1f679bbbe6d348fb3a160e5123b6 2026-10-01 [CPU] Compare HIR constants by raw bits when merging compares
+7b2ea9f9ac8509841a701569c5b86ce35ab120a0 2026-10-01 [Core] Report JIT exceptions outside any guest function safely
+bfa261b8c257f71f7aba3029d62ded2a6d63a257 2026-10-01 [Base] Block the timer queue thread on POSIX instead of spinning
+9a8aaaf883352b7be4a619d96fa8db3318e7d067 2026-10-01 [CPU] Fail loudly when no PPC context address can be reserved
+bc9098deb6a0394ebb06a515e91ac0d4ef618190 2026-09-30 [GPU] Pick point sampled texels at the guest pixel center when scaled
+7d0a45263730767dd94a4f1bce7e1ec894760ebd 2026-09-30 [GPU] Expand resolution-scaled lines to 1 guest pixel wide
+3171a10aaf1c90d3d754779d45103b5c88cb1e33 2026-09-30 [D3D12] Drop the always-set use_mesa_dxil pipeline description bit
+c3cd8617b18ef018ea8d638c865e0cced7399846 2026-09-29 [GPU] Snap point sampled fetches to guest texel values and centers
+692cd59cfef6451314666d7f6d0b127ae78b14b3 2026-09-29 [GPU] Implement VIZ_QUERY
+1c5059dccfae09a37f35b6719c4493093ec5b60c 2026-09-29 [XAM/XMP] - Stub XMPGetMediaSource
+a7c39fa7d9c54d83022e431da62c1c65bf3e6196 2026-09-30 [GPU] Await only pixel shader memexport output by default
+98b6319c555036d457e515e46fd680c8e33c5166 2026-09-30 [Memory] Skip re-arming watches over blocks already armed
+04085efaafcfb8907749f200514c21433db2ebeb 2026-09-28 [D3D12] Clamp stacked-texture layer index for Inf/NaN coords
+1222c23f789050c8623b8de4d3b9a9f5e5db4189 2026-09-29 [GPU] Wait for memexport output only as far as last export's submission
+34387b31f54efce6aa7480d76313f39e7a34495b 2026-09-29 [GPU] Copy only resolve's own bytes into edge page the CPU wrote first
+3390fc219b32be4a87777ddd72217259b24dc09e 2026-09-28 [GPU] Add round-toward-zero cvar for mulsc
+aa3339970ce187408dfa55e0db0511bfe31047f2 2026-09-29 [GPU] Vblank pacing fixes
+f453ede2e0a0d7b7bd119a32ae24ab332b36da44 2026-09-29 [CPU] Precompile functions only referenced by address
+5aa0d3dea57ab1061f602ee74b3a03a034253ea6 2026-09-29 [XAM] Ensure XamEnumerate item count is zero on failure
+f2583e9def130dfd6ac4dbc71fc393e6684a708c 2026-09-29 [CPU/PPC] Take a function's extent from the last instruction scanned
+b837246564dc45af8a307c31313b1b4cd3eba71a 2026-09-28 [GPU] Copy only memexport pages into the device buffer
+16df25981582ec8bd49dba09cef4d99363a165db 2026-09-28 [GPU] Keep memexport output when resolve output is copied back
+a0d11bec9d9d6aee53949ed3fdb9216e812f26a4 2026-09-28 [CPU] Grow the JIT code cache to 1GB and fail loudly when it fills
+89b7047ddc5b7b99b329d22f943f959c4894ad0c 2026-09-28 [HID] Pass XInput devices through natively under SDL
+5f3e28236ef12f753deb454b72875bb81aaff01d 2026-09-28 [CI/macOS] Ship an arm64-only DMG and drop the x86_64 build
+8c8c550aecdbed874d2c0e19f0a691127f4cfa65 2026-09-28 [Kernel] Tighten overlapped and scatter read completion
+beb3230fe95cd9cd41d9a01b9c3b1e5544be462d 2026-09-28 [Kernel] Complete posted NtReadFile requests like NT
+8a027ef4f90d7d8463ef802ce041de202a892ee4 2026-09-28 [Kernel] Make the file wait event manual reset
+e60b90ac046a09a4d99f6f7b227d51b85a5b52b3 2026-09-28 [Kernel] Fix async NtReadFile regressions
+78315ec19e313e2b3eedbc3d9dc026b73324b595 2026-09-28 [Kernel] Provide resolve output for partial pages before a file read
+c332733afd14ed3aeb08b38d0cabffa58d1c8c2f 2026-09-27 [GPU] Find exact tiled 3D upper bounds
+81e3deaee2dbd5d3125f87da2194a61e418851ce 2026-09-27 [GPU] Use rounded dimensions for packed base slice strides
+ace153cb84704cea5634a056076585b570380a26 2026-09-27 [GPU] Use the base address for level 0 packed mip tails
+26e1e0feeac95604a832f167510e70688436ffaa 2026-09-27 [App/Posix] Exit fork children with _exit when exec fails
+80d9a5c58acac1af33698e7196bbef1b077c2962 2026-09-27 [Kernel] Boost cooperative waiters only when they blocked
+50d999623022caf463517acbfa93226fb47395f7 2026-09-27 [Kernel] Signal guest scheduler timer waits from the expiry callback
+9a0474a2f8fa392851279146a86e540496cac006 2026-09-26 [XAM] - Add missing X_MARKETPLACE_ENTRYPOINT,  X_MODULE_FLAGS, and more CreateThreadFlags
+d8731edc99ecc438eb4cd1a8754341d7396a061e 2026-09-26 [GPU] RB_COPY_SURFACE_SLICE for volume resolve slice spacing
+12e3b4223dd4c2e41d57ea4b4477546affe4ce10 2026-09-26 [APU] Keep the audio pump off the global lock and make up late pumps
+de8e60601c1f8182757e92b455d2299799573202 2026-09-26 [GPU] Wait for the real pipeline where an async stand-in would persist
+935e0387660f3a0ec8fd7f72b2c0fff83e47aaf9 2026-09-26 [GPU] Copy resolve output without holding the global lock
+77f2cca8001af9641ea34c804d3daea34df18398 2026-09-25 [GPU] Copy resolve output into guest RAM when the CPU accesses it
+776dda2e33d27f15707df9ad50fb508f6dde4dcc 2026-09-25 [GPU] Unmark a whole scaled resolve when the CPU writes into it
+13e380a1d40254bd6386618316445bc8a87aa45e 2026-09-25 [Config] Fix loading aliased bool values
+aebd98b6203bfdd0f14c12f93ef0519eac41cc08 2026-09-23 [Kernel] Log the stack pointer of a dropped user mode trap
+b7336b560592490a8df786bb12ff0acb5ef7086a 2026-09-23 [Kernel] Add dump_module_images cvar
+9afccb2c8204228bc596be3ea040fb022828a029 2026-09-23 [CPU] Add log_lr_* cvars to facilitate guest debugging
+0c2da08dd1523506cb2bb1c9ce8c9f4866ff11a6 2026-09-23 [XAM] Log the launch data handshake
+4fc57ca433dd198660ab8b6b05a0a6bfd19fbdad 2026-09-23 [Kernel] Log NtCreateFile paths and results
+c9c8e483b13249ba5f0060fc4b36071da6d67261 2026-09-22 [GPU] Fix tiled 3D address bounds
+19da17403362f878d1362a71d6041125a05d8f0a 2026-09-22 [GPU] Fix linear 96bpp mip row pitch
+bc6b7a020295a7af21f5919c1d08e6054dc4fcd1 2026-09-22 [GPU] Fix array and volume mip layout
+aac25ad0c2ddf5dc623e55cfcbf967c09709ca7f 2026-09-22 [XAM] Actually apply license_mask to content packages when it is 1
+de6556b3c29c9923eb778d31d048ec1b3b5f6361 2026-09-21 [XAM] Launch a relaunched title under the file's own name
+74c4e4acbad21bb16c2266fcff7d6420c6a8fc19 2026-09-21 [XAM] - Add missing exports, add missing param name, and more
+89609297c7ae25dc5ba404c6a977260b806bb725 2026-09-20 [GPU] Fix tiled resolve offsets below 32bpp
+0bd090dbe979bc64959efe519aa320db8e3eb467 2026-09-20 [GPU] Fix 2x & 4x host depth copy sample layout
+3d233a5b2e94b940825847b70c788951e364bb33 2026-09-20 [GPU] Rewrite ZPD as a running sample counter
+79144075636b13dc4419846775166b3501176bb1 2026-09-20 [x64] Record stackpoints after the frame is allocated
+1e640ba491683c1f9d746679511110578c3dd132 2026-09-20 [a64] Port the backend half of user mode to a64
+887beea6979fc1ee8580deb755d771c61e0039ad 2026-09-20 [Kernel] Read NtOpenFile's OpenOptions from the sixth argument
+1af8dc6b27346b0454c94f6b6ceaec2dd3c6ac92 2026-09-19 [XAM] Pick an indie game when the XNA launcher starts without one
+11583551bd145700e7560f5b94d706b9804c98d0 2026-09-19 [Kernel] Implement Ke*UserMode
+efabe1d6acfe0d8e666e02b97d5d44cf27ad8a66 2026-09-19 [Kernel] Report XEX section protection from KeGetImagePageTableEntry
+2fe7b7d635c22daf0f043672a8d166731003a3b2 2026-09-19 [CPU] Fix XEX patches that move the image base
+1e02ea790fbc13c9c579f5e820e7642315d6cd37 2026-09-19 [Base/Threading] Let a created fiber restart from its entry
+cfbff8f2a739e2ecae61978490b6a029a37d2287 2026-09-19 [x64] Return exactly into live frames of dynamic code
+69821e728055534742b4ecf32f15d40548b841da 2026-09-19 [CPU/x64] Keep separate stackpoint records per host stack
+b539853698255bc5ac37929680bdaccf2eff3e8c 2026-09-19 [CPU/x64] Run guest code that no module claims
+63c95eca4edf571f13fd28b19fa0a90509ab179c 2026-09-19 [CPU] Let the kernel handle guest system calls
+32a95fff0db23bacc51f8ee69f75cc6e1790463b 2026-09-19 [Memory] Map a user mode address space on demand
+537426709d7afdd2052fcaee702a461c466f9c0f 2026-09-18 [x64] Compare guest stack pointers unsigned in the stack sync helper
+efdfa15402cbb2002cc66bbeee8f065e3b822f28 2026-09-18 [x64] Refactor longjmp resolution out of ResolveFunction
+52188fafea81f6df9236942756cdabd1279046ef 2026-09-18 [CPU/PPC] Read guest instructions through the owning module
+1689b263d3e44a69e9bdf0dd21e24a85c7bcc16d 2026-09-18 [Kernel] Strip \??\ from symbolic link names before using them
+0e5bc0723950a8961af912fd9895ce1aa2fc4068 2026-09-18 [XAM] Report HDD for a volume on a content package
+3ecd9d36bf30c22a3b1e85a550e351ebafe28613 2026-09-18 [Kernel/XAM] Look up the launch media through its mount, not GAME:/D:
+3e4a82b60db8d42452544e7d4ea32a3f8919ed5a 2026-09-18 [XAM] Close a content package's files by its device path
+037eef540318410cf8f8b61f8d4c22fc3205284a 2026-09-18 [VFS] Resolve a content package root named without its trailing separator
+3fbbc60f9bc2d61993d5637163f5a698fb065a10 2026-09-18 [VFS] Lock symbolic link lookups
+462a1ac855d295a87f0c0fab232205eef9359d5c 2026-09-18 [GPU] Publish a shader translation's validity before is_translated()
+e987fd7f502bc8f0f42345b1855169a2fe7afc25 2026-09-17 [VFS] Charge a storage seek only when a read does not continue
+d059e1771888ce5f3ae2da34521dc5ca416f1c6b 2026-09-17 [UI] List patches from the patches directory alongside bundled ones
+aee0871dd7a783de7ec61dfbd5e9985977093025 2026-09-16 Count the frame whose header crosses the packet boundary
+5e9eae601b16757e49eeb83ab0f4d2945809f401 2026-09-17 [Kernel/VFS] Model storage request timing
+04b3b63d9369d564659248635463ae6d39b79031 2026-09-16 [Kernel] Wait for synchronous file I/O on a dispatcher object
+f21ebd49e979e44f081f474df78c3fbfee9cb3f2 2026-09-15 [Base] Use pthread_self in the Linux global mutex instead of a gettid syscall per lock
+1b242658e535fbd12645e4d2c12693771075b738 2026-09-15 [Vulkan] Lock the binding layout tables during parallel shader translation
+8205e00e8a1ed1b8d9921a1e98987e4df0179a50 2026-09-15 [win32] Convert game paths to UTF-8 instead of the ANSI code page
+79feeb90950b2f43a0b62ccd258efa90e7f21b79 2026-09-15 [Emulator] Align guest system time with host time at setup
+4b39c27909191b3cafda9a4e85fa028c817dbb35 2026-09-15 [Base/win32] Keep past absolute timer due times from turning relative
+75b54532c8690cb1f1b484714c61c8a65b759244 2026-09-15 [Kernel] Reuse one APC per timer instead of allocating one per expiry
+19b223dea42743b2c871439795ad91da7307c75c 2026-09-15 [Kernel] Remove headless cvar
+199e30af83cbb40094d7b904031c9dfceba2cfc1 2026-09-15 [App] Move guide_button out of HID into the UI cvar section
+eac7a2d9ca5cd0d95a24f726924c7fadfa7081b9 2026-09-15 [App] Remove controller_hotkeys
+0c7829c10a576779ac7b955c83069b0dbd3ef9e8 2026-09-15 [HID] Stop using Back as the Guide button
+c6cc761676ab10be57c33c10171e87ef82169f93 2026-09-15 [Kernel] Complete async NtReadFile on the I/O pool
+510a9553beba0e3347f9a0f8ddbf8535ca6c07ea 2026-09-14 [CPU] Enable early precompilation by default
+d1541a579b3a96c70509d566f5b4d718c2e9c7c2 2026-09-14 [Memory] Invalidate physical pages on allocation
+44599705bc81032df4564299a8f8bd29ae80fa30 2026-09-14 [Kernel] Guest scheduler skip 0-length yields when nothing else can run
+62140dea888a56f41d108196c6436f35d57396c4 2026-09-14 [Emulator] Precompile the launched executable off the UI thread
+fc22bceae61b464b84dfa324328d74b10ca7bd18 2026-09-14 [CPU] Precompile on host worker threads
+a77db1ed3b51cf24880aa20688f12cc8a1cc2ef5 2026-09-14 [CPU] Replace EntryTable's split_map with a hash map and ready index
+1d46d61d30ff5bb77e8d47ad82bfa9d6833649d7 2026-09-14 [x64/win32] Drop the no-op FlushInstructionCache
+cc08b852266a5c40f8e62b86eafa483491ba0d8b 2026-09-14 [Profiling] Replay each profiler flip as soon as it ends
+6f9840568bb7dc9f5a9adb94801a99b18a7b2a60 2026-09-14 [Base/POSIX] Set O_APPEND only for append-only handles
+f1bc999f0f16b5839f7c9c46f850e2abeba3dff7 2026-09-14 [x64] Log guest function when emitter reads constant operand as register
+e25eaffffa7bcb8c923fc129ac4297dd54c844f4 2026-09-14 [Testing] Parse bracketed MEMORY_IN/OUT bytes instead of misreading them
+4e80f1ea8320888ea4fe4896ce472c74dcc1fd0a 2026-09-14 [Testing] Zero PPC test memory before each test
+504cbee7eb206df6efeb798da63aaac8442d92bb 2026-09-14 [PPC] Fix VMX128/disassembly opcode table entries
+8682ca78a38ba2a90d4d43661df95d6db6242b76 2026-09-14 [Testing] Fix VMX128 tests hidden behind hand-encoded words
+920f35c9386e1738b7a80e62f9bf8d484da03320 2026-09-13 [CPU/HIR] Fold float vector equality as a float compare
+ca9e0790514051c0cd2b137576b3f3469fe71f00 2026-09-13 [X64] Handle a constant vector in EXTRACT and the AVX-512 F2I path
+5ce7c336df060d043b0a2351889ec8789322d035 2026-09-13 [CPU/HIR] Flip the lane index in the constant Extract fold
+9363df7d8fe02f575442b57a94cb7f55da5ce9d5 2026-09-13 [X64] Stop two vector sequences clobbering registers they do not own
+dcf2994ea1d604e841b5553b2bf941b809e36e79 2026-09-13 [Kernel] Reconcile the guest dispatch header on native object lookup
+a33ee3117a36d0869b844f72fbdeda9a0c567ee3 2026-09-13 [x64] Handle constant operands in vector shift, rotate, pack & min/max
+4b95b068f65bef8c06c342bbd0255cd4b65f2cb7 2026-09-13 [CPU/macOS] Skip committing the MAP_JIT code cache
+dd924f2d8a56a116024a75bae6513d634d9fbef1 2026-09-13 [Memory] Keep initialization logging from spamming on every test run
+e011d1eeab81bbdfcc006d3216d44a5108d65a57 2026-09-13 [CPU] Precompile CRT static initializers before launch
+44cb87328c5bde6c95d4ff8ff8cddf7ac197ab70 2026-09-13 [App] Build the disc picker on the UI thread, not the guest thread
+d9bf601e1c349704cdba435b732237ee2168e502 2026-09-12 [XAM] - Implement XapipGetLocale, XamProfileGetLiveLegalLocale, and XamReadString
+0413471dad7e8462dfc37b8f9672c52227823f02 2026-09-12 [GPU] Add trace replay and shader bisect tooling
+8d8ba9b6f71edeefc95c3bf28c4571de5d588ea7 2026-09-12 [XAM] Added Content data getter to prevent DRY.
+67e0804262d2044735e63bcf3153dab8d3b9fe94 2026-09-12 [GPU] Default gpu_allow_invalid_upload_range to true
+f73c52123073875ba8b66025513ad30c3ea78dd7 2026-09-12 [Base] Fix identifier pasting in the cvar update macros
+f213cc6a9f89f29cbd0ea01a17b05db3ff3ca080 2026-09-12 [HID] Don't treat a device-type mismatch as a controller disconnect
+5dd1cdbbf548745a15714c158b15aad128530440 2026-09-12 [XMA] Resolve XMA loop_start to a frame boundary
+d633c5e7849feefb511b77748b91ea5b1240f853 2026-09-11 [XAM] - Implement XamContentSetThumbnailInternal & stub XamLogLocalizationEtx
+27db26839bca36f9b26c83c5ef9ce97e1e93748f 2026-09-11 [Kernel] Guest scheduler to wake only waiting CPU
+6d3efdd31cea75e32b57f282f9851601bfd367ac 2026-09-11 [XAM/XMP] - Add missing returns
+955e1d1723ce12e4e4695f59c8754ede7c4dab68 2026-09-11 [VFS] Read SVOD fragments at explicit offsets
+5a9104a2053d423935d87ba037d9a354d60755a6 2026-09-11 [Kernel/VFS] Guest scheduler pool I/O on concurrency safe devices
+086b4421dfb2914150f7f81ef91b9941573dc40f 2026-09-11 [Kernel] Guest scheduler re-home ready guest thread on affinity change
+2e7b6d7b7faa34b8c503628b2cf9f50b3aa7d3e8 2026-09-11 [i18n] Update compatibility strings / translations
+58a1bab5a9562feebf0eb9a4c8dc01b3282443d3 2026-09-11 [i18n] Fix colliding menu bar mnemonics
+55a7a4fb064269d5e71ca96a918da46cf4cf7043 2026-09-11 [D3D12] Report why a debug layer or DRED capture came back empty
+bea885689dc0e8ddb7be4daa75beea87e67b6776 2026-09-11 [GPU] Clamp dynamically addressed shader constant indices
+3ba9c86eb02806c7f192c05b4c98c7c5ba9e6c31 2026-09-10 [XAM/INPUT] - Add missing X_INPUT_CAPABILITIES_EX struct and other changes
+fe84ec77e87739dd6d26589e35f4c5573e60d271 2026-09-11 [D3D12] Pin the placeholder pipeline for the draws that use it
+2c9a7cd07ab54c93972856d8d83540cb671405c0 2026-09-10 [GPU] Use implicit LOD for 3D texture fetches
+8ae1c148560be3bd70c04c803c3063b0002c211d 2026-09-10 [XAM] Added missing check for content data size during package removal
+d8348b4f6830a82b68fa2dcbf7bdf3ae643a9c9f 2026-09-10 [Base/POSIX] Fix double join, terminate spin, affinity, NanoSleep and a stale suspend token
+9da693480d0995326b81c3a14f8b1a4c226066eb 2026-09-10 [GPU] EDRAM bits respected for color/depth aliases
+159337dbba7bddc9b684bd3dded31a12dbc0b62e 2026-09-09 [XAM] XamUserGetSubscriptionType: Removed overlap.
+85e4f325d567414ede49ed67d8dedc8dfb34e9b0 2026-09-09 [D3D12/Vulkan] Render placeholder draws on the FSI/ROV path
+cdfe7274496a742542b7733d0fa7a4189676d7b6 2026-09-09 [D3D12/Vulkan] Refactor to share the async pipeline creation queue
+5d4dc8a88abb2965f2933286571f5bfa0b87391d 2026-09-08 [XAM] Fixed writing to packages via XamContentFlush
+7ac465fd6ef55f75e8bd63fd8e48d88023e44c8d 2026-09-08 [D3D12/Vulkan] Improve async shader compilation
+99b3ccad26a933b9b15d46a513460096d0db2086 2026-09-08 [XAM/TASK] - Correct params and struct for XamTaskSchedule
+d4b1ae936ceaf135b46c8b373fa39bea1a4daff3 2026-09-08 [Kernel] Resolve the cooperative waiter once instead of per poll
+5c290c32e4de1f92801e6d9bd7f5f4758c5dd283 2026-09-08 [GPU] Split host_buffer/memexport toggle and restore readback fallback
+87c24112706d95f15f83dfec58e93923bd7ffa07 2026-09-07 [Memory] Round the AllocRange ceiling to the page, not to the alignment
+8d75a1779a52d1def8ed554e9628dccc6f6ff0c7 2026-09-08 [GPU] Specialize FSI pixel shaders for render target formats & blending
+830e605186436e693102ac348a9935ba3b65f64b 2026-09-07 [GPU] Specialize FSI pixel shaders for the guest MSAA sample count
+ca42e669c903a4808358730d1d2ef05f077d7911 2026-09-07 [Memory/Linux] Apply guest page protection on hosts with pages over 4 KB
+80679bcadd9804027ecff9724712dde8230685ae 2026-09-07 [XAM/USER] - Implement XamUserGetSubscriptionType
+60271139249ea9757157f9a93c08af8a888c5858 2026-09-07 [UI] Fixed ImGui OnKeyChar
+10ac2f5eff7ed9bf2517daed3f8066ba7c0f0818 2026-09-07 [CPU] Record MMIO faults on a64 and gate the 0xE0000000 host offset
+8705cd19cbdf3c92a965d566043f98eb1f1cc25f 2026-09-07 [Emulator] Align the stack when diverting a fault to a halt thunk
+30a2ef6fc969bbf398ee8ae6b442c5e4b0c19720 2026-09-07 [GPU] Sum the pipeline storage versions instead of taking the max
+7dab7132b577402badc4fa6e25b8b3ac3d85fe3c 2026-09-07 [CPU] Move overlapping XEX patch regions with memmove
+95a3d08948a10cccad5667d22fcaf4fb803a1642 2026-09-07 [Emulator] Add media_type cvar to override detected media type (odd/hdd)
+60b7ea98cffc9420396fdaa2365535760f5f5519 2026-09-06 [UI] Fixed ImGui error in content list view related to the same name entries
+51f397fd99ae6a12cc4d53d68b9db322e69932c6 2026-09-06 [UI] Give the Vulkan X11 surface its own xcb connection
+adf56b76c434fd97876fd79ffcde65b7ff90c8e6 2026-09-06 [XMA] Count the frame whose header crosses the packet boundary
+66af56ed7a3158cf4d020a7038079cda3631d7d7 2026-09-05 Keep the byte vector_shl scratch out of the allocatable registers
+afd282d5057db701a1afbdcedce2b1fa4790dbdb 2026-09-05 [Kernel] More details about XMic handling
+8c74cfd0c0a2e6282e3cfe4e6861a5135f9e0ccc 2026-09-06 [XboxKrnl] Deliver guest C++ throws to a catch(...) handler
+00a57b38151273bd6ce8396f4fcf7e05bad58edf 2026-09-05 [Memory] Back unallocated guest pages on an access violation
+74ab6677853475360c4d06c5d6e1969127518ce5 2026-09-05 [X64] Keep the byte vector_shl scratch out of the allocatable registers
+0e1307bd2e6bfeeff29635a6b823e72e61c97ce9 2026-09-05 Revert "[CPU] Promote VEC128 context values again"
+672bc8b81ad0098c8cd6bbbc46a72928a46ad272 2026-09-05 [Kernel] Keep loader-owned objects out of the title's handle numbering
+54fd4a3078ead37ce56a745d48939ef318b389d1 2026-09-05 [Kernel] Reconcile the guest dispatch header on native object lookup
+577fb8ee17457af7493690a408492d800d53af58 2026-09-04 [CPU] Fix mcrf: copy the CR field instead of comparing it against zero
+5c7f6b0d9bfd36bb9c464fa728c47f3f0112fd87 2026-09-04 [UI] Reopen the game info pane when the selected card is picked again
+62225fd74061634b17f036b87e20558bbadf05f9 2026-09-04 [UI] Fix ImGui presenting at guest refresh rate
+1e9c3f5fe9943a4cb920b8f7c3409410f266af62 2026-09-04 [UI] Add game info pane and rework the overall UI to grid
+78539da2d29a4d39cad44263133544e314375b22 2026-09-04 [App] Fix library init order to allow game import on first load
+4d8b3d650e8709f85bb6c6df05e561a5903eca84 2026-09-03 [Kernel] Added some details about XMic. Fixed incorrect return code
+b0a1f40b4101fb0dbe405f5d50cbc979a1e63404 2026-09-03 [XCrypt] Leave the padded block in the SHA context
+f9ed4cd520642f316518394c1bbad33165447693 2026-09-03 [HID] Check non-case sensitive key bindings
+6db5a346d2c8fd9b7cfd50c41d34ae6cf6e99362 2026-09-04 [XboxKrnl/Crypt] Leave the padded block in the SHA context
+01dc16a6048e0917ef418e4b46f9d0d200558166 2026-09-03 [CPU] Promote VEC128 context values again
+1ad151d1248f7483824260ccfa6f41abd89f64e0 2026-09-03 [Memory] Round the AllocRange ceiling to the page not the alignment
+9be56834e03f75a9a3b96750af2cfc13da8ebe06 2026-09-03 [XAM] Exit to the dashboard on the dirty disc error
+3494b56a0b8b60efbcc66e46afa67977787b2c6d 2026-09-02 [Base] Saturate the WinSystemClock to steady_clock conversion
+22267491503840047354c7256797e46919f01e86 2026-09-02 [Content] Fixed applying multi-disc TUs from packages
+63ea6e2725085f048dbce5c8e716c3a5e3aa00e4 2026-09-02 [CPU/HIR] Select the same vperm half as the backend in the int16 fold
+0d0fadb5e106eccbe7c2d51ee72f90ce3eeb5c78 2026-09-01 [HID] Generic keyboard input driver
+7be830a2dd9c7336dedea5f134d0f79adcefb46e 2026-09-01 [Kernel] Take the deployment type from the container content type
+2f6baa75143d90e81be7cebcbfeb779ae223d9b9 2026-09-01 [VFS/XAM] Create the content directory XamContentResolve is asked for
+76ce245b8ffe6c5783b0bfd42d7b3e3df2c8eef1 2026-09-01 [Kernel] Park the guest fiber during the disc swap prompt
+f5c8af81a5dce6cc6ee685a7c20ba24ddafd578e 2026-09-01 [XAM/VFS] Mount content packages stored as container files
+d7a868837c9863feaeb8a1a6f8fe198d036bab41 2026-09-01 [Kernel] Track the disc in the drive across XamSwapDisc
+b2d1e57eab707a47a3beac3d4879cb2aa2b01884 2026-09-01 [UI] Keep ImGui dialogs alive when the guest stops presenting
+728c93d65296e7232d523addb1280127826486e9 2026-09-01 [Kernel] Enter the cooperative wait before signaling in SignalAndWait
+e59f0d831e354df962dcb019b3caa472b1ac20bc 2026-09-01 [Base/x64] Document and log the x64 feature mask
+3a44f20c7bc66db1da583e8a6f0ab740e31908e9 2026-08-31 [GPU] Replace AC6 ground hack with scalar approximation rounding
+038050012a09669e95411079f538a4653a80c8ca 2026-08-31 [CPU] Number every block and instruction before allocating registers
+a2b609d22dfd4ed0298d54af4a0fd188ae791d05 2026-08-31 [GPU] Gate the 7e3 to 8_8_8_8 decode on the written channels
+3ea5e4212da9901a5f027a35a4399c86ff7f38bf 2026-08-31 [Vulkan] Log the requested device extensions the device lacks
+92952681a87e9c5aae724d19c0f298c837751320 2026-08-31 [GPU/Metal] Upload only the float constants the shader declares
+b4a50725057f561038f04f61a0e1229a1647f696 2026-08-31 [CPU] Simplify the carry and srawx helpers in the PPC frontend
+16ba84808609b449778b1f00745120851697989c 2026-08-31 [XAM] Match a content package that differs only in case
+b495439ba9b1eb03347836a47945192b635a83f8 2026-08-31 [VFS] Take a renamed entry's name from the guest path
+83abd43576d99ff5ef651e54272f8e95c077af76 2026-08-31 [Kernel] Add an opt-in guest scheduler starvation hack
+bf300b65f8383a9ffeed530f1f2cc9d61df95ebe 2026-08-31 [Kernel] Report guest scheduler ready-wait and background counters
+d275d8e30fcd7710bd94b1df14d5c8c210b825aa 2026-08-31 [Kernel] Add the console's background window to the guest scheduler
+10e20f3bf05a11cded62c372b9e39e6d710ba579 2026-08-31 [Kernel] Boost a thread woken by completed file I/O
+e0e1cf7e31717e65dc4630f9bff8ae2638949130 2026-08-31 [Kernel] Split guest scheduler re-poll bumps from real preemptions
+f2442d6e992464e759f28051583c3d1df0a39849 2026-08-31 [macOS/Metal/Vulkan] Compile shaders and pipelines asynchronously
+22708301ba76d10aae6f7d7caac8b1cac9e4a8e6 2026-08-30 [Memory/GPU/Kernel] Initial XPS support
+cbc767df13f64d546a031f946bef7310601d840b 2026-08-30 [Base/macOS] Fix the fast mutex being compiled out
+29fcaeac3244bed8475b5b8b549a861d743c9c32 2026-08-30 [GPU/PM4] Publish ring read pointer every RB_BLKSZ dwords not per burst
+6a67369f8529e1a147591a46f806fdfae9a78b52 2026-08-30 [Posix] Use pthread_self instead of gettid syscall per global mutex lock
+d5845a494105d8b2dbef9bbeb48d9d0ece32c3a2 2026-08-29 [Vulkan] Keep the texture blit staging image in GENERAL
+915532b83231df163b2736e18a17390487662b30 2026-08-29 [Vulkan] Fix swapped stage and access masks on scratch buffer growth
+6db3b26e9138953e0cbac0d9ffc2f9bd17d8581d 2026-08-29 [Cleanup] Drop two unused .spv files
+a766c62c79e01249b9896ee24d5744d1d675dd08 2026-08-29 [Vulkan] Replace the texture upload copy with a compute blit
+62fd1129d06a555785fbcb8a171b85f94800337a 2026-08-29 [Profiling] Reserve timer slots for backend scopes and add D3D12 scopes
+0c843efb3279341eefe9dcec2a60885fd14937e1 2026-08-28 [GPU] Round normalized unsigned fixed fetches
+182cd532572de00bc7fe7a05248b5dd560d5c742 2026-08-29 [Kernel] Report what a fiber crash and a SignalAndWait actually hit
+c87c0341535b3bd867454a62155572a2e0e3007c 2026-08-29 [CPU] Run the pending stack sync check before the epilog
+619170cc7aa3676c7c7302c2c749a3070892f3be 2026-08-29 [CPU] Emit the stack sync check after the source offset stamp
+ec5e0f40e750ff1e8c8634bc9fef2951747648c5 2026-08-28 [GPU] Don’t drop swizzles from dummy texture headers
+c8ac9258f0f58904d38bf6ed14ed6b928024e3c7 2026-08-28 [Vulkan] Push scaled resolve barriers instead of recording directly
+fb4270fb3bf40e5198df2ea7b624dc9d1c220f2b 2026-08-28 [Vulkan] Match stage flags between the two storage buffer set layouts
+bfca9b2d977f3914efc8a6a22b2abf5481e3b04d 2026-08-28 [Vulkan] Bind the guest constant buffers as dynamic uniform buffers
+a00f564b0a2ef355f724f20cc27cba5db386d312 2026-08-28 [Metal] Cache host viewport info across draws
+b308af27c7e51ce466f44b3b1015fc7c7dcfaaba 2026-08-28 [Vulkan] Cache host viewport info across draws
+3cc741caa3b9a8fa45cde2af41b8989d69f31536 2026-08-28 [GPU/SPIRV] Preserve Inf and NaN through ReduceFloatPrecision
+c814a7350620ecb840308c5338c433b53da47e75 2026-08-28 [X64] Vectorize average/pack/vmrg sequences; btr/bts single-bit masks
+a56d6b88380b55fc1a0811b88167d05e49825cec 2026-08-28 [Base/POSIX] Unlink shared memory objects as soon as they are created
+f63a14e6dc0663538e029d97f8801799778f7be6 2026-08-27 [Base/POSIX] Create shared memory private and refuse to adopt it
+a13309e331cfd7619047e3bfccd15eea0c18c955 2026-08-27 [Base/POSIX] Fix QueryProtect's region merge and its failure contract
+614fedfbe3a886e739e7ad980b41334daf5df081 2026-08-27 [Base/POSIX] Honor the documented length-0 release
+44e05e470a7001d9c59c73c88f8e47dc60be79b3 2026-08-27 [CPU] Skip the granularity call for addresses below the physical heap
+2e1580261886e2e249e52c013f8e7cd7fc8c9bf5 2026-08-27 [Base/POSIX] Classify directory entries from stat, not d_type
+c9536890c97ef39b7e156ade53c7bc4342665858 2026-08-27 [Base/POSIX] Set O_APPEND only for append-only handles
+8d99ccefb2a44311aaaa811e2d8f465052fab0ef 2026-08-27 [Base/POSIX] Check getpwuid_r before dereferencing its result
+7301cf24cffe979dd19b18d03aabec85bfb14e87 2026-08-27 [Base/POSIX] Grow and align file mappings as CreateFileMapping does
+f7a59b9f220f4e2c30809cd8ceca3d75e3599d3a 2026-08-27 [Base/macOS] Spawn helper programs instead of running a shell command
+a1c2b745ba94eac587d0be26c1e110099c7c4dd2 2026-08-27 [Base/POSIX] Return interrupt time in 100 ns units
+59d00d4baf2128959fb57807d0f39c0b9eb3edf9 2026-08-27 [CPU] Make breakpoints and guest traps reachable on POSIX hosts
+73388a080f81d41baa3dcdf942e7e6c05603d9ad 2026-08-27 [Base/POSIX] Fix thread suspend, join, terminate and affinity
+ff681ddf4858b085c2b8b654438bf165fdfa388e 2026-08-27 [CPU] Mark the host-to-guest thunk explicitly for unwind info
+46e8fd8dccba4f62276d85a303f05afff1e1b7bf 2026-08-27 [CPU] Fix mcrf: copy the CR field instead of comparing it against zero
+2cdfb45cbf22cea1fbb40f60763e789f2a421403 2026-08-27 [CPU/A64] Revert the LDR + REV byte-swap detection in MMIO decode
+4eb111560a4d9688989b93726e85af5c5377473b 2026-08-27 [GPU] Place direct resolve runs with division on both axes
+9d08d64b5deb1167cfdbc383bdd3dc9945c655dc 2026-08-26 [Patcher] Fixed loading plugin configs on linux
+437a7280cf95310d518a2f68087aab61403956ac 2026-08-26 [GPU] Use EDRAM layout with a single sample addressing scheme
+6e9cb7e3f6f5119aca7cf5a43c84b2abb1b78bec 2026-08-27 [D3D12] Drop the dxcompiler.dll dependency
+2d0f19746cfff4663ecbf9cec0673c8e29cc6970 2026-08-26 [GPU] Resolve directly into the resolution-scaled destination layout
+691c436b1b1181d7ad7af93f89c36e563f261a86 2026-08-26 [GPU] Pin xenos_draw.hlsli to the current system constants layout
+2f2a04e431962a96473e9a098601d6144abf2dcd 2026-08-26 [Metal] Fill in the texture integer scale system constant
+ec580f7e0eac340d8b007864712bd54983dcc96b 2026-08-26 [D3D12] Route the stencil SRV's G channel to component 0
+7b2555f1f296884bbe94274b0bfc9c93032ae484 2026-08-25 [GPU] Round normalized unsigned fixed fetches
+6bef1fbed17734b0c2d2039d20a15241e026045d 2026-08-25 [XMA] Drain the current frame before ending the XMA work loop
+12a0558b8f87789beb9861f7d4ef4ec573b75114 2026-08-25 [Kernel] Initial XMP Notifications
+0da2a161349a3b8582b5a3309fbb2bc47807339e 2026-08-25 [Kernel] Disable allow_incompatible_title_update by default and log when applied
+b591ea3ff626d132c591c9667d06ebe965dd07c8 2026-08-26 [D3D12] Resolve host render targets straight into shared memory
+c00e7aead23d03599c7a101f8ae96ca4bfc7fe8c 2026-08-26 [D3D12] Generate the ownership transfer shaders from SPIR-V, retire DXBC
+ebe86a57f255630bb9c6ef36c7a89ef971d9521d 2026-08-26 [D3D12] Generate the EDRAM dump shaders from the shared SPIR-V emitter
+9da01b66c8da28b5f27418cc78ad20b51653b613 2026-08-25 [Metal] Fix base map selection with a separate mip page
+d3094f5e672d67e1139860d576760ccbaa9169dd 2026-08-25 [X64] Return PPC's positive default QNaN from the VMX float binops
+850f45610b6474d2bee5f91d3c833f246a8aa281 2026-08-25 [X64] Handle a constant vector in EXTRACT and the AVX-512 F2I path
+45827cc2ba14a51abca91ab3877b0cf0613fbd30 2026-08-25 [CPU/HIR] Flip the lane index in the constant Extract fold
+052365bc01592e7a29bd2014dd34a0b34d049bbd 2026-08-25 [APU] Drain the current frame before ending the XMA work loop
+2f858c462902f80dba89e737b3e78f784142815f 2026-08-25 Revert "Revert "[Kernel] Initial XMP Notifications""
+1e834f8a8c4033e9848f1a65c57edb8703990e09 2026-08-24 [Emulator] Fixed regression related to relaunching games introduced in XContent change
+7015473a777156bc92e251986a1f61d15cb3952d 2026-08-24 Follow the sub-stream skip chain past frameless packets
+9d8210b32ddd3f0c8ab7d5df18798ec9e513aa65 2026-08-24 [APU] Follow the sub-stream skip chain past frameless packets
+bbb60630f0d43e2231abdecf2583b31837cf9004 2026-08-24 [GPU] Match Canary's alpha bias in 2_10_10_10_FLOAT resolves
+b11458e49b8d3cac4b920b119169e34e4e8e1d80 2026-08-24 [XContent] Allow loading of content directly from packages.
+909008870f2941838e2b09f51ddccac1d06bab33 2026-08-23 [Base] Proper support for non ANSI characters in launch argument
+4a863a0e1a69c88591b46564e637b9a817c70a9a 2026-08-23 [GPU] Fix base map selection with a separate mip page
+6b5c3233d5cc97583ae6971d6a0afab3a3ffc9a6 2026-08-23 [MISC] - Swap misplaced error code
+e87321b067f59a72676f8f881b425bb0e53b79c3 2026-08-23 [GPU] Fix 2x-as-4x cvar typo
+accaef3f07b587c02e497757bc0fe7deaf097e4e 2026-08-23 [Base/VFS] Collate ListFiles so directory order is portable
+a7a3eabdbb00e4263583fb7f14d07ea075523681 2026-08-23 [Base] Fix upper_ascii lowercasing instead of uppercasing
+211e7d95318ddd21eb9f4616fd0f3afee975a3e4 2026-08-23 [VFS] Refresh host entry timestamps on update
+33f3a47ce2dcb334cd4277a0ba3d1a9ef107bab8 2026-08-23 [XboxKrnl/IO] Refresh entry info in NtQueryFullAttributesFile
+ed0e06112c841c2eaeb83006e1420e65b88e61c6 2026-08-23 [VFS] Hide the package thumbnail from guest enumeration
+a5262a968a5a7f87f2c9f464da953535b3078c81 2026-08-22 [MISC] - Replace magic numbers with named error codes
+cfb81bfe546cdfca1a7dd3629e1d169ed204a9eb 2026-08-22 [Linux] use memfd by default, fallback to shm_open, add use_shm_open cvar
+d624e09eb4eb2aaea3e99c81371b7377d0879d57 2026-08-23 [A64] Emit isb for db16cyc instead of yield
+1383888834182c73aa647a2938239f51d01bba42 2026-08-23 [CPU] Coalesce consecutive a64 DELAY_EXECUTION yields
+c097a6d3194cf9df45a51ca4eab04374a4bbb018 2026-08-23 [Kernel] Drop the unreachable sole-waiter wake path
+64a0242af36c2a35598d3f2bed4c07fdff426d31 2026-08-23 [Kernel] Close the lost-wake races behind targeted cooperative signal wakes
+833dd7df7d862918f657f5913d1feb1fdb48b84f 2026-08-23 [Kernel] Wake only the CPUs a signal can matter to, and skip condvar syscalls nobody is parked on
+f94aa54cd96086e19214e465e0412935f7e8eefc 2026-08-23 [Kernel] Restrict the re-poll gates to waits their wake sources actually cover
+1fad1408486590a56d772acab13fc17b8e5abd94 2026-08-23 [Kernel] Name what a wedged fiber waits on, and stop re-polling waits nothing can resolve
+8a8fe1d32a7073abf39813be44e44b888e85f83a 2026-08-23 [X64] Record the safepoint PC (same as A64)
+404bfa3a52dfc8b865981ffac3664d055596e920 2026-08-23 [Kernel] Name where a wedged fiber last reached a safepoint
+9a232c8a1a80d195d00ce25d115cef17e118ba3d 2026-08-23 [Kernel] Detect the guest scheduler's other wedge mode: rotating with no progress
+bb798a0b84c64dc0798b0a8abbd3626e9c492a28 2026-08-23 [Kernel] Report scheduler stalls with enough context to tell the wedge modes apart
+137d68bdc41d0724aba867eb34cad04d23cbdd3d 2026-08-23 [Kernel] Bound the guest scheduler's preemption defers and make its costs measurable
+cd934b7ec93cf3a89609c89b6cd90ba801e491ac 2026-08-22 [Base/Threading] Add PreciseSleep
+444104a33e17daf09f2252a14c237d978d588fed 2026-08-22 [CPU] Inject preempt checks at every back-edge, not just trailing branches
+e3b335fcbb281282d7519a39287caf6013b5da45 2026-08-21 [Metal] Enable dxil path by default
+1ff448c63d0be4cdb3337adc68ba81c90248a407 2026-08-21 [macOS] Disable MetalCaptureEnabled by default
+addda160ca677f93dfd4f9ff191a0b44d94c8f3f 2026-08-21 [Posix/Threading] Fix parked-waiter count leak and thread-exit wake
+0cfa18775d53f1d95c52ffca496a7552f6965f44 2026-08-21 [Posix/Threading] Wake parked multi-waiters only for watched objects
+1cf1169fa517c4557e72fa968ab81a1113480759 2026-08-21 [Posix/Threading] Keep realtime audio callback off the global multi-wait mutex
+cfcc929b64b1290a1006b6b3e96c50b49a04e967 2026-08-21 [Posix/Threading] Wake multi-object waits on signal instead of polling
+e88555c35c81cc09b2c40556afd171c688abb201 2026-08-21 [Kernel] Fire timers set with a past/epoch absolute due time
+1fae8f43a5cd7303de2bbd664c9066a51bb2e38a 2026-08-21 [APU] Decode XMA on the kicking thread by default
+bb41c0e3d570e5811cdba01ed5adfb34393375c7 2026-08-20 [X64] Blend SELECT_F64 in one instruction instead of five
+3212e5d38be99b780036d9ef63cfc654b372fd2e 2026-08-20 [Testing] Cover SELECT_F64's constant arm
+ec69937b09c3e19d9fc6c01d6f7bb075e94c386f 2026-08-20 [X64] Shorten the vrsqrtefp helper's denormal fallback
+f88d285dc6a3dd4d2530e35a59f03b43c63874b9 2026-08-20 [Testing] Cover the paths that open when an operand is not opaque
+166439c7925c374111e47a03b2ec8db555bc32fe 2026-08-20 [X64] Stop two vector sequences clobbering registers they do not own
+d39b10a2abc005e173493e28b58718e61731a4d4 2026-08-19 [CPU/HIR] Select the same vperm half as the backend in the int16 fold
+0f55d6cb502fc5709eb753edcfedc4c49f4b74b0 2026-08-19 [CPU/Profiling] Widen the sequence sample key to 64 bits
+0c9dbf8cf924f0f0a0f4281bf29c09a9bad09540 2026-08-19 [Testing] Name the vupkd3d128 cases after the type they run
+a2003c3a48e470e5f76efb098a92cb0b9a80d1cc 2026-08-19 [X64] Fix negative denormals in the fast f16 unpack
+a5f59a48aed9a8508b5ef5547139063e1383231d 2026-08-19 [A64] Load the lvlx/lvrx base control from the literal pool
+3fd67de684699f4563c5a767207c14e01807160b 2026-08-19 [X64] Build lvlx/lvrx shuffle controls from a table
+70ac6a3574ea196b3065f6b79a24102d0683dac7 2026-08-19 [CPU] Rematerialize spills from the context instead of a local
+e3d399e5dc39a9c3febbc79f760bb80ea59e342a 2026-08-18 [CPU] Drop the unproven root cause from the VEC128 promotion cvar
+8642d8eff999c44266dee4604ae4cb7132df2725 2026-08-18 [A64] Load v128 constants from a literal pool
+e6a86116f34aa1a3708ce1503eaaa0e15f869eb0 2026-08-18 [A64] Keep a constant vector operand off the clobbered scratch
+d72059cd4a7c9a1279d83d3851ae511adad5f80d 2026-08-18 [CPU] Let disable_context_promotion turn off VEC128 promotion as well
+a5a18f5c752d08f8b0d84139b69b16fb370b8cbb 2026-08-18 [Misc] Random optimizations.
+bb4da59dacd0507620b338da168e1d24e6006758 2026-08-18 [CPU] range-keyed context promotion; re-enable VEC128
+4cc584f47d310c95d3686d8f4c9ffb052ee38fcc 2026-08-18 [D3D12] Fix constant-alpha blending in the RTV path
+1c7df55be378ee31a2bf86e01ae8eb57bfcda92f 2026-08-18 [X64] Blend through bitwise combinations of comparisons
+229fec07c2f5e76e6b08e7ca613eec6b927eb945 2026-08-18 [CPU/Profiling] Weight the profiler dump with guest execution counts
+7cd47947b07de30b649fb4224418a659890eab73 2026-08-18 [GPU] Select promoted tfetch1D layouts at runtime
+95545f8e76035d8b904e120a0bf379cbc300d86d 2026-08-18 [D3D12] Fix over-invalidation of bulk fetch register writes
+197929d967f587502256fd52c0c5121781fd0e47 2026-08-18 [D3D12] Fall back to point sampling for non-filterable formats
+61a8aa36073d291c2b61430b6ca2373bbbb37307 2026-08-18 [Vulkan] Add spirv_disable_rounding_mode_rte
+31168682b02bd0d03f81cbbab27786e8fcab3126 2026-08-18 [Vulkan] Fix draw_resolution_scaled_texture_offsets cancelling itself out
+3eab2b8b39442e32537610c955fbb8db0c2a6561 2026-08-18 [GPU] Handle tessellated triangle strip and fan draws
+77597d62ae285fbc5b14a234d24b93aaa5cfd13f 2026-08-18 [Vulkan] Select back-face stencil ref/mask when culling only front faces
+53061c63feef3b6ea6d455f6c012195a0e57f226 2026-08-18 [Vulkan] Use dedicated alpha blend factor map for alpha srcb/dest blend
+2d5b41080c444d0cbb3b28af0fcbd9293c0f26b9 2026-08-18 [Vulkan] Clamp stacked-texture layer index for Inf/NaN coords
+9e9d3cdd3f59ec61afb1115bdd95e3a67e20559e 2026-08-18 [GPU] Clamp out-of-bounds vertex fetch words to 0
+e6bdb0fdf7e745955a74379935d85d6584bb7192 2026-08-18 [Vulkan] Skip draws with surface_pitch==0 to match D3D12
+654a8cacf55e6c11002175eee39ece99505859cb 2026-08-18 [Vulkan] Fix FSI 2x-as-4x sample mask reading host sample 2 instead of 3
+0d38781760568e715f181f69d527219ecb11d1c5 2026-08-18 [Vulkan] Apply float controls to geometry shaders to match VS/PS
+f25003c0ead4ed88f066efffc945e1e330e74b6f 2026-08-18 [GPU] Load guest-resolved mips from scaled resolve memory
+710102115028e4b51acb551655abd6b3a9042e29 2026-08-18 [Vulkan] Bind shared memory persistently for texture loads and resolves
+cb240560df0653fe3fef3431e6997dd47cc2c3cf 2026-08-18 [Vulkan] Fix 2x MSAA alpha-to-coverage sample layout
+4aeb518c9c9f183c41a502478531de79da2d9cba 2026-08-18 [Vulkan] Clamp scalar maxas/maxasf address register to [0, 255]
+3ff230d23be454b39a9a2904ad0d8a5156e3aa10 2026-08-18 [GPU] Emulate extended-range float16 in render target pack/unpack
+2b071d9b09195a68464401d333ea6ab4d5bf3e62 2026-08-18 [Vulkan] Invalidate user clip plane constants on source registers change
+66779fb87365a4e22f3eb7246d16e39706f69b42 2026-08-18 [Vulkan] Fix adaptive tessellation issues
+aed81ca93a1f3e8dd043107babd33438379f379d 2026-08-18 [Memory] Rework guest access resolution and unwatched invalidation
+59c08cd46231708b7c13050650192136047a72cb 2026-08-18 [Kernel] Replaced X_DISPATCHER_FLAGS with X_OBJECT_TYPES
+cdd60494d730502b0476aa9913db7401cbd43d06 2026-08-18 [XEX] - Add support for dash 1746
+7ea10c4f2d313485da3d4a00a93ca71767a0be6d 2026-08-18 [Kernel/XboxKrnl] Give arm64 a real spin hint
+fb1c3dec3f6ef863661ca9916f839fb7e41e4167 2026-08-18 [CPU] Reduce CR6 with native vector tests
+5cf409d6e54faa0275113b121f24f389fe4c4b1c 2026-08-17 [Misc] C++20'ify Part 1
+8ffe24e372fb5c137f14d776e9645b03eafc703a 2026-08-17 [CPU] Publish JIT entry results under the entry table lock
+0d395ce9abf0374ae895d5474bc942dcfbfe7542 2026-08-17 [GPU] Move debug cvars to a new TOML block, misc cleanup
+01efb80ed2b9b1bdc404f4ecbf659d8dfe516710 2026-08-17 [X64] Rank a NaN addend above the multiplier in vmaddfp
+8b19ee756fe2461cc1e6c00ab7e8ce0a4a1185a4 2026-08-17 [CPU] Skip the rounding to single for a denormal operand
+ff6bb1c95353e811a26cb2cd94edab2a3d81249c 2026-08-17 [Testing] Delete skip tests that never had any implementation
+378c95215e7b29f412be39b85eb1ca8f21744b4a 2026-08-17 [CPU] Report FPSCR exceptions from the conversions to integer
+28f38affeede46a12a30c59f33c76d482ce1fe67 2026-08-16 [CPU] Answer a denormal operand with default QNaN in single-precision
+cf43c4c522738b9c7ec084a0823bff9288e4e348 2026-08-16 [CPU] Return PPC's default QNaN from invalid add, sub, mul and div
+32920009d94fd734cc980838828348c61a08ffdb 2026-08-16 [CPU/HIR] Derive FPSCR from the host FP exception status
+e4b13738c3c461b2c06241fa3f54b5a669b6a304 2026-08-16 [CPU] Set both vcmpbfp bounds bits for a NaN operand
+b2d6a4140157acbb9440851c507f3cde90a87943 2026-08-16 [A64] Make the two-operand VMX NaN fixup branchless
+f1173df88d8c6718de415440fd225c4f9c9f0ea8 2026-08-16 [A64] Keep the float16 pack sign in a register
+9900f7cebb70791a23bdb873a2e29e6cfacbcb47 2026-08-16 [A64] Make the FMA NaN fixup branchless
+6de9c21ecb69d5738a069c515dcc83ea3ae68642 2026-08-16 [X64] Return PPC's default QNaN for sqrt of a negative
+19fb3979dd6d13acd96a7523c124f63db6d734d1 2026-08-16 [X64] Use the FMA form whose NaN order matches PPC
+ed9bfc9a40db1c138e5a7ac9e927f425d4c039b9 2026-08-16 [CPU] Quiet the NaN vmaxfp/vminfp returns
+6cc7c18358924fdc688da5810f836cf0bf79f096 2026-08-16 [A64] Select vmaxfp/vminfp NaN lanes by operand position
+9804846f427f3fb4d1c4b4348383c91ede91666c 2026-08-16 [CPU] Give the multiply-add family PPC NaN semantics
+746e5ac649c8303f57dbf329bff03580cc6a81fb 2026-08-16 [CPU] Share the vrsqrtefp lookup table with a64
+36a7bb57f79735127813542f2458f106c114bfa1 2026-08-16 [CPU] Add an opt-in accurate VMX denormal flush
+42087f44bf1b5ef7a808e7f6478e27f4adac76a6 2026-08-16 [CPU] Lower word aligned vsldoi as a word permute
+de4d24493dc6eee64eee07365c9ada9c7f8d171f 2026-08-16 [CPU] Derive the FPSCR invalid-operation summary for CR1
+bca15a921493fb2a884c6b97cea17eabd64f78e7 2026-08-16 [Testing] Removing now passing tests from skip.txt
+e9582aca75aa32c0c656667f47670471b435196d 2026-08-16 [CPU] Replace the stvlx/stvrx byte loops with overlapping stores
+a3a4cd4683656d0be24d9ed53b709e3845532180 2026-08-16 [A64] Emit vrsqrtefp and frsqrte instead of calling into C
+fb225d97568b072193c55fa12c62effde4330678 2026-08-16 [CPU] Inline vexptefp/vlogefp instead of calling into libm
+7b778e2a3eeff2fdc6298ac920b4a8c0ad5c40c0 2026-08-15 [A64] Preserve infinities through dot product instead of returning QNaN
+2a10971772e540e10218a34793e1c895661c8b40 2026-08-15 [CPU/x64] Constant-initialize the emitter's XMM constant table
+02f1d27b2aa487900b23c4e61773710d5c3c34a9 2026-08-15 [macOS] Remove redundant avx check and downgrade  another xbyak check
+1a87f56c166b901533ff5c0331cd8b9c457db156 2026-08-15 [Metal] Compile the ownership transfer shaders with SPIRV-Cross
+9f2ee44c4a03c3468245b1479d47405bc8a6c3f4 2026-08-15 [Profiling] Scope the texture upload path and the command queue stall
+334e9a09f12646064477055ed721c5d4c3237a68 2026-08-15 [Metal] Order memexport output against the draws and fences that read it
+48920ac199002661bb1a469c7247eed8d6596418 2026-08-15 [Metal] Batch a draw's texture uploads into one command buffer
+7f42c2e16efb79fdd9186021e7b35caa0ecad036 2026-08-15 [Metal] Drop the duplicate resolve range invalidation
+1f10abdcc2388fbcf0adf7d59431e3a3c93810fd 2026-08-15 [Metal] Discharge every resolve hazard when the copy->draw split happens
+33ec192cc51d8fecd2ba729691fc55597f87d6b6 2026-08-15 [Metal] Account for every command buffer and per-frame count by cause
+0db64ec3a2a7ce241e7e4c9129d29cea81d633c0 2026-08-15 [GPU] Recycle Vulkan GPU time query slots before each submission
+052a20526390170bfd71f239c720a7e1dabd5e4d 2026-08-15 [GPU] Record the Metal shared memory into frame traces
+af8c760489345ec9c02053ec395472ea06ae9e7c 2026-08-15 [GPU] Save a reference screenshot beside each frame trace
+8e7b6ca27d877198c3c278be737e8a3ccaabe272 2026-08-15 [GPU] Record used textures into frame traces
+1d8f2ab75607b9747a4623293b712ceca4c3f44f 2026-08-15 [GPU] Hoist EDRAM snapshot capture into the shared render target cache
+2bb456b0ef4a3282dbca421c4ea159b3d125f966 2026-08-15 [Metal] Add a trace dump tool
+9c08953752e292ece771f7d74fcc8c7bc6a723f3 2026-08-15 [Metal] Signal the uniforms semaphore before releasing it
+e2f4c1580a965d1202adfbd680f763abdb53e755 2026-08-15 [GPU/Trace] Create subsystems and a presenter in the trace hosts
+78516573ee7369d61fddef170594662e042ccfaf 2026-08-15 [GPU] Fix trace playback running the base PM4 executor
+b4572483bba8c618e9e28b02069356b03182f159 2026-08-15 [Metal] Give depth-only passes a one-byte dummy color attachment
+c9e8a596ea3ae90365563bda5fae2e9bfdd0f726 2026-08-15 [Metal] Attach the visibility result buffer only to passes that query
+15349da52fc25251e425184fc7f9ec9a360a0a9c 2026-08-15 [Metal] Narrow hazard tracking from whole heaps to single resources
+77b737755e8f4ff99310d4446f667f2c4bf3be41 2026-08-15 [Metal] Stop draining the GPU on every command processor wait
+61810b48e01b7bdc3c539d91276132acf18703c4 2026-08-15 [Vulkan/Metal/Profiling] Report GPU busy time and render pass counts
+12353b0145fbac31366cf6f0bac9f64733d5485f 2026-08-15 [Metal] Report real texture memory usage instead of estimating it
+659012897d724ddc5e4c7c85c3dd100ea37a639d 2026-08-15 [Metal/Vulkan/Profiling] Instrument caches and draw paths
+aa7f9ff2d0466fd2d968e7aa1e21b8383a58c5b6 2026-08-15 [Metal] Build ownership transfer shaders from shared SPIR-V emitter
+32ddae920628d31ed0f77d4f673f9a4dd37ddf33 2026-08-15 [Build/Win32] Fix --build-misc
+b5b201e9ec0705896eed3fa78d6d4c3719d7f11c 2026-08-15 [Build] Restore the XENIA_BUILD_MISC targets
+a6c8b1450b355b642fa50f20e8d62e398ff755e2 2026-08-15 [Core] Define the Emulator's own cvars in xenia-core
+68bd11df093747d25f8be41886d4875a5fe2000b 2026-08-15 [Posix/Base] Initialize logging in console apps
+95092ce583e966a9b325a0ca649f8d7d21c337de 2026-08-15 [MacOS/App] Enable Metal frame capture on the bundle
+3e31cf69f567e23766e4871720e35c0baae09ab3 2026-08-15 [Profiling/Metal] Instrument command processor and report GPU busy time
+c731a47d5d8a5850008cd2dc1787b40c819c8f6f 2026-08-15 [Profiling] Dump csv by default and add cvar option for html
+8237a12d92eb8482d515ce047d0987f8456a8b3d 2026-08-15 [Kernel/Base] Give each guest thread fiber its own profiler log
+d734608a7e5a40a6df7887a4dc4d78ea4fbf88e2 2026-08-15 [GPU] Hoist ownership transfer shader emitter out of the Vulkan backend
+52054be64e84bbfb1900599694845c06cc8ee164 2026-08-15 [Metal] Keep the render pass descriptor when queuing draw pass transfers
+e1ba7952983fff9bf4735522fb7f08ad9c2437cf 2026-08-15 [Vulkan/Metal] Resolve host render targets directly into shared memory
+aa2efeafac66edea055e7fcfd349055f49d3219e 2026-08-15 [GPU/Vulkan] Resolve host render targets directly into shared memory
+300ff21ff186989a2c29bf9c10a13441b76c619e 2026-08-15 [GPU/Metal] Build the EDRAM dump shaders from the shared SPIR-V emitter
+97ed99bbb6de316bdd5d219db341d2824f7c81cc 2026-08-15 [GPU] Hoist the EDRAM dump shader emitter out of the Vulkan backend
+f46937949c489279dd45b17e160f13d720ec4360 2026-08-15 [GPU/Metal] Fix the render encoder's viewport and scissor caching
+5c83290a31786d6891d65811e3262578b0e4bdd7 2026-08-15 [GPU/Metal] Fold the transfer stencil write into the depth draw
+1c39af7859faa687c213991293838beecb8f8790 2026-08-15 [GPU/Metal] Write transfer stencil in one draw where the device allows it
+d026b5f546ac6a2852502722c2ff89c2ab5915f8 2026-08-15 [GPU/Metal] Encode queued ownership transfers into the guest's draw pass
+4b658d7bf3fa7ee1649fc22757c44c85d3f7698e 2026-08-15 [GPU/Metal] Queue ownership transfers for the guest's render pass
+2a4da06086c045ec4c6ae9db56f7455dd5435bd3 2026-08-15 [GPU/Metal] Key transfer pipelines on the render pass attachment formats
+5248c662f2f96fe1db5481244e9f667248eb6e6f 2026-08-15 [GPU/Metal] Implement ZPD occlusion queries
+f8848973eea52edb23e560e420116a62d8e427a8 2026-08-15 [GPU/Metal] Fix upload pool Shutdown double-releasing in-flight buffers
+a68bbc06d0783261277eafa7722d7e3437bacbcf 2026-08-15 [GPU/Metal] Normalize blend control in the pipeline keys
+017274127f69a150ca98c9ec2a89964e53656b26 2026-08-15 [GPU/Metal] Reject invalid texture descriptors
+39820ee336da90b059dd320378bb8a643bab2c4f 2026-08-15 [GPU/Metal] Invalidate the 3D-as-2D wrapper on base texture reload
+9acc863fb498327a46e87769fd0d7302748b7d24 2026-08-15 [GPU/Metal] Fix scaled-resolve range length truncated by scale_area-1 bytes
+afe4855f74616785a26403d783ebec118fc30318 2026-08-15 [GPU/Metal] Fix red/blue swap on 4444 textures
+43e7ff9430a5f55227c6a3779132ae054d97a2d8 2026-08-15 [GPU/Metal] Map k_1_5_5_5 textures to BGR5A1Unorm
+e7595ef605e97ebad586165a0df2fd0c6a5eac31 2026-08-15 [GPU/SPIRV] Write the documented result value for kill instructions
+7c59fca0a21db72af68b754a8fc9972d79234e82 2026-08-15 [CPU/a64] Inline lwarx/stwcx. reservation sequences
+b6d4c0de7542d43105e82cee097731da23e24b21 2026-08-15 [CPU/a64] Reuse CallIndirect for the restore helper's tail dispatch
+ef0d200c8723d91654ef6dc35264b013d23298e3 2026-08-15 [Testing] Cover the restore helper's tail dispatch
+0bd9b388e6351859a1a9ca8ad907af8aece88e1e 2026-08-15 [CPU/x64] Inline PPC GPR/LR save-restore helpers
+92b0b28ec14fa6bad47d560dbb955725d91379c1 2026-08-15 [Testing] Cover inlined PPC GPR/LR save-restore
+6e81825dfb89e4b50fc661d38fceb9c78932dba9 2026-08-15 [Testing] Unwind with _Unwind_Backtrace in the JIT unwind-info test
+6f2e59bb13bffa2ffd27c5fa675c13a53c43c2c1 2026-08-15 [CPU/a64] Inline PPC GPR/LR save-restore helpers
+c7a3f1a6719de4bc7168eb05eb16438be02ad949 2026-08-15 [CPU/a64] Add inline LOAD_CLOCK fast paths
+6fe1231561010fc0fa27e251feb333121e2abf62 2026-08-15 [CPU] Don't assert on unknown thread in OnThreadExit/OnThreadDestroyed
+7a3775d866c11fc00d054415ada18c55689361cb 2026-08-15 [APU] Require a vectorized path for audio conversion
+32177527faea68c946780f53247ad9b87a978ee2 2026-08-15 [APU] Match cvtps_epi32 saturation in the NEON frame conversion
+b899a97a7e1e628c552a7be7c55199d4e7bfa5a6 2026-08-15 [APU] Vectorize ARM64 audio conversion with NEON
+565aad31867dd9c6b0919afad77284d2ba39931b 2026-08-15 [CPU/a64] Fix narrow (I8/I16) value-width bugs vs the x64 reference backend
+af082b6d0db4c2a5067eb205db27ff458ced2970 2026-08-15 [CPU/a64] Emit shorter, branch-leaner code for hot guest sequences
+1d25455159d9590ccfec5a525b0be21251a1b895 2026-08-15 [Base/Apple] Fast global mutex via os_unfair_lock
+35917fa83afb13392290d32aaf46c46700e26930 2026-08-15 [Testing] Delete orphaned gpu test files, no longer used
+1a65d986c9e6910e884ea90ff6aa92bfdf1eb112 2026-08-15 [Metal] Add tessellataion to the DXIL path
+6f483f7a708fc2fdb51d3e2863b47f0eaae834bf 2026-08-15 [Metal] Add a SPIR-V -> DXIL -> AIR guest shader path
+5dd1588c5966170099986bebcbd1a1a9910c1132 2026-08-15 [GPU] Move SpirvToDxilCompiler out of the D3D12 backend
+fe5a7a12dd87cf897988e446cde33e61a9bdd788 2026-08-14 [Metal/UI] Wire force_depth_clamp and expose in debug UI
+0d1a38e7e1b501684cc65cded80d421cffaa0815 2026-08-14 [XAM] Bound profile setting and GPD string reads
+ccb602b76398d5602713b54b9addf05183fb9d6b 2026-08-14 [GPU] readback_resolve fast mode improvement - writeback per resolve
+907d92bf8cfad334cb1b83755f48b6bfea391806 2026-08-13 [XAM] Fixed potential OOB memory write in copy utils
+92ada8ebc0b6618f2c48202b615068c92a6a9252 2026-08-13 [GPU] Fix scalar ALU swizzles with three-source vector ops
+2fce2d89577d676587fe2d7d887c096d127cc119 2026-08-13 [GPU] Mask guest fetch addresses to physical
+ec5c875122b43a596fd5fd18edfa5e441b8521a8 2026-08-13 [CPU/X64] Optimize VMX dot products, vrsqrtefp, partial stores, and permutes
+e31142bd79a35cfa330530ab8ac59e9592e991cc 2026-08-12 [Linux/XSocket] Added error ID mapping for error 11.
+fc48d37cdc76c21f20b3dbd8b2e15b035139868d 2026-08-12 [GPU] Remove num_format/decode cvars and dead shader code
+8c98ef028087847492f276435c879bdf1fc8afe2 2026-08-11 [XAM] Cleanup XamUserCreateTitlesPlayedEnumerator
+367d22d26998f750fc027216d39b0d92c0b25173 2026-08-11 [XBOXKNRL/MISC] - Stub MicDeviceRequest
+12f5084b9317e4898090263caa18679837b1b092 2026-08-11 [XAM] Allow deleting titles with achievements earned from profiles
+052cb95f24abb225c9e5d952b55777b2b67efaac 2026-08-10 [GPU] Give integer scales the channel width that feeds each lane
+b6e27cb4f922cb19d54629454bc7aee7d7076818 2026-08-10 add memfd fallback and remove gate check
+7d8db5a2cd06373aefba29dc019db74e78d6fb7d 2026-08-10 [XBOXKRNL] - Replace lpvoid_t with pointer_t
+2b3f0cb456cd29886da6360589a1b72eda805c95 2026-08-10 [GPU] Select alpha for A8 resolves
+6a454520877624f35ac5e2c34b4e8317c34f1ab6 2026-08-06 [GPU] Walk the guest swizzle for integer scales; update comments Fixed integer fetches are updated to look widths up through the guest swizzle, so every output channel is scaled by the width it came from.
+25597a5465187288d147dabd62bc41a30aa6b7ff 2026-08-05 [GPU] Allow depth clamping instead of clipping
+6ff2a56f6a213446aeb4689389c7b6f74e94e01e 2026-08-04 [XAM] Fixed returning incorrect max property size
+0f2980de442341788c07b282d6fbd6dc689166de 2026-08-04 [GPU] Apply gradient exponent bias during fetch that's per-axis
+090cecd1b88ab983e18730f52e61096201f3b047 2026-08-04 [Vulkan] Implement vertex kill (oPts.z) in the translator
+3254ac20f8e337a175167fcfa91cd84511b34520 2026-08-04 [Vulkan] Sample auto-LOD cube fetches with implicit LOD + bias
+658cdbb5de27e28a6f21e9fb51fc0d7084dfe105 2026-08-04 [Vulkan] Disable anisotropy for ineligible texture formats
+1fdbe569e4e637986148f82d296b1cdccafde980 2026-08-04 [Vulkan] Barrier consecutive uploads to the same image
+cde5d85ec93881e15fa256c704421cb1683ec179 2026-08-04 [GPU] Host RT polygon offset for Z-fighting decals
+2a6e9f4e2a53a336a54f43a0ad949f2139c3b75a 2026-08-04 [Vulkan] Add depth_float24_convert_in_pixel_shader support
+947075f88003b7d78f252839b87e4aee51654044 2026-08-04 [GPU] Implement wide 1D texture support
+d0dd989238addf353d7435dfdb3d26049f1b08f8 2026-08-04 [GPU] Honor force_bc_w_to_max: force sampler border color alpha to 1.0
+084f14ec414f77ac6cccb62329c9b7dd6f589805 2026-08-04 [Vulkan] Use VK_EXT_custom_border_color for YCbCr texture border colors
+ac422506881adeb587c5f78b95f474d987ce4def 2026-08-04 [GPU] Fix 20e4 bit span in Depth20e4To32 comments
+e519d59e40e5c3b3411e412dbbf98e5fe2ccad0c 2026-08-04 [Vulkan] Fix stacked-texture inter-layer lerp base in SampleTexture
+f3e42609a21fe937c1ea4021d25455869010f2aa 2026-08-04 [GPU] Fix mantissa placement in CPU Float7e3To32
+fbdb1f2817c4c876227cf15c0835994d23731967 2026-08-04 [GPU] Handle two component tfetch1D coordinates
+fe40c0d68ffb2e1166c4fce329e25b4ac9467b97 2026-08-03 [Kernel] Fixed regression related to X_OBJECT_HEADER struct
+7ef873b0d5faf2c02c1b2448d23441b95b6267ab 2026-08-03 [Audio] Added mutex for each audio client
+889d93e1347656bd23876407484e80009577ce14 2026-08-03 [Kernel] Fixed X_OBJECT_HEADER
+a0e1ba83135f810114162025cf4b729d6c420ba3 2026-08-03 [XAM/INFO] - Stub XamQueryLiveHive & XamGetLiveHiveValue functions
+6d530a1ab980a64643706376f9912321bbe104f8 2026-08-03 [XBOXKRNL/IO] - Add missing structs for IoCreateDevice
+131503f68d4b34811154437ae224960ba15b5007 2026-08-02 [XEX] - add more file signatures
+8486e97a06cbbf68da310f16bf18f011d511c528 2026-08-02 [GPU] Sample locked mip unnormalized fetches in the mip's grid
+364dc1d770f2378c4c9ca7e63b2a8b0630906156 2026-08-02 [XBOXKRNL/IO] - add structs for NtDeviceIoControlFile
+da47dfaacfae1134b238af9083a7f3d413c6cbbe 2026-08-02 [GPU/DXBC] Fix signed round bias breaking memexport
+e25bfd8242576532c8f530a5aaaccafd9badf7cd 2026-08-01 [APU] Signal kick completion when a context enable is consumed
+65aa004d86b38d4958bb942a92d9274e1694b882 2026-08-01 [CPU/HIR] Print call target addresses in HIR dumps for unnamed functions
+a9b03a0b432219c7d38af2f3d9a2209ec3318fca 2026-08-01 [UI] Add log_high_frequency_kernel_calls to the debug dialog
+34357e25782dca8214b171fd19cf6889139c442a 2026-08-01 [Kernel] Default enable guest scheduler
+fb53ac24cebd662c12c97711f3a2352881f39450 2026-08-01 [Kernel] Only the front cooperative waiter may consume an auto-reset set
+6f78967c3f0e9a5d13d586ab40c55a9efba51639 2026-08-01 [Kernel] Remove guest_scheduler_cpus cvar
+54f63c6f3f1c6cab3b27c1c8b4db08de81d15f3d 2026-08-01 [GPU/UI] Default clear_memory_page_state to false and update UI
+48718c13c22e4026441c9c4fe2b6840b728f178e 2026-08-01 [GPU/Memory] Remove watch-blind page refresh
+5ddf045a83a6a9345c458019826cb762e2f1c3ea 2026-08-01 [Memory] Invalidate unwatched ranges when made writable or freed
+d66c15600e3232f5f38e450fca3994271dd0c220 2026-08-01 [Memory] Propagate genuine access violations on unwatched faults
+2b45465491ff7990f297cdbf0f1dc5241217bc92 2026-08-01 [Memory] Resolve guest page access at system page granularity
+ccd4443ff88cea53aea8e482dd97c55c17c022cb 2026-07-31 [Posix] Install fault handlers with SA_NODEFER for nested guest faults
+65c0ff7000daf244e7b5fa708209a43eb0763653 2026-07-31 [Kernel] Release cooperative fiber waiters on manual-reset event pulses
+7010c86fb14f118ee598d3f76010dc0759b9502a 2026-07-30 Revert "[Kernel] Initial XMP Notifications"
+e4f28f6984af68640e0230192fafae1e56979efd 2026-07-30 [Kernel] Fixed object type
+12eb05f8acaabc8031a868f6e00691b1780ba271 2026-07-30 Revert "[Kernel] Initial XMP Notifications"
+2585d3cd69cc6344c107c07c7e99b121878af745 2026-07-30 [XAM/NET] - Stub XampXAuth functions
+40151c34296b15fcb7afcd4fdcf12744c216c56b 2026-07-30 [MacOS/Base] Owner-tracking global mutex fallback
+879af707d503b2dd57cced002658ab1b95f38161 2026-07-30 [Kernel] Tripwire log for indefinite host waits on guest objects
+c4d3447d0b22599bbaf20865e39f2b77096bf5fa 2026-07-30 [Base] Sanitizer fiber-switch annotations
+344198d6d81b98de5bfcb4940081550bcf161dab 2026-07-30 [Base/Threading] Reserve-and-grow fiber stacks with SO diagnostics
+1807da06db181c17c657a09a6614b6fa1a913e29 2026-07-30 [Kernel] Added usage of X_DISPATCHER_FLAGS
+2ddc5ef737db3f409ec4ad3b202c256e612f18b9 2026-07-30 [GPU] 8_8_8_8_GAMMA resolve update; fix unsigned-biased fetch scaling
+c0eaaedb4888ba244148a348675e72490722ad41 2026-07-30 [CPU] Fix comments to reflect implementation change
+dfac87cd249912d2195e2352fef596aeddedd28c 2026-07-30 [Kernel] Deliver event pulses to parked cooperative waiters
+5cd4f4149da90d5820970d2983362717fbbf1397 2026-07-30 [Kernel] FIFO handoff for cooperative mutant waiters
+256cc3a9049cfe2d4e56784ac21ba4e3ae47b464 2026-07-30 [XboxKrnl] Deliver kernel APCs at wait shims and report no-yield
+76b8a4b4ccf4da050733e2e30c516a2c82f99b6e 2026-07-30 [CPU] Follow guest threads across dispatch CPUs in FTRACE state
+055fac08e3c678b04650b60c9d575342da54123f 2026-07-29 [Kernel] Guest scheduler rehome dispatched threads to their affinity CPU
+9e65691fc481f0dc0376c8b7d464e33c1311e0d7 2026-07-29 [Win32] Deliver timer callbacks from the timer queue instead of APCs
+65f9686cb425fe96a0e50663cb394afd2a3225ff 2026-07-29 [Kernel] Guest scheduler fiber termination and shutdown reclaim
+7976f8af092b833a91946205fb89517e6eb60921 2026-07-29 [Kernel] Guest scheduler size dispatch sleeps from waiter deadlines
+3fc35975509eba70d93fa429ecc0e3f503e582d9 2026-07-29 [CPU] Guest scheduler limit injection of preemption safepoints
+e9bed6b4dafb7eb0e933df082c95229746502ec1 2026-07-29 [Kernel] Guest scheduler optimizations
+264374a5f56ee03139d138b1573cab611f5c4a11 2026-07-29 [Kernel] Guest scheduler NT quantum accounting for wake preemption
+7aec08288e6aeec0dfa8ca85dca0d3385dd6de4c 2026-07-29 [Kernel] Guest scheduler epoch-gate cooperative wait re-polls
+5a05e2a2cc715f71e5afd1e3ddbc99e1a2aa3626 2026-07-29 [Kernel] Guest scheduler only dispatch wake syscalls for parked CPUs
+e268e113be17257ff9d867a49928b8589cdb4ce4 2026-07-29 [Threads] Flag-based JIT safepoints for the guest scheduler
+c159d855de7c99dc6494c1a20bb85cd4ec5980ea 2026-07-29 [Threads] Add JIT preemption and cooperative waits to guest scheduler
+9cbcca5cde29366aa891042081a99c5faaf7c6d5 2026-07-28 [XboxKrnl] Convert assert to xelogd for non-owner critical section leave
+b8c10a21ddc0ef44f2c67c8af76f6f8b9605d57b 2026-07-28 [Kernel/XThread] Only pin guest threads with ignore_thread_affinities
+888b9ad2588f432f2ab87c293f371ae6ca20ea2b 2026-07-27 [Kernel] Added cvar for loading XDBM
+0c6dc9b628e399484129d94e69ecfb3d619346cf 2026-07-27 [Kernel] Initial XMP Notifications
+7d8be7f17e3e868a0a9f97c6f89f44981c6d1ae0 2026-07-27 [XEX] -  Add missing xex2_system_flags_32 flags
+9c729844c02c5d8c90feb901c644eab289a19885 2026-07-27 [CPU] Emit a real acquire barrier for isync and drop lwarx/stwcx fences
+578a551b3134fa5162d74cecf5a72fd3796fa7cd 2026-07-27 [CPU] Back Processor::GuestAtomic* with real guest reservations
+f0e2a16f4bc4d41ab5dbbd9ac7538b64693a24b8 2026-07-26 [CPU] Rework lwarx/stwcx reservations onto generation counters
+8f55b4abf70d5041e2e9da65f8b2adcce002b115 2026-07-24 [GPU] Store Vulkan gamma RTs as linear UNORM16
+6e9bac0dffcecb4545df79d4cda2d9495565e58a 2026-07-24 [XAM/INFO] - Stub XamXStudioRequest
+ed4540a641acd9f0a65132eac143322ee34c174b 2026-07-23 [XAM] Remove XMP polling throttle sleeps
+913ec6b9b2bebbe3bc1939393934992e6769b4d3 2026-07-23 [XAM] Limit guest UI to only one instance
+74db632ab32e179dd0d6858b51caae07fc444949 2026-07-23 [GPU] draw_resolution_scale_threshold for host render targets
+536900e76b3ee5f0991fde407e0bd2f1790a9e1a 2026-07-23 [XAM] Cleanup XamGetCachedTitleName
+b2c8fc8fc338cd0e88dd3007f5bad0db4f8cbbd3 2026-07-23 [D3D12] Bind shared memory as SRV+UAV on memexport draws
+ba06e42b4577b4938bec1c58a58ab29b4aed36f6 2026-07-21 [Profiling] Add guest-function and thread-sync microprofile scopes
+f4f30053d2b9d95d6b4fbbc3615e0eea17cddeb9 2026-07-20 [App] Open issue URL from compatibility database when available
+c1165cdeb28a6829a7db363c52f7b1d0895192b4 2026-07-20 [App] New game compatibility data source
+3efd1a6e9356c684ccfda086278c0c3bb08a3701 2026-07-20 [XAM] Remove XMP polling throttle sleeps
+10266ac60137a2ee4b706c4522fde3c1f8ea4a1a 2026-07-19 [GPU] Refresh memexport ranges in the shared memory buffer on the GPU
+651b51ef72ea718bc298df31974b1e6296a7979a 2026-07-19 [GPU] Fix memexport host buffer barriers and stale GPU-authoritative marking
+2f2d6b89cd1649381fabc6cc8f7efa39c8627d17 2026-07-19 [GPU] Match memexport stream validation between draw_util and the shader
+856cbfcb6df5d957fccc06780f22a932995bbae0 2026-07-19 [Vulkan] Route memexport draws by shader, not by parsed stream ranges
+9f49683b5d020131fd732a9abc14328f0e751456 2026-07-19 [GPU] Add memexport_enable and memexport_await_fences
+a635ac64f5ca37c0b789e8b4166b53dc673b213f 2026-07-19 [GPU] Scaled resolve readback through downscale CS
+2aa8b9c2da2566c54c157effe5725e6e593c4be3 2026-07-19 [Memory] Fix mprotect invalidating the GPU's guest RAM import
+23b79f2a9740ad8aa796f1facb957546cb9878a1 2026-07-18 [XAM] Removed returning error in XamUserCreateAchievementEnumerator
+a9be0845ba86fe853ca130e1db518b101dcccfa1 2026-07-17 [GPU] Hoist shared_memory_zero_copy to top level cvar and add to D3D12
+8729e8aa60f0fb07a84e99f859e10b69cc509640 2026-07-17 [Metal] Clean up some leftover diagnostics
+9daef643e8fcbc67ecdcbf6b56088c70f003002d 2026-07-17 [VFS] Match device mount paths on component boundaries
+3bda3c8d3d534d2fcaa5b66b2b33b2ca1f65047f 2026-07-17 [Emulator] Mount XEX launches as a package volume
+16e1eb8e28a2935b75c36707b585a4f5e174ad43 2026-07-17 [GPU] Clarify 64bpp clear register order
+9792c2b95cbb3824cc31a9b9f355c48fd3d0e6e2 2026-07-17 [GPU] Rework readback_resolve to use host_buffer
+c6298dd0e3b2a2b5868067aca2159db55c49a49d 2026-07-16 [XAM] Implemented game exit behavior in XamLoaderTerminateTitle
+44e1a64f3510622c1ed4650b8563990d809d11b5 2026-07-16 [XAM] Extend UI delay on close. Added delay to headless after notification sent.
+c2650c6e588e6c582adb6eba9dd7251905591c37 2026-07-16 [Testing] Define full test paths, unify test results of vectors to unsigned type
+6f0515e98530c99cb0b64b83aef42e98fb1d7d94 2026-07-16 [Vulkan] Fix device lost with resolution scaling in 3D-as-2D textures
+0fa163a23e914632384dae32e4c3a8268cbcfa06 2026-07-16 [Memory] Implement CPU read watches
+7ff152a5a7f69390c1a625d3fdc57681d5ccb7e9 2026-07-15 [X64] MAX_V128/MIN_V128 Proper NaN handling.
+51322122a58f6953a7f08842d556e78370bf6f44 2026-07-15 [Xam/Info] - Implement XamFeatureEnabled
+2799234fbb1635e9d37007979a383807fcf1b56c 2026-07-15 [Xam/XMP] - Stub XMPGetNumSongsInTitlePlaylist
+b2e1e58cac428139ba26922aef35e8542b930cbb 2026-07-15 [GPU] Skip device-buffer upload for host-routed memexport streams
+e1fa5c77496838409c4cac2bc8ddfdfe7e09c97f 2026-07-15 [Vulkan] Invalidate non-coherent readback memory and fix buffer leak
+b9dac9d11c168e992ef38a1c2279f368e2d4eb87 2026-07-15 [Vulkan] Fix fast/some readback races via graphics-queue snapshot
+a84f4d1ffb40768c989684bdef566e5e3f8e3c42 2026-07-15 [D3D12] Add two-buffer memexport and remove the memexport readback path
+e3ada14620df9e1214f884ab6cc8bcea4142cdce 2026-07-15 [Vulkan] Declare external handle type on imported guest RAM buffer
+d649a01caf278cfde38b428d542643beb33a7e39 2026-07-15 [Vulkan] Close the occlusion query when switching render targets
+a9eaf85dc934fb1c609d97c9b63fc96705375c29 2026-07-15 [GPU] Clamp texture-upload copy to the host mip subresource
+e20f26963fbebd57209b8356ec6da0f27343e333 2026-07-14 [GPU] Initialize GPU registers to hardware reset defaults
+7c999ca76da7d3cdb8ea308aadab4d0c0e6a47e6 2026-07-14 [SPIRV] Fix FSI sample mask dominance violation on demote-to-helper GPUs
+70ad7c527e502193eb3f2a458987ca312ac4e9e3 2026-07-14 [Vulkan] Replace memexport readback with two-buffer routing
+3df64c0299ce81f94c7551457513ae02f984048b 2026-07-14 [SPIRV] Fix FSI 2x-as-4x sample mask reading host sample 2 instead of 3
+a281cc753055cb5c5c5063344873ae93e6e07324 2026-07-13 [Vulkan] Add zero-copy shared memory via VK_EXT_external_memory_host
+22ccb9a747b6c0bbc47abd24fa5786780f589082 2026-07-13 [Vulkan] Skip draws with surface_pitch==0 to match D3D12
+5796dd4e5b59c50e422f2f1fdb1013a1f5b1a0f2 2026-07-12 [SPIRV] Clamp out-of-bounds vertex fetch words to 0
+d158580873f67c08743eb24d215a23e131f01c4f 2026-07-11 [VFS] Back HDD content partition so raw save-size checks pass
+f145711a4a3595c3535a53fb760ae9d9db702942 2026-07-11 [Vulkan] Replace main-loop OpSwitch case fall-through with explicit jump
+22d91c86e81092bcaa361529b7a6e84a0fef2092 2026-07-10 [Kernel] Restored yield in XAudioGetVoiceCategoryVolumeChangeMask
+e9a5c8328756f92b31d908bffa6bb14211815f00 2026-07-10 [Vulkan] Use dedicated alpha blend factor map for alpha srcb/dest blend
+595638bdc7fd538bb76a86cfeed5791fbafedb06 2026-07-09 [App] Replace stale paths with new ones when a game is launched or added
+5256f1395816f4447b70363c746144c2c68b0de7 2026-07-09 [App] Update last launched disc to be the default for future launches
+7817528ffda8ca22bddadefb42ef97cafae01b37 2026-07-09 [UI] Only show newly available games when re-scanning directory
+eaa446a5bdb09726238c73ed91d5b82bdb57c089 2026-07-09 [Logging] Add current frame number to log lines
+6e5b8324f4101464de0f8c2334edb03cac8826c4 2026-07-08 [APU] Pace audio subsystem
+d804cf828abe36db97b533d514a5c99adbb35204 2026-07-08 [Xam/Locale] - Sketchy Implementation of XamGetLanguageTypefacePatch
+fa6301a0733af9fe0133e72aab00f84d1ed6daa2 2026-07-08 [D3D12] Fix float24 depth shader linkage
+fcbbe0d4eb27bb3b803585cc13d000672bfa68f2 2026-07-08 [GPU] Remove unused GuestSpirvShaderCache::BuildGeometryShaderSpirv
+742dcfe9120416c33a1a039ddf2a9795e03cd8cf 2026-07-08 [GPU] Dump built-in geometry shaders with --dump_shaders
+daf946c8cbc4f199fbef1181d1ad930f796e8854 2026-07-08 [D3D12] Fix ZPD ROV counter buffer barrier state under res scaling
+a345250e15e6581a844585a029ede7c316fe1070 2026-07-08 [D3D12] Skip scaled-resolve mip UAV flag for non-UAV formats
+6b24b9ea1037e11c1907242394eb093b49178652 2026-07-08 [D3D12] Name UAV/resolve buffers for debug-layer diagnostics
+2432190b61e00c56f55094c3f83b3cd2ec9f7202 2026-07-07 [D3D12] Ensure d3d12_debug drains log messages on every frame
+218b149035d6af60bc662ed5550571e443d41319 2026-07-07 [D3D12] Force strict IEEE float math in guest shaders to match DXC -Gis
+5052facadcf80de2c6885d934187826b3a0cc2b8 2026-07-07 [App] Ensure discord presence is only active while in game
+d119505289d540f61ae3d4ba6168f1145625277a 2026-07-06 [GPU] Texture integer scaling fetches; 8_8_8_8_GAMMA resolve
+052d5656c86cd2237e41f134827f6f1a9ddcc57b 2026-07-06 [GPU] Load guest-resolved mips from scaled resolve memory
+007fe6d887af05b10e92137d138218765cf90eff 2026-07-06 [D3D12] Pass input_clip_size to fix GS+user-clip-plane pipeline linkage
+1a003aa279c21c03d58e8c001aa6cfdc2c33bfe0 2026-07-06 [GPU] Clamp stacked-texture layer index for Inf/NaN coords
+2f5e57d15405b1b3bed091bc9a1295932db8017a 2026-07-05 [GPU] Fix tessellation vertex index endian
+c25dedb80d91daa615a065517598bdf2bd692f60 2026-07-05 [Vulkan] Disable anisotropy for non-linear-filterable texture formats
+573cce0fe2724cbdcab38a22153009275c26672e 2026-07-04 [Xam/Locale] - Implement XTLGetLanguageV2
+e45c25c4c9569ed0a0d5dd565e70d63cb27c6341 2026-07-04 [XAM] Added check for UserSetting max ID
+35c513bfa2f0652c8178be2aa43afb7ce4cc46de 2026-07-04 [XAM] Fixed UserData reading incorrect variant type
+2c94e46727b8595060cdd80fb36dd9da7a48f607 2026-07-03 [GPU] Reduce log spam from D3D12 pipeline
+c0e1129d739a66643dffeecd64cbf7d41377f22d 2026-07-04 [GPU] Honor force_bc_w_to_max: force sampler border color alpha to 1.0
+7db52eba8a7f296f39d8aed5892cbb5f2769ecd3 2026-07-04 [GPU] Apply per-axis gradient LOD bias in texture fetches
+4e2964f85a4bca323e2f1850d07f7e61c6c46975 2026-07-04 [D3D12] Fall back to point sampling for non-linear-filterable formats
+bf29ea28c06b919899333b85f3b524d0e424eb18 2026-07-04 [Vulkan] Use VK_EXT_custom_border_color for YCbCr texture border colors
+5a959788c5fc81e8eeed5829ec770678690817ec 2026-07-03 [GPU] Implement VS intepreter and add parity to vulkan/d3d12 async paths
+31b25f8aae7ed11ebdac41fa3ed2d3ee5de12e47 2026-07-02 [D3D12] Replace HLSL with SPIR-V->DXIL guest shader backend
+b151c6ede2e40d605a18992c602d767db3a859ef 2026-07-02 [GPU] Extract shared guest SPIR-V shader cache, FSI constants, GS
+ae85080743e49a5e149f4f67e958f9968754dfc8 2026-07-02 [Vulkan] Fix stacked-texture inter-layer lerp base in SampleTexture
+d1fe445a391c94430c45b735991c68e93658a742 2026-07-02 [Vulkan/FBO] Fix 2x MSAA alpha-to-coverage sample layout
+bd5d4a0390033013802f7696f3c09ec0c40bcdb2 2026-06-30 [CPU] Harden function compilation against concurrent-thread data races
+174214e68acb35ac22679d24862c3f56478dda42 2026-06-30 [GPU] Re-upload write-watch-blind shared memory pages each frame
+cb885e8a139fec1e656a77d47268807d3d336632 2026-06-29 [Vulkan] Run resolve readback copies on a dedicated transfer queue
+74deafde7a7cc43c1c20995f3ab330d89b6afa51 2026-06-29 [UI] Present the imgui overlay at the guest frame rate
+d2724c303313dcdac779971e4f3d2a15089d919b 2026-06-28 [Threading/Posix] Use deferred thread cancellation in title reset
+4974e7fb8e582fd1ba69827b3a15e77b05a0f656 2026-06-28 [Threading/Posix] Fix suspend/resume state-machine races
+9a9931f45b2ff52e84674616565cba0570b463e0 2026-06-28 [GPU] Value-convert 7e3->8_8_8_8 reuse only when the draw blends
+e08a7e82220e872c92f075a6213b82f8b47aff9f 2026-06-27 [GPU] Put 7e3<->8_8_8_8 EDRAM tile reuse behind a cvar (default off)
+6947a91e610f74303ffcaf8022862564ccde7cb4 2026-06-27 [GPU] Value-convert same-base 7e3<->8_8_8_8 EDRAM tile reuse
+4a23b2a95a6c2d0a3107e46cd9a32222cb9d025d 2026-06-27 [GPU] Remove ac6_ground_fix hack
+65e7f337e928029f4beeede406ace4eca5503456 2026-06-23 [App] Linkify About dialog and add Xenia license info
+e3d942807126a26d343b3d539f34b967c6a127ec 2026-06-23 [Vulkan/Metal] Fold user clip planes / tessellation into system buffer
+ebe6531905ca23f2fd70b9768243c9e71398cc83 2026-06-22 [D3D12/DXIL] Drop NonUniformResourceIndex in bindless resource indexing
+013fd6c401ffe50fbbcd961fe759cd5087d55452 2026-06-22 [Win32] Fix D3D12 Agility runtime opt-in via exports
+ed5232d3941b66afaf26503e97c85059a3144f07 2026-06-22 [Vulkan] Fetch vulkan-1.dll if missing and fail loudly on init failure
+7508568db0f6db32b26f5fe7ee904c4b90db128e 2026-06-22 [Win32] Download missing or outdated Visual C++ runtime
+5a04224d1dd32a07259050c7f6e49b5f0415ec2f 2026-06-20 [D3D12] Add opt-in GPU-based validation for debug
+d04d0c2a5bc0eeb6d2632a4cd4033fd1aaadf5cc 2026-06-20 [Win32] Runtime check and download necessary DLL's
+8380ba1e153d6d0b5f3d7cb5687df88490a86ae3 2026-06-19 [D3D12] Log device-removed reason and add DRED diagnostics
+1a7019b4ff271d001741d4e0ef6b0931470717c9 2026-06-19 [D3D12/DXC] Ensure to preserve precise float semantics
+b5275a6cb94bdd2770e0a662f541bccb8d9a4487 2026-06-18 [Linux] Activate in-process launches
+b49447d12e80a40e2c68c31fe6c18651509a3287 2026-06-17 [App] Resolve title IDs to titles on import of non-STFS games
+60f0381aead16955def9e5112c43b08613c070d7 2026-06-17 [App] Use alternative_ids from x360db for more complete compat matching
+5a7ca5188be973b4fbca995fd0d512d1685e599c 2026-06-17 [App] Bundle games.json from xenia-manager/x360db
+25620e98708062dcead1201d46f317b775aa30c0 2026-06-17 [Emulator] Stop command processor before guest thread teardown
+66137b3e353d50b60f3e77080fe81b5ed4d1e2bd 2026-06-17 [Vulkan] Fix validation errors / warnings
+e2da4c116112880e97b447d28477407f944e0036 2026-06-17 [Vulkan] Reuse texture/sampler descriptor sets across draws
+ecdd3d4fbbc824e735f08b90d70f319917601dbc 2026-06-17 [Vulkan] Bind shared memory persistently for texture loads and resolves
+7a2c2e2d8e4c8ee430209f9fc63b996fc1c434d4 2026-06-16 [D3D12] Bundle D3D12Core.dll to support SM 6.6
+113c76219f03e6c9d3e3300fb7377ab41de71985 2026-06-16 [D3D12] Use placeholder PS for async shader compilation
+02b8a34989c9f813853337643eaff76f33f3f757 2026-06-16 [GPU] Extract and unify texture-fetch computed-LOD logic across backends
+1ce7e767faf1b95aefe1a361bafb78d2fa17d527 2026-06-16 [D3D12/DXIL] Add dxil_debug cvar to gate shader compilation debug flags
+7051ceb9a49e6dd5364aacfdb334a3d948ff65f3 2026-06-16 [D3D12/DXIL] Remove the now broken DXBC fallback
+b3734893b79146b48b40f24ea3f87b20268703e3 2026-06-16 [Build] Remove dxbc related build rules
+195e115a3eb76c7c2ee1a424b66619c49bacb47b 2026-06-16 [D3D12/DXIL] emulate extended-range float16 in ROV color pack/unpack
+5864cd2b437325724573a902f60da9a7dfdc6b66 2026-06-16 [D3D12/DXIL] flush float32 denormals to zero
+2b103a3fa9de9769e3a3564ecdbd76e785de2165 2026-06-16 [D3D12/DXIL] Add ROV support
+17861968fb3ff86216c33d81357b37c44e332eab 2026-06-16 [D3D12] DXIL feature parity with DXBC part 2
+743d2f2ca3df5119899910922da2e7482f4d794a 2026-06-16 [D3D12/DXIL] Implement barycentric interpolation
+d81e8d70650f4fc1f6ccc490a0bf1bb36c60a688 2026-06-16 [D3D12/DXIL] Implement getBCF
+51bc1c74e3a3fe369bf4d9ed80ad0bb908126b0d 2026-06-16 [D3D12] DXIL feature parity with DXBC
+06a4466bd08bc5e4dd33286f68d661f9d6153f36 2026-06-16 [D3D12] Bring in DXIL fixes from Xenios
+a4681813e2b281a7ee9550cc4f9922967349a2ab 2026-06-16 [D3D12] Convert runtime shaders to DXIL
+0635b264f4abf957a49b5dbc8c086c5469883320 2026-06-16 [D3D12] Convert standalone system shaders to DXIL compiled with slang
+ad41554a539bb5a254cb1a31324f83a623a0fea0 2026-06-16 [Vulkan] Flush float16 NaN to zero inside PackFloat16x2ExtendedRange
+315a51d4c20a1602cbd708288cb4970a820f82d0 2026-06-16 [Vulkan] Clamp scalar maxas/maxasf address register to [0, 255]
+5dacb14a77b68ebf5c286d977422a4fc579cec13 2026-06-16 [Vulkan] Select back-face stencil ref/mask when culling only front faces
+c9de260f10eaf2b9272af5322d9a1c0773ee1a2b 2026-06-16 [Vulkan] Invalidate user clip plane constants on source registers change
+953c379639c4a6efaaa6d4027dd16d98a5580e20 2026-06-12 [Vulkan] Emulate extended-range float16 in render-target pack/unpack
+03df72df9324361f43c24d1fe412d73a45cd107f 2026-06-12 [Vulkan] Apply float controls to geometry shaders to match VS/PS
+3241ba91ef95b4a420d9406d9e297b166d0ffb5f 2026-06-12 [Vulkan] Implement vertex kill (oPts.z) in the SPIR-V translator
+c2fcac01773eaf72846eff8f0e1f2e6cae704a9b 2026-06-12 [Vulkan] Fix tessellation spacing and CP-indexed control point indices
+bc5a66147a8011e024956d1b926014080a60f355 2026-06-12 [Vulkan] Fix adaptive tesselation issues
+62c21ea8e0271201cc7e13ef71a6ea1230e0672f 2026-06-12 [A64] Store only in-range bytes for partial vector stores (STVL/STVR)
+6b46fb9f7ed4fc54f1921c728d20cd618f17942c 2026-06-12 [Vulkan] Skip unused gradient setup on the cube implicit-LOD fetch path
+03c37a76b39a9ddb2f125a67a3c16ba70f19f847 2026-06-11 [Vulkan] Sample auto-LOD cube fetches with implicit LOD + bias
+3d8d3149d59155e28658432c8543c6f9ded0fe23 2026-06-11 [Vulkan] Implement gamma_render_target_as_unorm16
+eb30865c9177c5603b892f68f785172bcb00bbb8 2026-06-11 [Vulkan] Enable device features required by Float16/Int16 capabilities
+9354026847a31cccca96bff5a7b2f791e401bdf4 2026-06-11 [GPU] Fix mantissa placement in CPU-side Float7e3To32
+3ab51a5ff2df42d55b100710966ca1387b1a598a 2026-06-11 [App] Return to game list when game request dashboard exit
+f3a50c8bea0acdfea90a9af348e65d62db9db18c 2026-06-08 [UI] Update strings/translations for quick settings
+a11cc81d01d309ba4c4186658e2f31c40e0e2f1d 2026-06-08 [UI] Implement mute/unmute on the volume icon
+1f0e7b1c0e45e3dc469faddf8a74d827ac790204 2026-06-07 [UI] Make sure alt-fast is available as option for occlusion_query
+07021f019cf55105bc26c0474e0b0835808353e2 2026-06-03 [App] Allow invalid cvar value to fall back to auto-selection
+afa25f8a01c40c4585b5ba143f271c91768af6f7 2026-06-02 [Kernel] Run guest fibers across multiple host threads
+6f2e8a5897c18e4db08f49c74875043acaeda8b1 2026-06-02 [Kernel] Round out guest fiber scheduler: re-poll, crash halt, teardown
+9079e0bbfe43c7529c94aebe809bbd8f07b96e22 2026-06-02 [Kernel] Add cooperative poll-yield waits for guest fibers
+46dca60a53f765849317a66de0d5b57ac8833ea4 2026-06-02 [Kernel] Add cooperative guest-thread fiber scheduler
+ff752532735ba74d5d0ab41668f231d93c916fea 2026-06-02 [3PP/Base] Add boost_context submodule and initial fibers test
+a259fb45c38f3115a60bfc22340d4899c5cbf943 2026-06-02 [HID/SDL] Use SDL's bulk loader for controller mappings
+fbbb46a9754d6d1f21bf81b599537a8d7b7a579a 2026-06-02 [Kernel] Don't assert in XObject::Wait from a non-guest thread
+7e2412a79f86759623d2661ea48ec6310aecc657 2026-06-02 [VFS] Fix STFS language slot resolution
+c02060f228762d488c518f57a4e28468d1c9dadf 2026-06-01 [GPU] Fix garbled readback resolve downscale
+1b5326393e10316610c3b5a9fbbd42a37f466bfc 2026-06-01 [GPU] Unify hlsl/glsl resolve downscale shader into shared xesl
+d29f7530bdf088ee52459d98783dbd3b27814558 2026-06-01 [macOS/UI] Add ability to launch with Rosetta2 on Apple Silicon
+0018f5723778784a1c344f08b690c113245da975 2026-05-31 [CI/Linux] Drop linux build to 22.04 to support older glibc versions
+d5956d7e350f61eb1af4ad0c1cfb481b1abfbab2 2026-05-31 cpu/a64: repair stackpoint longjmp synchronization
+95b75cf03894c42d57af66b4abc97dd16bdda735 2026-05-31 [Kernel] Mirror dispatcher and thread state through to guest memory
+b9888085695017fc35da85abeeac0fa76252caaf 2026-05-29 [GPU] Host RT polygon offset for Z-fighting decals
+7d5dceabd544e70ce16fec621186478ef82e1371 2026-05-28 [App] Stop and join gamepad hotkeys listener in ~EmulatorWindow
+1cebee7842a88480ff58f553cdb6c29687db92df 2026-05-28 [APU] Wait for AudioMediaPlayer worker to exit before teardown
+22133d5c7d593a26e56c8882b1b58459b9cdc4c6 2026-05-27 [APU/Linux] Remove ALSA backend
+8c6fb7ccc3ae6e46ebf01dd830b965c19b306451 2026-05-27 [Vulkan] Fix dynamic rendering on FSI render target path
+455f3a8b5f06bc488f7bf7a0138a539539b02d5e 2026-05-27 [APU] Match XAudio2 loudness in SDL/ALSA stereo downmix
+e6df550547e45a02a6d2d38d371477e58447840d 2026-05-27 [Base] Refactor file-slurp callsites to ReadAllBytes/ReadAllText helpers
+85243a643b33d2d0e195431358e7d22f4c09137d 2026-05-27 [UI] Refactor filesystem code out of the patcher dialog
+cdcbfa6358c73a3ff21184ea13a3ed37d1cf74ec 2026-05-27 [UI] Add "loading titles" interstitial to the game list
+a31a1b9222f85bcbb73eb59737e97bb42e216a8e 2026-05-27 [UI] Replace toolbar volume button with slider
+394b11003f56f5529e26b989f09476b1d2036b95 2026-05-27 [UI] Run LaunchPath on a worker thread to keep UI responsive during load
+00cea1ee6f827b4acd1edea8783b669ad15d7cb3 2026-05-27 [UI] Disable compatibility menu when no compat data available
+a34897f0a3a65a12d39f62cf4ef870f85fd04983 2026-05-27 [APU] Upgrade to SDL3
+d2b5419d79dcc0b5d4fee78f6dd979819375d5b5 2026-05-27 [App] Ensure child process inherits parent's cli overrides
+e88c641962011da3abc5cbc86282304cd3d94d93 2026-05-27 [3PP] Remove tabulate, it causes bad locale related side-effects
+95171aea9dda109342bce685b77ee0551b7a3351 2026-05-26 [HID/SDL] Recover XInput SubType from controller name
+c9716fbdca353596950186efdbda6dc131bed7c7 2026-05-25 [App/HID] Ensure child process inherits controller bindings on relaunch
+e24294f450fb334a59f20bf0f8671f45e9108dcb 2026-05-25 [UI/APU] Persist master volume changes made in the UI to the config
+d4deca8de4f4d31a0faf88e275429273afedd5b1 2026-05-25 [UI] Fix sorting by last played by default
+95aa3e47c385451a23338493ea363c974ef8ca35 2026-05-25 [UI] Remove custom win32 wxApp event-loop
+db6efc74c9bb511a67f9e720771cdf4584528982 2026-05-25 [HID] Move SDL init/pump off UI thread onto a dedicated worker thread
+e2b3c3847340d5f33d9a56a24d096951ed46d065 2026-05-25 [UI/HID] Add controller/slot assignment support
+7eb0c7671a3549c82f00426143bedf934180c645 2026-05-25 [A64] Fix SHORT_4 unpack lane order
+45d770a7f3cbfdb136447871968d46ed20e153ae 2026-05-23 [HID/Win32] Merge winkey into the cross-platform keyboard driver
+1f4bb5008290c6a93191ac67daab83e9f4e0ca07 2026-05-23 [SDL] Translate SDL_JoystickType to XInput sub_type explicitly
+5d4a90b3e97bf194946f7db4310f8db451cd8d5b 2026-05-23 [App/Win32] Remove XInput
+882cd7e9171a713a011f6ac0dd9c2bf6979eb4f7 2026-05-23 [App] Implement game library storage separate from dash GPD
+71dcd5004050e7d1f26c0297e7922e533560dac0 2026-05-21 [UI] Add volume controls
+6e9c49739739951aa67f091aa053c9554f2e2f61 2026-05-21 [UI] Wire per-game frame rate limit into the performance dialog
+50a630c035b15e68860cc63d26019b71a8461ee4 2026-05-21 [App] Fix leaking cvar overrides to the global config
+0a8208052df5095efcd5a798c1eadbca868ecba9 2026-05-21 [SDL] Bake the latest gamecontrollerdb.txt into the exe
+a71dc5cbbd53efd9406d5d4562a2995a5f4f01b0 2026-05-21 [UI] Clean up vestigial zarchive code that's no longer reachable
+93ba4749da6c35a4cc94e835d8809c60b8a49143 2026-05-21 [UI] Remove xmp player
+fb6e066918e88ce56f45d759f2c0b5f97c293a9c 2026-05-21 [Metal] Move metal cvars out of gpu_flags into appropriate TUs
+c2f7fc48cb41d11e25e40da2ae7458478ee1b3fd 2026-05-20 [x64] Fix latent JIT data-tracing codegen bugs
+b975095fde82050a8cde6ce20d0ddc908f90728e 2026-05-20 [CPU] Add JIT execution tracing (ITrace/DTrace/FTrace)
+ba490f79e02c632559c25158e0be5bbe149e36f9 2026-05-20 [Net] Implement NetDll_WSAEventSelect via asio async_wait
+57d36c6e67a1aa1286d17b00a29c32e3ce7ce008 2026-05-19 [Testing/Linux] Speed up ppc-tests on Linux
+8f678692db3d0b22ca172b75fb4b1a46cfc9f410 2026-05-19 [Testing/macOS] Speed up ppc-tests on macOS
+f68da4a929ac04abec505435308948d836a3965f 2026-05-19 [Testing/Build] Fix tests compiling
+96effa1eb3e0680b58dc2404e4008dcc72edd294 2026-05-19 [Debug] Add gpu trace button the imgui debug menu
+7a41c97d6ac9fce213c7ce7937c58db39d246793 2026-05-19 [GPU] Compute correct trace-writer guest addresses
+59630a63680c3050aad426086aef61b1721901c9 2026-05-19 [Xbokkrnl] Null-check heap and accept devkit/zero-size in NtFree/Protect
+f76efa33e1092fdf21c6696f6442b6baa1087ce7 2026-05-19 [x64/macOS] Register per-FDE for Apple libunwind
+c424001d80878d431c9069d86bfc23032cd6f094 2026-05-19 [SPIR-V] Keep rectangle loop merge before branch
+3ec3e8a05eb9dc69588c98c27c983ca4a856e3c3 2026-05-19 [SPIR-V/MoltenVK] Omit NoContraction for SPIRV-Cross MSL
+86ba193bf0c449888434ef341b02048857e038d7 2026-05-19 [Vulkan/MoltenVK] Disable barycentric shader path
+9dff3f2c6c83d9e212671cd630465618919564b9 2026-05-19 [Vulkan/MoltenVK] Populate vertex_index_count for bounds-safe loads
+680e2c078b0c29e3e6382223696edfebb2e13e61 2026-05-19 [Vulkan/MoltenVK] Allow rectangle VS expansion draws
+168f9f8528f976d386aa7cb406c75b0ead3cc9cb 2026-05-19 [macOS] Statically link MoltenVK
+59629d7a6c9cd8c271915667494f8ea1be1351f0 2026-05-19 [Vulkan] Fail setup cleanly without provider
+6f46641f9054b95b6d5b3b68292a3440b2aa81ed 2026-05-19 [Build/Apple] Build Vulkan backend on macOS
+c9934cfeed998127fd1b8ec952b9018f2bc4b711 2026-05-19 [SPIR-V] Enable Vulkan feature probing on macOS
+ff096b01b224f2627d755bc2b5271aef2b719f69 2026-05-19 [Vulkan/MoltenVK] Add macOS Metal surface support
+1d15a211ea1d4bf9d29edf1fe06f017a5e1a3207 2026-05-19 [UI/Linux] Fix gamelist alt-row colors and column sizing on GTK
+302034249048dc9d664b12b6a3560a6d95933803 2026-05-17 [UI] Show number of currently available games in the search bar
+4b1b62f733329ecd4f9543262c7b08589eb01572 2026-05-17 [App/UI] Implement startup profile creation and game import flow
+6101f13ec1971199ed5bf6d9f3d43ff6eda84dae 2026-05-16 [macOS] bring window to front and focus on game search
+b0a1ea5f8ba2de34240f5fb3e8e8da352348b7bc 2026-05-16 [APU] Default-init ClientSlot instead of memset over std::mutex
+3811fbf902dcd1de2ba49e3bac96feb5115ee9e4 2026-05-16 [App] Fix dangling argv pointers in posix relaunch
+250fb40dcb80dcc036e589809e0d1ba8a27368f9 2026-05-16 [XSocket] Map asio error codes to Winsock WSAE*
+63dbbf094db7db2298646162f8129655074e3e85 2026-05-16 [Vulkan] drop kEarlyHint in GetCurrentPixelShaderModification
+7be6ecf54aa286807456084673d2b77b885a42f8 2026-05-16 [Vulkan/Debug] keep a 16-slot rolling per-submission summary
+99199704610eb0343f79cb808fa009847ccc2170 2026-05-16 [Vulkan] Enhance device-loss logs with submission context
+bf2f984f71bd75846b7376eccd60f362f9eb06bc 2026-05-16 [Vulkan] Wire VK_EXT_device_fault to log driver fault description
+29b03f9ea372f97563c38f43a741a771b1d6acf3 2026-05-16 [Vulkan] barrier readback buffer writes to avoid torn data on slot reuse
+631d7d2b58ab0a06f7172bb353fdf73349a3974d 2026-05-16 [Vulkan] Drop stale FenceAcquisition operator==
+6f410ebfc9004c69c8fe88ed5f10a1df393c2ca5 2026-05-16 [Vulkan] Augment vulkan_validation cvar to support multiple levels
+d1a4cf163eba06271778cfcbca01cb8af0fa88f6 2026-05-16 [Vulkan] Emit dynamic-rendering attachment slots to match declared count
+3087c4c5dcefc243487b11ed64fbc29210eae030 2026-05-16 [Vulkan] Barrier consecutive uploads to the same image
+4839365b2c1467f9b6ce774039cfe802f5ebc4f1 2026-05-16 [Base] use quick_exit on FatalError to skip static destructors
+731b19d864a9b9e5cff09a8e850cfd36cb24b303 2026-05-15 [Vulkan] Add depth_float24_convert_in_pixel_shader support
+5c82c5cefc27b8bb40a32b0e49bcb160a2d63307 2026-05-15 [App] Remove duplicate Profiler::Dump() call
+944e395c3b0d34c8a055afe5d6384ea6784493b9 2026-05-14 [GPU] Refactor ZPD; add FSI counter
+cb5ad9a11bce192ad2df4bf9def695bb03e8db35 2026-05-14 [GPU] FSI_DepthStencilTest consumes shader depth
+9a085fdbc132b8966fb617d781e94d06bd5eeaf1 2026-05-14 [APU] Stop AudioMediaPlayer worker before destroying fences
+ed4db6ea54fe38f728c02156f6965aec262589c4 2026-05-13 [UI] Update confirmation string on reset to default settings button
+de260a70eca16749b573e14aec97f4d075e95312 2026-05-13 [App] Ensure ui_locale from the config is respected on startup
+8aa50e0e07ed659b26ea06e72c4bc21a07ad9bbb 2026-05-13 [APU] Per-client callback mutex
+c26d937636dde58691e6b1a1d0edb227f6ea82eb 2026-05-13 [APU] Tick client semaphore on submit-after-unregister to keep worker alive
+9f8c68b9f9fed89dfbe537c1a768e44c52eae752 2026-05-13 [Linux] Log uncaught exceptions escaping host thread start routine
+3341c7aa837d189213cc12ff78dbe7c241260c28 2026-05-13 [Kernel/XObject] Pad pre-header so guest object bodies are 32-byte aligned
+adeacfa0ed13099501e373df9d8be46dc4a3f1c8 2026-05-12 [CPU/A64] Mirror x64 MOVBE handling for LDR + REV in MMIO decode
+a0ca35628c5a3d9b5a198f8be40964055457487d 2026-05-12 [CPU/macOS] Skip signal-handler QueryProtect race-check
+88310952738bb0410eeb685ca7ab58f75c5c6fb7 2026-05-12 [Base/POSIX] Restore the correct original handler for unhandled SIGBUS
+353a7a00a76855b11c1f2d0979869033d7b3093c 2026-05-12 [Kernel] Reduce xtimer logspam to XELOGD
+0a18453bcc617e72eb84ef549f96746e2d9cda0d 2026-05-12 [A64] Fix LoadV128Const crash on encodable v128 splat constants
+b7283911e66c1177071ca02cf9d924473ee7edd4 2026-05-12 [macOS] Recover arm64 fault direction for libc memcpy/memset/atomics
+0672a6872b84195f86b9c7bc5a1185560bc04675 2026-05-12 [Kernel/POSIX] Queue timer APCs without guest TLS
+ace49597bdb21159e2532606bc57911682da61f2 2026-05-12 [Kernel/POSIX] Defer XThread release to host exit cleanup
+ad382c44a38d560c395919af6976e5897cd150f1 2026-05-12 [UI/ImGui] Add runtime debug settings
+ba18bc543da231e702a8a60e1662c73b7661c779 2026-05-12 [UI] Ensure disc edit dialog shows path in addition to label
+0b77309f4f306eb5fd2c081ded63d2cfc9b1c47e 2026-05-12 [App] Embed i18n locales in the exe rather than bundle alongside
+80b4ddac27131f15a2d28af79ef89c62b15a22a2 2026-05-11 [UI/i18n] Fix emdashes in some English source strings
+e824ae6e37241aadea4547f8ffbee66d8aa99a52 2026-05-11 [UI] Add game import dialog
+d0362fbcf4ec2178740c1882030aa5fe4fdaf850 2026-05-11 [UI] Improve DPI scaling support for the game list
+204a704cd1e4dbaf9292d711c995b887ec6b7218 2026-05-10 [UI] Extend tooltip timeout in the Settings to 30sec
+53be01dba6da0e20c72622fab56d1f89bbaf2101 2026-05-10 [App] Add separate Return to Game List and Exit Xenia options
+12d9d030bd3ca4e3697cb893ae9c932bf4930b96 2026-05-10 [macOS] Strip macos-26 provenance/macl xattrs
+e1378d6ecdaa73230b2ca05c047fbb721f238ed7 2026-05-10 [macOS] Sign the .app bundle after locale files are staged
+d6510d14bcf278497e91b77fd05e7d8413348a94 2026-05-09 [UI] Add i18 support and initial translations for 33 locales
+5fd14bc4d42b3a749be0e733c02ae2a3c64b6fd4 2026-05-09 [UI] Keep macOS from injecting "show toolbar" into the View menu
+682eb0f6edac6fa7e7839050bcd05701ed0f8328 2026-05-08 [CPU/x64/macOS] Force AVX2/FMA/BMI feature flags for Rosetta 2
+92ee001f51264db369c45bf2a6695b2b052f958c 2026-05-08 [App/macOS] Build xenia-app as a signed Xenia-edge.app bundle
+2303d1149a9e9cb3145f5ae0b14a763255559e6c 2026-05-08 [UI/win32] Add in_process_title_launch support to quick settings
+1227111996963ab3358930c1ffda3a58bf245617 2026-05-08 [App] Allow quick settings to be accessed from Configuration menu
+534cf8593be0a71a21a9ee9489b866fdc6521cca 2026-05-08 [App/UI] Add View/Toolbar support to show/hide icon toolbar
+08b1d460f14a411886e6498c6c49bc6b9309b676 2026-05-08 [App] Drain UI loop instead of std::exit when stopping game
+361273c365369b49b1d803614898e604a60a5a79 2026-05-08 [UI] Fix gamelist layout spilling over on macOS
+ca38d7cc13293caa1973af572a6d5eed6e38efd8 2026-05-08 [UI] Fix fullscreen on macOS
+7f0957ffaa6cbbda1446d4486dab3ed243a3a1ad 2026-05-08 [Build] Add --enable-profiler build flag / dump profile.html on shutdown
+7d5f68583af2fe8904f26fe3b44e46327b140ae4 2026-05-08 [UI] Drop CS_OWNDC class style on render panel
+435bea911aef5d4b5671987af5f8849b3471ba67 2026-05-08 [Vulkan] Add detailed logging for swapchain creation failures
+b23e0abe47616b5dc0bca98f65201354d1ef3543 2026-05-08 [UI] Scale game list columns and rows with system font size
+0700db48466043f74459693d0f7caaf10f0ccfe7 2026-05-08 [App] Show render pane before creating swap chain in RunTitle
+925cab8f9aa3617b4e8fb2fdab94b8af607bd387 2026-05-07 [App] Ensure fullscreen is only respected for game surface not game list
+6ca1bfaa983c31b3d4c639b1207de8f8b753423b 2026-05-07 [App] Skip redundant presenter setup if already wired to same presenter
+1d17b8bd38586d5b9d33c22c511cee7b675ffaee 2026-05-07 [App] Create window surface synchronously in direct-launch path
+719be214164efa7240b4e4d07e130919bd52613c 2026-05-07 [APP/UI] Convert Qt to wxWidgets based native UI
+61aec53823526fe98e332bc5e7e607cc7e489ed5 2026-05-06 [Vulkan] Fix regression due to df16917f
+df16917f9154f4e2cf8b160ef70776a427dcba4a 2026-05-06 [Vulkan] Fix draw_resolution_scaled_texture_offsets cancelling itself out
+9d93773228cd659e095a03eb8acf1de996dd85e4 2026-05-06 [GPU] Synthesize D1MODE_V_COUNTER from measured vblank cadence
+ba5fd0f4149a99e8665e989d53bbd2c6b9b7bc91 2026-05-05 [GPU/macOS] Tighten vblank and present pacing with mach_wait_until
+5fd92b5bde87afeb737e3c21d1ee6851108679c7 2026-05-05 [Metal] Add metal_allow_tearing cvar to disable CAMetalLayer vsync
+e23ff447560160fadbed8739067edc40b0f8af85 2026-05-05 [A64] Fix DWARF unwind info on Apple libunwind and d8-d15 encoding
+e51b4ee0d21c2c4e3c52f3cf75e4d7e5ab07fdff 2026-05-05 [Memory] Narrow macOS host-commit skip to parent physical heap
+f955cca9ac6e2a3b0a277ac3313523ce1048aa4e 2026-05-04 [Build/Linux] Fix building on clang21
+3a07a2a8ce9a9a004285b76ad367ddf9e1d6df8b 2026-04-30 [Build] Don't include xenia-xex-metadata in the regular build
+d659fcd8b7470279707398a59d8d39f9aafdb3cf 2026-04-27 [HID] Add a generic keyboard input driver for non-Windows builds
+89b81da8df7a67cf26af6954c1a043f5a5db7adf 2026-04-27 [A64] Lift code-size and cond-branch range limits in JIT emitter
+d8a0f832a8e1f9aa043c4d84d8e8ed3cfaec50f0 2026-04-27 [App] Refactor title bar display and add cpu backend
+d7421f8b0a31638a3335b9335bee508528b4621e 2026-04-27 [Build] Move Qt rcc output to build tree and drop xb clean
+be6e6b0fddc5dc10cd1608c8de243509c014fa48 2026-04-26 [Build] Generate shader bytecode into build/ with per-file outputs
+7fcb7666e029883960967830bbb66f85eedf2009 2026-04-26 [GPU] Invalidate only used outdated texture bindings per draw
+6403370b143ed882624f16f72786b881a8311d43 2026-04-26 [GPU] Handle tessellated triangle strip and fan draws
+5290a3d5538d0121fcf0951a1a50d079ab2f9796 2026-04-26 [Metal] Add SPIRV-Cross based GPU backend
+ac5d6a4c5c237cf185e784f810efd59e0996650d 2026-04-26 [Metal] Port resource management and primitive processor
+df0bcfc97792131532ff0510562386eb01621afb 2026-04-26 [Metal] Port ui/metal skeleton
+9afa3254e311d3accf55ac7544d3cfe8738ecaea 2026-04-24 [Build] Redirect host tools to build/host_tools
+ddd89c293f45c36b85ae6dfbcf622a92ea2b842a 2026-04-22 [Metal] Wire up shader build pipeline via SPIRV-Cross
+3d02eae07df5816dd70e4ae3878beff6e82ada8c 2026-04-22 [Metal] Remove stale Metal backend
+1f8d873459f6e5fcd0549c2b12f22d2e4ffcc4bd 2026-04-22 [PPC/Posix] Apply 0x1000 shift in PPCContext::TranslateVirtual
+9f0ef3123f9aed6840e49d4930951615aebf3d6d 2026-04-22 [CPU/A64] Port helper-based RESERVED_LOAD/STORE
+ba05ea73d66ef3d38e13c85550002db6eabbeeea 2026-04-22 [A64] Resolve longjmp targets to existing JIT'd body
+c9a6327ad136f82920df547afc9e552424b863ac 2026-04-21 [GPU] Optional saturation adjustment for higher ZPD sample counts
+300f420f01aeeb00a2683f0de5dc8b766737b9e5 2026-04-21 [x64/macOS] Use MAP_JIT for code cache and skip fast indirection
+ff859a39b59105e542edb214231b17a0f96a937b 2026-04-21 [CPU/x64/macOS] Enable sub-2GB allocations for PlaceConstData
+2c90b75020d21e003731f920f3f1d8fe944527ef 2026-04-21 [CPU/x64] Preserve RSI/RDI on macOS
+1e14a7742b2f261a2353b9b66fc05d61dc41456d 2026-04-21 [CPU] Avoid static init order in x64 sequences
+4e4fcae966ae34ade25b32199a7c101e7abbc98b 2026-04-21 [CPU] Gate AVX non-fatal warning to macOS
+bd8f2495fb424b734e27c76de6c42356c1ae857b 2026-04-21 [CPU/x64] Make AVX absence non-fatal on macOS
+74ebb9e4f6ca28fcc88e5c4198f8e64a66c16e49 2026-04-21 [APU] Skip _load_be_u32 fast path on macOS clang
+76bc2511a55d7ce7410547298e905c67dbd86684 2026-04-21 [Base/macOS] Add x86_64 mcontext access to posix exception handler
+15d2346aa8f2886093b6eac74bc362f484bd42a7 2026-04-20 [Memory] Check physical-address alignment in PhysicalHeap alloc paths
+26ff54511db0dc1b55e27a22f54a54cda449e7d0 2026-04-20 [Memory/Posix] Fail MapFileView on address mismatch and fix tests
+1fff1ff44d67ca3c1b30f734bf0f5e78aa50333e 2026-04-20 [Base] Re-unify threading_linux/mac into threading_posix
+91c1c881091330c0d6122ee4b2183921b0698100 2026-04-20 [CPU] Make HIR dump robust on read-only working directories
+0142894016f89b5186292e388997fd7c3e10263b 2026-04-20 [Base/macOS] Per-instance condvar/mutex + poll-based WaitMultiple
+3c002fde5c089f0f5526211e35a4624c68224408 2026-04-20 [macOS] JIT code cache via single MAP_JIT region with W^X toggling
+3dcc713199626640c7c09b3420a148da883f1677 2026-04-20 [Base/POSIX] Catch SIGBUS as access violation alongside SIGSEGV
+aed6b765c8c43050e42145b40edf94d12caa129d 2026-04-20 [Base/macOS] Align ucontext_t copy in arm64 signal handler
+15b2689a003d0ddad469a366e1a8f842b9ef87a0 2026-04-20 [macOS] Remove vulkan from gpu selector
+2f6f46b5fd105ac50b208bd9912c9ab2a285ad33 2026-04-20 [Base/Posix] Avoid infinite signal loop on SIGSEGV/SIGILL
+5c6a28ccb78496736115f8db027c232d63f61faf 2026-04-20 [Emulator] Check if /dev/shm is mounted with noexec on linux
+9725d921a37cd2656f677d268a5f8351829e0691 2026-04-19 [Build/macOS] Clean up build warnings
+0e87dd3c714ecd01e791da015a79e3d523a2ffe9 2026-04-19 [A64/x64] Relocatable code cache with runtime fast/encoded dispatch
+559007a741460dab5b4a452bf2aa3f3b400635f3 2026-04-18 [Build] Fix cross-compile Qt issues
+6970da7b7846c3838084b214116e3e4065fcf373 2026-04-18 [A64] Relocatable code cache and indirection table
+6398071f677566ce732748c14bcd402ffe8f611c 2026-04-18 [Build] Final missing pieces for macOS compilation
+3a1ca2dedd0d46522cf0dd00a84515dc256f2586 2026-04-18 [A64] Add runtime fallback for dynamic code cache allocation
+7d3fb87c1879e912abc196dc876d90855cf4557c 2026-04-18 [A64/macOS] Toggle W^X protection for guest trampoline writes
+993a676750b7341f925c4d91ab6b7944c9278c1f 2026-04-18 [Memory/macOS] Add macOS memory mapping and protection support
+55bcfbeac72c170cc1507e1295e8d9d92961c42f 2026-04-18 [Base/macOS] Add macOS threading implementation
+16fc37fed3848f6ea21dfa207868a1ff74b8a60d 2026-04-18 [GPU] Ensure duration_scalar is defined on MacOS
+9661acb77d94ccfcf56331474226f89db53038d1 2026-04-18 [Build/macOS] Add macOS platform support
+e9f481ef72f8eddaaad5b8776063b3246a2a557f 2026-04-18 [UI] Increase tooltip timeout to 60 seconds
+f1dfb08ddaadd15f3152ea1983a151fc7ec5e205 2026-04-16 [Vulkan] Remove runtime dependency on SPIRV-Tools
+f4e36a673bb1bca62c4904041cb70ce2f8ce5f84 2026-04-15 Revert "Merge remote-tracking branch 'wmarti/a64-backend' into edge"
+7efd56131c11548b27d60c2a1fa89c84c82b0422 2026-04-15 Revert "Merge pull request #88 from wmarti/pr-arm64-backend"
+a12fdee02f8b682d7c8e6fa2355eb7ee68e3b589 2026-04-15 [Build] Convert to cmake
+1e27f0b83b6a451b01ac726df243c20f5a8982d8 2026-04-14 [D3D12] Fix bindful shared-memory descriptor layout
+5c2eeb91629894fd511fccb6934e743f9f62d08c 2026-04-13 [GPU/D3D12] Implement ZPD queries for ROV path
+aa877ad157149ca93a800e0a1ca29171989bb1b4 2026-04-08 [Memory] Add free block tracker to BaseHeap for O(log n) allocation
+9115b0d93a9727ff1354da9e62924823e0924f32 2026-04-08 [Memory] Remove unnecessary 256MB carve-out from v00000000 virtual heap
+83630786225323effcc499b107b6389a4808605e 2026-04-06 [XMA] Fix stall detection false positive in Work loop
+95efc4cf6776d2bd3c9df1a1a6c048e6e601a1e3 2026-04-06 [GPU/ZPD] Default occlusion_query to fast
+904ac7c31ec921167981f70d1e2b4055c394c284 2026-04-06 [GPU/ZPD] Move resolve lifecycle from base CommandProcessor into backends
+0fdb5ff82433bc2a7965cb17d12ab5841510321e 2026-04-06 [GPU/ZPD] Inline XenosReportController into CommandProcessor
+e8065ab248f935a4f3a19103e4f2b0e086408924 2026-04-06 [GPU/ZPD] Move begin_record ownership to XenosReportController
+2d07d228ee6328799cdee20b972849c7443116f2 2026-04-06 [GPU] ZPD occlusion query fixes and performance improvements
+f4b124b37905d318783243f2794084e288dcf8ea 2026-04-06 [App/UI] Add support for toml optimized settings
+397fc9284178b7626e77642c6ea24bfa69a620a8 2026-04-05 [GPU] Rewrite hardware occlusion (ZPD) implementation
+7acf88d59f995e14f03094ae36f998a30aea4029 2026-03-21 [Memory] Handle host page sizes larger than 4KB in heap operations
+9593224783828e2aab197b0403c33edd1575214c 2026-03-15 [GPU/WGF] Fix resolve_fast_32bpp_4xmsaa sample addressing
+5f74680615d30ebeecb7c2209fce3d253e0b0c95 2026-03-13 [Kernel/XMP] Add title-specific file I/O hooks for XMP volume sync
+ff9b961b0d5eae38ff16a2e6c978f0ce26b77cd3 2026-03-12 [Memory] Fix watch race condition causing crashes on Linux
+60cb1547b93e83dafc5af884e4f746940212a111 2026-03-12 Revert "place locals on backend pages"
+b843198880e73ee27d59b36d5a650681c3ee79ec 2026-03-10 [CPU/XThread] Add DWARF .eh_frame unwind info for JIT code on Linux
+db7eac3d012c4dce7f08abc0718ae53e5b10e946 2026-03-10 [Emulator] Add access violation details to crash dump messages
+3dbd58b64071a6d16904bf25f2423f92e98ae0c5 2026-03-10 [CPU] Skip QueryProtect in SIGSEGV handler on Linux
+2b06bce7a65d8813c78e0d6070dae566986ee304 2026-03-10 [Thread/Posix] Fix thread suspend deadlock
+42ced3ebb1b83ec4b26945766cba15056fcdee7c 2026-03-10 [Kernel] Replace BCrypt RSA with portable bignum implementation
+32eee83f9e58b72a26141e39a40906a698360107 2026-03-10 [GPU] Vulkan: Fixed FSI render target path
+48889c3d2e991e6bf341844e1abbd73bebf8bb81 2026-03-10 [Kernel] Fix data race on XFile position
+2beb0bfe8da0ae2dd553e802f3822c8b4d682c11 2026-03-08 [XMP] Fixed error caused by incorrect audio allocation for FFMPEG
+2d37755850175f66b97902fdf4a49fbcd0facb52 2026-03-08 [XMA] Fixed min output space gating to match Consume() write granularity
+a900199032b0cfcc9683a48503414ffb5ed1dd39 2026-03-08 [XboxKrnl/Audio] Corrected XMASetLoopData's pointer type.
+e62ab5811427f1087292da7e424a8d030e63d8ee 2026-03-05 [GPU] Use UNorm not signed EDRAM encoding in k_16_16 resolve packing.
+707052a2ffe76649745319abbeec867a4bfeb737 2026-03-03 [Vulkan] Implement extended range for f32 to f16 conversion in memexport
+7cb61949e1d2480dca72e6a8d31e601dd79e0d57 2026-03-03 [D3D12] Implement extended range for f32 to f16 conversion in memexport (#899)
+2a87dae92485a8f6df61f2215f0639bf6a067a86 2026-03-03 [GPU] Fix k_16_16 and k_16_16_16_16 EDRAM packing clamping
+c5fa2f0ae7b4e86deb7c524283eb2630ce7a6902 2026-03-02 [D3D12] Fix cross-format EDRAM data written to gamma_unorm16 render targets
+f7b9a876a1211703fb0337982e8363af83a8a584 2026-03-01 [Net] Reject duplicate active binds via object table query
+2ea9004392007553e668f88c5a596eac3be86394 2026-03-01 [D3D12] Fix device lost with resolution scaling in 3D-as-2D textures
+83a80bc635bed5e2de8d34582a7afed1d97095ff 2026-02-27 [Net] Fix TCP listen/accept by using acceptor from socket creation
+ba9526a580b0d9cfa8adcf4bf81538dad897cd66 2026-02-26 [D3D12] Pre-create 3D-as-2D textures before draw setup
+49984e97d1bc4e69adf59e998dd846ad55115186 2026-02-26 [D3D12] Fix 3D-to-2D texture crash under Wine/VKD3D
+9f869698eafdb7295ebd172c279305d0ede0d541 2026-02-26 [XMA] Fix consume-only context resetting output buffer offsets
+86327a3e77d949b2f72b4a20dbf3d6508580174f 2026-02-25 [Kernel] Thread safety fixes for xfile, xmutant, and xtimer objects
+cf0d65e9751ba4d49590ee7ceec5532ad3e123cb 2026-02-22 [XMA] Restore error_status on split frame body
+e4ec5e52d52e6f1ec0a768c5861a3e97967d20be 2026-02-22 Revert "[XMA] fix loop trigger to guard against degenerate loop regions"
+5f5e5bb5ed8e097e5bde03aaa8ce5c6526d63678 2026-02-21 [XMA] Write back output_buffer_read_offset in StoreContextMerged
+01c399164d400b8575bf4e3dacd34ca820d7c270 2026-02-21 Revert "[XMA] Fix loop trigger guard and comparison direction"
+f521cb3ef01b2a9dbcc876f11525360691ceb0b6 2026-02-21 [XMA] Revert stall detection from Work loop
+5376439e1b1d29323c2da143a23b412647ddd906 2026-02-21 [XMA] Swap input buffer on unresolvable split frames
+8512a65a05ba125983b8fd2d7795bc7872071f38 2026-02-21 [XMA] Fix consume-only path write offset and drain check
+7a0b28eb1e242cd8debd7f4cb13c3647f24a3095 2026-02-21 [XMA] Guard against subframe_decode_count being 0
+8c6d54e9916f5fb5d9e50747d6da7a85452267eb 2026-02-21 [XMA] Implement loop subframe precision
+ff4fcc7b6bba6db2d582d4c986862b6c4b2fccdd 2026-02-21 [XMA] Fix loop trigger guard and comparison direction
+5f8fb63b6973bcfffac8cf2737b43c31722e606d 2026-02-21 [XMA] Add diagnostic logging to new decoder
+233f0056ba33476edd279f765808773e548a2db2 2026-02-20 [XAM] fix unsigned underflow when packet has no frames
+184858322649209520326fd5bf1ba992d7da2a0b 2026-02-20 [XMA] convert GetNextPacketReadOffset from recursion to iterative loop
+98b33fff7e61d61218e26aa6b02c0ba71544c62c 2026-02-20 [XMA] detect full packet skip sentinel and advance rather than overshoot
+683e40881aabf21aa80e91c17329f37743cc8642 2026-02-20 [XMA] swap to valid buffer instead of stalling when current is invalid
+492e7c958c183e75bbfbea79839e15bd4c609d3d 2026-02-20 [XMA] fix loop trigger to guard against degenerate loop regions
+a50947684055321e88cd44d0c66faf64ccbb8348 2026-02-20 [XMA] skip split frame tails instead of decoding as complete frames
+3ad6e23d542e6805c4ef8f3eaf944f6dc156b381 2026-02-20 [XMA] don't queue output subframes when frame decode fails
+ccde34faf7dc64eaf12f1326d3dabf45f5efc478 2026-02-20 [XMA] treat frame_size 0 as end-of-packet padding (XMA1 compat)
+e8177928eb67bb1b28ee4b5411f34a3c6ba345a3 2026-02-20 [APU] Fix ffmpeg upgrade related logspam
+38e877500bfe08ed84e11a41a3792883ed258b8c 2026-02-19 [3PP] Upgrade to latest FFmpeg (for real this time)
+32aff9af0de4cc10092742be92fe835a84a59700 2026-02-18 [XMA] Reserve headroom per decoded frame and account for it in gating
+d379c156e3ac2af6ccfc1e36ded9530140bc2374 2026-02-17 [XMA] Fix dedicated thread stalls by blocking guest audio thread
+38c2385cc31d486fb16751a40ade5a8809588a62 2026-02-16 [XMA] Default to new xma_decoder and force configs
+b04d96a9cbf5dbc88e6932079f7b4e015822e7ac 2026-02-16 [XMA] Fix multiple audio issues in new decoder
+c3d1d3d4ecbf9fb687dc7d3ebbc1dac7aa5b1e28 2026-02-15 [XMA] Fix consume-only context clear being overwritten in new decoder
+ece70899d13cb8a4523abeb104840f5f9268ac9a 2026-02-15 [Testing] Update ppc testing harness to run multiple test names
+a9075ecbb6978ad8a6f66f500393362b8454c2a9 2026-02-15 [Testing] Allocate a guest stack for the test ThreadState
+1d780bd98d70014eb608dcba0937f86503fe21e9 2026-02-15 [Posix] Fix DeallocFixed crashes / memory leaks
+82fd9d282ec13be003f1842678c6dc6e62b376d0 2026-02-12 [x64] Fix AVX-512 vctuxs NaN handling
+e55935e89500eaf3d2d996cb0b19fa28a9b923cb 2026-02-12 [Testing] Remove tests for unimplemented instructions
+c308cc84e85e274921dca35a5122de53a0064bfb 2026-02-12 [UI] Fix race condition in QtWindowedAppContext timer lifetime
+4373384299b2b338120ebac31a74ab9121ad0250 2026-02-12 [CPU] Fix f16 pack rounding and SHORT_2 test input
+33910662421aaea87d15db6c04a4535f701ffbad 2026-02-12 [CPU] Fix incorrect all_same detection in constant vector shift paths
+7a45f66bb47673c28ce54bf030a1872f3e456048 2026-02-12 [3PP] Switch FFmpeg to latest release with port of xmaframes codec
+5362f09c97a79453335b69b51625207b456892f6 2026-02-10 [Memory] Treat writecombine memory as writable in all protection checks
+9d3267bd556306f23fc6a2c6995a45e845d1368e 2026-02-10 [UI] Hide cursor immediately when entering fullscreen
+3f27be4b610ab80e37f39595b3d4cf956d39e3ec 2026-02-10 [GPU] Default depth_bias_decal_clamp to 0.0
+37c10ad89f441f28b09760b625afdbce518749c6 2026-02-10 [Base] Replace CRITICAL_SECTION with SRWLOCK based mutexes
+1d348ac2d37eda5380165315a40216de3f4e78cb 2026-02-10 [Metal] Optimize transfer path and RT handling
+eee151ffc169b14a10a253ecef80f1487b653c14 2026-02-10 [Kernel] Return null on handle type mismatch instead of asserting
+371f2f79273609c53bf57fa026f898e3fde5515a 2026-02-10 [Base] Use function-local static for global_mutex
+dc723ed865d5e10c1c024fdc75288bbb5e0453e6 2026-02-10 [CPU] Use RAII lock_guard in GuestTrampolineGroup
+9492aaeba0faf5dceee166f17dd7542fdb70b2b0 2026-02-10 [APU] Move XmaContext::Block() to base class with RAII locking
+f4848c875f743873105e16ba88a3f07d074f3f2b 2026-02-09 [XMA] Fix recursive lock acquisition in new decoder
+e8f38504d293c6ace9eac244897a302c32b09789 2026-02-09 [XboxKrnl] Don't crash the host on guest trap
+1662c7570f47aa867f632066dcda693653d845ea 2026-02-09 [APU] Fix audio crashes during shutdown
+8ca0062f1301b8569aa944dcc2f8deedf0d1c277 2026-02-09 [Emulator] Zar creation fixes
+65b481ed29285e62fa48778092ca2dc0fa80fd2b 2026-02-09 [Emulator] Fix crashes with in-process relaunch
+3eb5c17275489669ed0c8aa52630faf4c4c53ca0 2026-02-09 [UI] Disable forcing X11 for UI process
+86ead2d0feb3d6c5604aa1be728352469fb3cf3d 2026-02-09 [UI] Standardized bundled data lookups (patches, optimized settings)
+c90b04a7de90629d091118584eed3f91c882062f 2026-02-04 Debug: avoid signal macro clashes in GDB stub
+4f9107156f305031f3462e8e2a781ec239193c6c 2026-02-04 CPU: enable A64 backend selection on ARM64
+764db58a8264c1814587fc234b7483762370a444 2026-02-02 [Testing] Add missing bool defines to allow test harness to compile
+e48b091086f7af1122bb0fdc403dfe2527b00612 2026-02-02 [Testing] Remove orphaned test since the code it was testing is now gone
+21d631a3520ba7a0070ce5eb4e8fee5b4aac9231 2026-02-02 Revert "[Testing] Initial gpu shader test framework implementation."
+8571937dc2a488e931d5978dc1100dc4e440edb9 2026-02-02 [Debug] fix up gdbstub to not deadlock and support missing register
+6673cd2d5a8b056b073936437beda7a77d2f9d0d 2026-02-02 [Debug] Add cvar to support dumping xex file for debugging
+31c3dfd2fa3e7de733b1e82a2643f295793899f5 2026-01-31 [Net] Convert sockets to asio
+6fcd7bb916a02f76826db2431242b6df2046f1a5 2026-01-30 [Emulator] Fix in-process relaunch fallback path and disable on Linux
+45b7917efa748a371b9536d32cfd40b16fa50c84 2026-01-30 [Kernel/VFS] Case-insensitive path matching...
+b70357004586f082df0317235847c375ab0fd106 2026-01-30 [Kernel/Socket] Default to SO_REUSEADDR
+5815abdabe650ccca153ccab7e457ccb15f5557b 2026-01-29 [Emulator] Add in-process title relaunch removing emulator restarts
+03c717999cedea82ad7295ea1b5322669451358b 2026-01-29 [Vulkan/D3D12] Validate upload range bounds before vastcpy
+a6c821a925bf3ffd644d1e549bd39b5ea9446863 2026-01-29 [Kernel] Clear object handles before release in ObjectTable::Reset
+934e97ba4f6f500d0a0e7b23496b69703678fe43 2026-01-29 [UI] Fix leaked locked_achievement_icon_ texture on drawer teardown
+333474f3609f5a936d2763488c50894d5714168c 2026-01-28 [D3D12] More gamma_unorm16 fixes
+f1f44c1356e3b2a64be3e7f753d8d18c0d8a4603 2026-01-28 [D3D12] Always use async pipeline creation when enabled
+8db2ce260386f208801afdf514f1df8581aa74d7 2026-01-28 [UI] Menu and F* key updates / remove recently launched support
+ee78b653f2bf995e997e36fbd04bb106721bac67 2026-01-28 [Vfs/Tools] Update to support recursively processing a directory
+0afbd81ebbd50788408b9783ce8f276cbdb84edf 2026-01-28 [Build] Fix building misc subprojects
+36b803ad2188aa5ae6849ac35c766b5485771ce0 2026-01-27 [UI] Add progress dialog support for ZAR archive operations
+9c3e9cfae1785ed3f510c76c65de0529c9e7caf7 2026-01-27 [Metal] Add Metal GPU backend for macOS
+69ced5bc655b06e26899f901f0b76602e5fa4836 2026-01-27 [UI] Ensure progress dialog shows for TU installs
+d54d2666b28b4981cb5775e928ef4dc9604aac7a 2026-01-26 [CPU/A64] Handle constant operands in vector sequences
+6a5acb46663c121dcb922ef202a6bd40012032c4 2026-01-26 [CPU/A64] Preserve 32-bit wrap in guest address adds
+62e5238ad1c7380a2aeeb3778245e614cbc3e46b 2026-01-26 [A64] Restore mac-app debug tracing and diagnostics
+8dbb4edaddb68dedc5a4bd2d6a4f4c1b57002e32 2026-01-26 [A64] Update ARM64 backend from xenia-mac delta
+fbe70c60ae69be2ba193aa7c7a7cc91a489244a8 2026-01-26 [D3D12] Remove gamma from source_is_64bpp calculation
+717eb2caae8e21350d30c455236a3f0d7c82255e 2026-01-25 [x64] Fix mismatched operand sizes in CNTLZ fallback
+ec197362b0f26655f292a60114f628b7a6efd16d 2026-01-25 [Base] Make AVX startup check a warning and allow startup
+1c88f9d0e6d0a5d6edd85938464875858efe15a4 2026-01-24 [GPU] Fix wide 1D texture support detection
+cd2f4cd3dc0d785b0ed605a1d522853c1a88502a 2026-01-23 [GPU] Add depth_bias_decal_clamp to mitigate z-fighting in UE3 games
+b4c34c199a627ed17d4144ad36036facc58c59f5 2026-01-23 [Vulkan] Update barycentric interpolation to use AMD style formula
+745581d4bd9cfb711a9bcc9dc78d80eaba1dc14c 2026-01-21 [A64] Handle large stack local offsets in local loads/stores
+a12dddcf27008544badfbaef348dd5e3b0bc6600 2026-01-21 [A64] Mask vector SHR immediates
+ab942708ffe9f183ba4cfeb254d9cfd967299b8b 2026-01-21 [A64] Handle constant F64<-F32 conversion
+a8b39dc20a5ae4fd948c1f5a376b07a00ec20726 2026-01-21 [A64/Vector] Handle FLOAT16 unpack sentinels
+82061a5ffd701161302cebd8abced52f02dd7905 2026-01-21 [A64/Vector] Normalize TBL list usage
+129462f32627f891a36fb39bbd24d604b8f9945b 2026-01-21 [A64/Vector] Gate pack ordering on Windows ARM64
+3afa85c4c56c1bfa6d63dd9d952ac7e9437e35ca 2026-01-21 [A64/Vector] Improve SHORT pack saturation
+284024165b9415c480fcc4bc112a858ef234378a 2026-01-21 [A64/Vector] Handle FLOAT16 pack sentinels
+283f3d7db79e961dd8c77514a8ca548534ee0bbb 2026-01-21 [A64/Vector] Use numeric min/max for D3DCOLOR pack
+1de36083c8ad6e4ad16ddd8e047433a87b36c266 2026-01-21 [A64/Vector] Rewrite PERMUTE_V128 int16 constants
+5520cda456186587d95cd6a51f13689266b92dc8 2026-01-21 [A64/Vector] Simplify SPLAT constant handling
+5f1da79eb06e0d30ee218ff3a737b259220c137e 2026-01-21 [A64/Vector] Handle constant converts and shamt types
+a83bd019a4456bb8bd5a7a842501edd64236295f 2026-01-21 [A64/Sequences] Fix NEON byte loads
+9fe9f2ab2a09546bf67bf008cc7a0fb1363b0dce 2026-01-21 [A64/Sequences] Fix MUL_ADD_V128 temp handling
+310a2e8bea4de4ae72408b3842d752cc3424397e 2026-01-21 [A64/Sequences] Drop unused lambda captures
+683cc221c8c0eeeb64fd33cb1e4071c7935a06eb 2026-01-21 [A64/Sequences] Centralize sequence registration
+e3a2b1f9defa36fe18ba0fa21808945f437e9db7 2026-01-21 [A64/Emitter] Relax const data placement on macOS
+9d331d99af090088a6c110f231e9f3d3b4e423c8 2026-01-21 [A64/Emitter] Document VPackD3DCOLOR mask semantics
+5c1d4b68519563e7f81cfcb65e05c45f45aabd0b 2026-01-21 [A64/Emitter] Fix ConstantFitsIn32Reg mask
+8a915746abc64abdc2b22cb11818dc857b56cfb9 2026-01-21 [A64/Emitter] Mark Emit counters unused
+7bc540d07a0334936e3cf4f7deb8e1f4b3128327 2026-01-21 [A64/Emitter] Fix code size assert cast
+4df1d22cd1217b37aafb477b1faaefb0e1fad53b 2026-01-21 [A64/Emitter] Update indirection table loads
+a05dfe70f20ef9a7dd3ff7fba926af17362b26e5 2026-01-21 [A64/Emitter] Log undefined extern arguments
+2e82935dcc213b4468a56b9213e244899c1bc49b 2026-01-21 [A64/Emitter] Expand ResolveFunction diagnostics
+bdf24adeb7657365887625da5524c96e3c24024a 2026-01-21 [A64/Emitter] Add TraceOnInstruction trap logging
+b6b45f9977662a440088ce28aeee3717a8eb1107 2026-01-21 [A64/Emitter] Emit BTI and robust stack pointer adjusts
+f0b87fa1c7fe8a2c877133108854e7e4aa3fa24c 2026-01-21 [A64/Assembler] Fix source map index comparisons
+652eeac197066f5a1269ae417311745a814916b5 2026-01-21 [A64/Assembler] Add 64-bit indirection on ARM64
+b8ae35085c822c95d858d349ccb6066cae5f4958 2026-01-21 [A64/Assembler] Tidy capstone disassembly setup
+c8487d641a74072056cc6bc7821c73aa68959aa0 2026-01-21 [A64/Op] Relax constant accessors and mark temp regs
+a6bacef4d3ab37da5c363dccf2e5be6ff6c9bf15 2026-01-21 [A64/Op] Fix enum arithmetic in key encoding
+ed319bccec324c16f9a84a38adb5f89a09b72dda 2026-01-21 [A64/Emitter] Move FP immediate helpers into emitter
+dba51ae0b2d01d50b9b423990dd79faa49426dba 2026-01-21 [A64/Backend] Guard resolve thunk against null targets
+ad7a10edc545c56b72788c041e8e0ee2ce16ac3f 2026-01-21 [A64/Backend] Log access violations with guest offsets
+74180887eed4eb88b7c12612e67be6178a72d84e 2026-01-21 [A64/Backend] Use brace-init for capstone structs
+03335d56e84337ba158e3854e52e02a421085d3d 2026-01-21 [A64/Backend] Use 64-bit default indirection on ARM64
+f5d02886316b348fd8e5a1ed158880ce51b63ea5 2026-01-21 [A64/Backend] Improve capstone init error reporting
+b18442e19769c33ae3b7ea2ebefd0bd5ca5708e5 2026-01-21 [A64/Function] Initialize macOS JIT threads before thunk
+eb15c34234902ac41703fa587da8387ac87ff606 2026-01-21 [A64/Tracers] Use standard ARM NEON include
+4f3f14a3d98d57211fdb06f01c5d28ac5bccca16 2026-01-21 [A64/CodeCache] Silence unused low_mark warning
+24db01fe759c4699a456f7eadb2c0f259259c177 2026-01-21 [A64/CodeCache] Use stable code cache mapping name
+107a1484600d673f20515a65b56bc86c6ace7f9e 2026-01-21 [A64/CodeCache] Update code cache mapping and JIT writes
+0cb9dfba6b72e3fdcd8c7905c62bc05ac81b9328 2026-01-21 [A64/CodeCache] Fix indirection table dealloc size
+9b6af467440392bc3613d98f97c0531d7caea321 2026-01-21 [A64/CodeCache] Allocate indirection table with ARM64 fallback
+ddd36bbab67b984bc77a09f8585f7a9a94866e6b 2026-01-21 [A64/CodeCache] Add 64-bit indirection update paths
+db039b12951afb6c9f36559d3cfc578081190f8d 2026-01-21 [A64/CodeCache] Add indirection table config and logging hooks
+155636834be2d98e3376bd77104b38ca689c0da7 2026-01-21 [Vulkan] Add support for precise pixel shader interpolation
+fc38ebb985f4b31d49a07da58dce6703f396dff5 2026-01-21 [A64/CodeCache] Add POSIX code cache and JIT-safe copy hook
+621430444bf7ab3af9e7ed5bf0c044d16277a917 2026-01-20 [D3D12] Convert R component from linear to gamma for stencil output
+f234ae92da2afd9719dc8459cfb357367ded63fc 2026-01-20 [D3D12] Ensure k_8_8_8_8_GAMMA is properly identified as 64bpp
+9a9fb9ca686c2b30c89476fa82ce322f5603e2c1 2026-01-19 [Vulkan] Fix fullscreen corrupting HDR state on Windows
+f77c654e77496d697da3521485b6ed11deb08cb3 2026-01-19 [UI] Achievement notification and font handling fixes
+f1aa4ea244a40d85f95180e1a06e735ea093342c 2026-01-19 [Vulkan] Add shader disk storage / startup loading
+d05273d6b7b9a160d9fb4a9b57740c6e381a094c 2026-01-18 [UI] Bundle Inter font and update font defaults
+f517bd697647073000afb735b29712f10a353e2e 2026-01-18 [UI] Implement proper font handling in the UI
+587f29e13ebf0ef34a47195127930f3db5d3a95a 2026-01-17 [GPU] Ensure force_special_view checks swizzle signs before using signed
+cdc894d15c0b4f687ffd6a900ec32a114b27fe98 2026-01-17 Revert "[GPU] Add signed texture support for block-compressed formats"
+c9d07ab5cdb1f3d4c5f48005fd0850fec3a2ecea 2026-01-17 [App] Fix UTF8 handling for paths in recent.toml
+73bcaa6237a9d075fc67663fab330a19ca64c767 2026-01-17 [GPU] Fix exp_bias for k_2_10_10_10_FLOAT
+521d73f2e26769633fa8a27773f7d7bd37215c52 2026-01-16 [D3D12] Improve shader disk cache handling
+e54a3658f08fbda5b9a1d0ecc5677181d0b7f3f6 2026-01-15 [UI] Fix UTF8 handling for game location path
+8804da687eeabe296e41a9da1a0141f06e833bc2 2026-01-15 [GPU] Remove 2.5x vblank limit when framerate_limit is applied
+8c4c6a46e317d8745c3bff59af69db79181a7d83 2026-01-15 [Build] Generate shaders on build instead of having them checked in
+9031a4a9d04efe71d47ce3c57229db8ed42a82cd 2026-01-14 [UI] Convert disc selection to imgui
+f776e5e0f96cfb10f259d30990671e1f581f733b 2026-01-14 [GPU] 3d-to-2d textures default enable
+f89f4076e3d90e9721c9cdc8ff459ef15f56f665 2026-01-13 [GPU] 3d-to-d2 texture implementation
+529e43754afabc0a4635135df452733e28deec73 2026-01-12 [GPU] Only apply exp_bias to RGB not alpha for k_2_10_10_10_FLOAT
+29f1c0645e570cae62fc70efb89feaee640e6cc2 2026-01-12 [Vulkan] wave64 optimization for AMD RDNA gpus (5000/6000/7000 series)
+762a5679d5bb9fcfad742f3e6bc936a2cdf9495d 2026-01-11 [UI] Swap graphics and audio sections in quick settings
+5a010146d23a2e7fed2d57e98a3f79fd317e3c0a 2026-01-11 [GPU] Add signed texture support for block-compressed formats
+ef7d70ff187421bcac32d0b1d1eae69861737394 2026-01-11 [D3D12] add cvar to control 3d-to-2d texture mode
+cbee3e926da6218c813f96a7551c3ef7714f97c4 2026-01-11 [D3D12] Fix 4D5307DF fur textures
+ebfdd7ff112bd097a1cf180812a79a8026137891 2026-01-11 [D3D12] Fix 4D5307DF fur textures
+d85450573d90b956bc9ef83a2685d3f647573e7b 2026-01-10 [VFS/Posix] Fix Rename to properly handle guest paths
+376cdeb745b1de05b17fa12d340a95286aa42462 2026-01-10 [Base] Simplify separator replacement to work on ASCII rather than UTF8
+d9260e1a50aad0246c93dcd31521db1bfec47c99 2026-01-10 [UI] Rework various imgui in-game overlays
+7ea2852585af968c5191748552906d845c2b2c29 2026-01-10 [UI] Replace QtMultimedia with miniaudio for notification sounds
+fbfffd9b847d3510042df1059680dbcb51239e79 2026-01-09 [UI] Switch from QWidget to QWindow and ImGui in the game process
+440c0374046edde356429f05257ef2293d84e4c9 2026-01-08 [Build] Upgrade Qt to 6.10.1
+81faf73a1072be91f0e62ead22afe8fe6e54aa24 2026-01-08 [UI] Rename vsync to guest_refresh_rate and update UI
+1fdc786642cad8cec2a6e85e02eec2d461aa492a 2026-01-08 [GPU] readback_resolve_half_pixel_offset to control downscale behavior
+39a65586ce352e66fbf673286180a75cd4d320d9 2026-01-08 [GPU] Rework frame rate throttling and improve vblank timing
+04363694ca18c722c1d86e92c7065fe7dec0e940 2026-01-06 [UI] Handle onfocus events
+4366b05dae5ec01f0e8bac26de84f72537a2982a 2026-01-06 [D3D12] async shader compilation actually fully async
+697c116a366bd92bbcec754b377d0ea554306fc7 2026-01-05 [Vulkan] Remove background spirv optimization
+31b679b6589d50b9c087987df2483576090c1f54 2026-01-05 [D3D12] Use priority queue for async shader compilation
+12b28f6714a564006a6e5494b4b7d5582cd471fd 2026-01-05 [Build] Replace spirv-remap with spirv-opt --canonicalize-ids
+7ccb831f26a1ed0a637dd7cb1bbbae20f9edda29 2026-01-03 [GPU] Compensate for half-pixel offset in readback resolve downscale
+31316530986543b3e738ace99518c25f673a949b 2026-01-03 [Vulkan] Use priority queue for async shader compilation
+b563098b0f30903b6ac68a7630dcecd3e2c332a8 2026-01-03 [UI] Game icon fix when running under wine
+e1d9c09d0967aa26e6fcb1d9e47517b250b0dcae 2026-01-03 [UI] Fix "quit game" button on windows
+4b608d927d23062e695a714edc291a152b97eeb8 2026-01-03 [App] Use Qt event loop exit instead of std::quick_exit
+4b8656ef51e05483d1d758f286fc051f85a17f08 2026-01-03 [App] Remove automatic fullscreen persistent in per-game overrides
+d7ca76fbb76810c08498d14f16104a01a16bd7f6 2026-01-03 [UI] Add Quit Game option to the context menu
+81af207bad17aecc843a0ade4c059268b00ee50d 2026-01-03 [App] Close UI process when game is running
+b5496e9ea5d2f72488b759275fd4db5b17aaa0df 2026-01-02 [App] Implement title-to-title launches without intermediate file
+f276316f7248a8d6ad6c5e53dd555feb2d20f2e0 2026-01-02 [App] Rework game-specific config overrides
+6a98d1cb42ec027e164e4b5fb3245ea42815cb51 2026-01-02 [UI] Ensure file picker is able to save
+ecf346e4e762c97cf92caa7572f77da96de7d64f 2026-01-02 [Linux] Implement fast mutex similar to Windows version
+1952e6201a5f3dbadf4d0728293526c2e8088bd7 2026-01-01 [D3D12] Use sync path for new PSOs that use the same vs and ps pairs
+3de7e788173bcacdb310bbde07384b94ef8d709a 2026-01-01 [App] Persist fullscreen status
+11a82b08355055222c9c1496e011b8162839d8ce 2025-12-31 [GPU] Async shader compilation for D3D12 and Vulkan
+9a40f4075e356082f71582aae78c27edbb512ad1 2025-12-31 [Build] stop packaging vc_redist.x64.exe with windows release
+28a39bcfe6f33d042782569c88084dc3f5e9d758 2025-12-31 [Vulkan] Vertex buffer residency caching
+7f9c66d346a1a5eb633957ac4fee9f5b097ea0fe 2025-12-31 [GPU] TextureCache lockless pre-check
+d912a6ff80d67886708fd7b4d22361044f30913d 2025-12-31 [GPU] SharedMemory lockless fast-path
+9da9a735fcf12d3dbddfe660106a7d28497e5625 2025-12-30 [HID/UI] Ensure guide button closes dialogs / button presses consumed
+e837c36fd371ee5da5e4c88e17478f9c9199579b 2025-12-30 [Vulkan] Use VRAM for staging buffers
+dac6b653f3cf296910f6ebfcaf7390d9c0267d80 2025-12-29 [Vulkan] Use dynamic rendering when available
+55f4f996ddec2b3df63139eb037b1ce220ad690b 2025-12-29 [Vulkan] Resolve downscale shader to use rotating descriptor pool chain
+f170fc574ccc780557d02e763373da53790678bd 2025-12-29 [Config] Log commandline overrides
+00888edf93c8ce5d3af2f137823233c47a5bbad2 2025-12-28 [Vulkan] add no_discard_stencil_in_transfer_pipelines support
+f8d15108c6f8b7a97315121966e548fcf2b1eb37 2025-12-27 [GPU] Pre-mask instead of skip write range blocks
+43fa7d1b56b9dff72cf220a2cc673c93e5b1a2c5 2025-12-27 [Vulkan] Add shader variants for bound color targets
+94847b4f370adc42c01ec3924f78eff3ac26969e 2025-12-27 [GPU] Fix scaled resolve tracking for blocks outside write range
+8b81fe77d94afb1dbd221f98a4792eb604c7f4c0 2025-12-25 [Linux/Threading] Self-suspend with condition variable instead of spin
+3cf3a852e7362db3c4c6bc58ab287ce363ccf6a2 2025-12-23 [GPU] fix min/max blending regression by only applying to kSrcAlpha
+e584ada09b1868c5275bca39867ae0f27726f8d6 2025-12-22 [Vulkan] Implement readback resolve for resolution scaling
+bc6f2237f65963a27b1145ebb311d2ef173794bc 2025-12-22 [Vulkan] Fix incorrect scaling EDRAM tile span parameters
+9e6b84c16983c77923a1dd4253b7c8c9b996133b 2025-12-22 [Vulkan] Implement tiled_shared_memory for resolution scaling
+293a1ff8969e0f83372d2817b1d694f579d23251 2025-12-22 [Vulkan] Fix stencil bit transfer shaders not discarding pixels
+c0b28c06fa74f1cddcdffe816a37cb235d34a371 2025-12-21 [Vulkan] Fix sampler params
+a3f8813c9f0ac69b39d104cf4a2978d8ed4e19ec 2025-12-20 [App] Move arg parsing to happen as early as possible
+98a1285696133cf4b9cffae28409a077e8a7f38e 2025-12-20 [UI] Ensure app starts on the same screen as cursor
+c50e07331d7e73f84d7d55d0e92f48ba151fbb47 2025-12-20 [App/Xam] Fix multi-disc issues
+9bc8551ae594e5d7efaf81bcc32fde3d9cd81e8c 2025-12-18 [D3D12] Implement readback resolve when upscaling resolution.
+e988868f01dc57531278fec680a6afa4f77df4b8 2025-12-18 [D3D12] Fix mips generation issues
+78f53264a091a786d1660f7ed288b87a132d53ed 2025-12-16 [GPU] Fix min/max blend operations to properly apply factors
+4ffd5b5e80b83e445ad72be59925051341187b5e 2025-12-16 [D3D12] Add resolution scaling mips generation
+f9cefd913d943a244e9b0774634b92d1f19ea15f 2025-12-16 [Vulkan] Add resolution scaling mips support
+7222930fcbb2340a15677bb9685e96a18941ee8a 2025-12-14 [Vulkan] Ensure entire scaled range fits within the buffer.
+56b12712a5d3479b56e5663802e3521f6c5f8e28 2025-12-14 [Vulkan/Debug] Add some more verbose error logging
+b184181dcec018119aef858468dd04d6b0c2f297 2025-12-14 [GPU] Implement wide 1D texture support
+416d25b2119c55c6def729ed432f5f55f1654d80 2025-12-14 [Vulkan] Smear scalar bools.
+8493c8ee8f91edc6760ce429a60362778e3d5539 2025-12-14 [Vulkan/Debug] Validate and dump problematic shaders in debug build
+34f752fe787f646d18febcc625dbb3b116df5845 2025-12-13 [Linux/Threading] change self-suspend to wait to be resumed
+2f260a5dc7e2aa9d5d9c1f494e8e7ba4d1e16133 2025-12-13 [Vulkan] Create per-swapchain-image present semaphores
+d2cc7190cab7dbd34aeb2d92683bc1cdb6b01587 2025-12-13 [Vulkan] Fix VUID-FragDepth-FragDepth-04216 validation issue
+6691d2dd9cfd3e8430896e16ee908865a6e1c51d 2025-12-13 [Vulkan] Fix alignment related validation errors
+11078f3f2c977841a2b2e5713c7a823aa32b1389 2025-12-13 [GPU] Properly handle scaled textures and weights
+13aa88b246e0b429f7b20b8351277b82a1e47255 2025-12-12 [APU] Make xma_decoder default to "old" again
+f663f041ed3f6ad1eadbefd15e8f77e2dd32c294 2025-12-12 [UI] Fix post-processing dialog.
+590c1f9546d1010eaaee0fa48ce867b30fd8d17b 2025-12-12 [Vulkan] Add FXAA support following the D3D12 implementation
+3c4c8dfe94d1abdf5a48d52e5b39760855075afe 2025-12-12 [Vulkan] Convert gamma application to compute pipeline
+68ca6429f2964eb1cfebaba3d80245484f665ee3 2025-12-12 [Vulkan] Add tesselation support
+496676f68befa5ed869e7ec56e75ad737e888f98 2025-12-09 [Vulkan] Properly scale rectangle coordinates
+10cbc08333adc1ec949cb4408cdc46135ab7f609 2025-12-08 [D3D12] Fix dxbc pipeline creation crashing
+f243a407491c62194bf0fdad91abb522c3bfc75b 2025-12-08 [Vulkan] Use VK_FORMAT_A2B10G10R10 for xenos::ColorRenderTargetFormat::k_2_10_10_10
+3d4be9fa076a398cc5a4e61ec5521235d520bbcd 2025-12-08 [GPU/Debug] Additional GPU debug annotations
+d0700520227414a751fcf71a1f6661bb8859b33a 2025-12-07 [Debug] Remove F7/F8 debug bindings for save/restore state
+b827558e3c4e52b7724b30bd4ef99c9bae83dc1f 2025-12-06 [Vulkan] Use fetch_contant_word3 for exponent bias
+405b2f3920f8d39cd5e302f390e3ead99d90ad87 2025-12-06 [Vulkan] Invalidate descriptor set bindings for incompatible sets
+d43b246c5ed560c9d1ca6ee519aa8a78948aa127 2025-12-06 [Vulkan/Debug] Add cvar to disable RoundingModeRTE
+c777013dc48c1295b2683aa6940bd880188da334 2025-12-06 [GPU/Debug] Add debug markers for renderdoc/pix frame capture
+ac610bbfe7ded9fabec45913bac997213b0b6845 2025-12-06 [GPU/Debug] Add logic and cvar to convert triangle strips to lists
+879224ec1d8fee76fe628d21492a7e2b0141dc1b 2025-12-04 [App] Make sure Configuration menu dropdown has all the sections
+94acdefbb39300a764acd1add9124054dd3722cf 2025-12-04 [Linux/UI] Allow forcing X11 surface for game process
+8b4dafcd5c748401d16ae539362f9b24619b2768 2025-12-03 [Vulkan] Fix Vulkan validation errors
+246ae2f3c20f7158d663bb661ee461aeed84b0a3 2025-12-03 [Vulkan] Add proper tracking to swap gamma correction render pass
+19677648e6dbaac36050c227889966aae3951f01 2025-12-03 [Vulkan] Add some logging when shaders are compiled
+f344134138eca2dff3d856d7db3cc3478b0a98dc 2025-12-03 [Vulkan] Add dump_shaders support
+14f217fcc8121032e20dc9ebd132d8a70131bbf6 2025-12-03 [Vulkan] Fix kComputeWrite access mask
+a767f0321b4c370b150c9f9a9a10cdbf3fd3dd9c 2025-12-03 [UI] Improve dynamic icon and process grouping handling
+70efc05fa9cb54d48a685ec9e20597fec124d86d 2025-12-03 Revert "Revert xbyak"
+fd7502a68f027c50dfe5332dd1ea931e8410b314 2025-12-02 [HID] Make sure all inputs are captured when a dialog is shown
+e9626150cfd02dedd813947d66078a995810a4f5 2025-12-02 [UI] Make sure only achievements play the notification sound
+5434060715ee38628193f13a6e8b6827a328629f 2025-12-02 [UI] Guide button and controller support for right-click menu
+458b26b861aaef145e6898c65f66c296af92eeb0 2025-12-02 [UI] Replace controller hotkeys popup with a proper dialog
+a45d3e6b62375b76c2c82cde7ac467a70b9b00fe 2025-12-02 [UI] Add performance settings dialog
+483ae72b0369eea4d3e4986c89e132453bada6e3 2025-12-02 [App] readback_memexport and clear_memory_page_state hotkey handling
+b06b8a7d6d686b0b99d68f105481cc93b2ecbd59 2025-12-02 [App] Replace hotkey toggle ImGui notification with Qt
+00bf9daa8b5f7937fa933a974e15583be22febb0 2025-12-02 [GPU] Change readback_resolve values and default
+f62a420e43ef468f749bea015348e9aff66f0dc2 2025-12-01 [Vulkan] Add support for vkPipelineCache
+1c670bf3a6c7e6c23ba4b4fd5f3a008fa8086c99 2025-12-01 [Vulkan] Implement submit_on_primary_buffer_end optimization
+7d2f5239edade76d645cad5084935a5023ee2baf 2025-12-01 [Vulkan] Implement ClearCache to clear upload_buffer_pool
+97f2985baba39a0d4a4cd90cc1a21e7a08de08c8 2025-12-01 [Vulkan] Implement same vastcpy upload_buffer optimization as d3d12
+ca2d4ad43bc3b8c91c35a4a66cd27d2ce1a65ce3 2025-12-01 [UI] Disable all mouse interactions in game window through cvar
+0cf4e08f3874f5bb061c297353abfa105fcadf4b 2025-11-29 [Linux] Ensure AppImage writes log files to the exe directory
+1388ce68b21c384c5df68a61dbb89ce6ff4db2c5 2025-11-29 [GPU] Add readback_resolve=slow option
+f200c25c9085c8eeae5f6ea4a2f960dc9c0707b6 2025-11-25 [Vulkan] Add gamma_render_target_as_srgb support
+46fefa54f3c899d1b75dca615def2bc9fe966afe 2025-11-25 [Vulkan] fix FBO path reading from output variables for alpha test
+511e4d3497bf882c3b36a827cc8deab2b945e69b 2025-11-25 [UI] Fix letterboxing on Linux/Wayland
+33645603d66a91bb7ae607b5536a166224090a7b 2025-11-25 [Memory] Linux cleanup shm files on exit
+91d1349b792ea65320ff4b860ddf472dfe995660 2025-11-25 [Testing] Make sure tests clean up shm resources on exit
+912eb560b6f34ed8bc6e33cddd80055f67456482 2025-11-25 [Testing] add skip file support to cpu/ppc tests
+e0aeba2274e588669d5004eb721023515b26280f 2025-11-24 [Build] Make sure to call fetchdata to populate data dirs
+e911ff2d5e250cee952b98de666a5dd696a4fc33 2025-11-24 [XSocket] fix linux sockopt setting properly
+1210c26c818efc9d4edc9fba01d8d3f66ce98c70 2025-11-24 Revert "[Kernel/Xsocket] fix linux sockopt handling"
+b0e3dda66dcc66d398bb44274ff549e4ba2f4954 2025-11-24 [Build] Remove data repos from third_party and fetch during setup
+f3b1a3b641c7c1c0e82161041872838d19499625 2025-11-24 [Xam] Restart title immediately instead of waiting with callback
+63078b6a91468944e0669b09b2abcffc928ffdc3 2025-11-24 [App] Flush logs on terminate
+94f8a287d892171086fb7a9ca608fb79eb77b89a 2025-11-24 [UI] Add controller support to Qt achievement dialog
+dbbaf2232bf6dc506875c86d8c2ff11c89d98bb5 2025-11-24 [Xam] Keep track of Qt achievement dialog
+d811c1ac4cfc4d66fd46d83325964fc4df04126a 2025-11-24 [Kernel/Xsocket] fix linux sockopt handling
+3957b9f73294b251d7518464d0958aa81894fb4b 2025-11-23 [GPU] Clear readback buffers with F5
+89b571b15bde40f7d3b0b29e7385c3a4555a3eb0 2025-11-23 [GPU] Invalidate GPU memory with F5
+d21c0d7047dc799cf93a2bb7a83f4e576742fd8f 2025-11-22 [Testing] Fix flaky threading test
+b953707c08ef8577113450f383f91b221c62096f 2025-11-20 [Vulkan] Alpha to coverage FSI implementation
+be3c16dc956b7da1e41f0682e95eaf29a8b79949 2025-11-20 [Vulkan] Alpha to coverage improvements
+3d3bb604770ad0658e66bf0a8da1f1dcae61fb46 2025-11-20 [GPU] Revert readback fast path optimizations for Vulkan
+0830086f2855d70deb08b77cde931bd1a0f15aa9 2025-11-19 [Vulkan] Implement alpha to coverage (FBO only for now)
+c7f64199b3b03294afc86523e1b4360eb2e25894 2025-11-19 [Vulkan] Implement kDepth storage target
+f1f72ecb90347a5a97b75ee8501c6650b64c6aad 2025-11-18 [GPU] Implement hardware occlusion queries for D3D12 and Vulkan
+9c5c950977b4cde97aeb7ab7cca652d195016e77 2025-11-18 [GPU] optimize clear_memory_page_state
+8fa45e9f1230359d99e6459ebde433c1de808bee 2025-11-18 [3pp] build fix after fmt upgrade
+87def8bd90e58f523c0c686e1b359b8b8fe49180 2025-11-18 Revert "[XMA] Revert changes in old XMA decoder to state from master repository."
+1b544c1fb5411983ae89074385ce84ab69d38ab0 2025-11-17 [GPU] readback_memexport should not call vastcpy with unaligned addresses
+f76c2e0bf42cf19ece5eccb5938f08bdfd846256 2025-11-17 [GPU] Optimize readback resolve and memexport fast path.
+6c6bd88ec3c47359ae6ef7071d44ffee3b771ac2 2025-11-16 [Memory] Remove repmovs path from vastcpy
+b96b6255c9eb5989caff7e05165c398721f96e4a 2025-11-16 [UI/Config] Persist window dimensions across restarts (#19)
+9dd5c33cb57289cd2aac12a85a7b80d17aa3d61f 2025-11-15 [Linux] Add wayland Vulkan surface support (#10)
+41c83548227ca6d189d250b8fe3ec4af015648ed 2025-11-12 [GPU] Optimize fast readback resolve
+3b21f65ab73f0518e06913a66aec292f3cde2f2c 2025-11-12 [GPU] Double-buffer readback_memexport and enable by default.
+32a5bf08209144cb04a6e5db9ac70253c6b485f4 2025-11-12 [GPU] Remove read locks from updating validation on gpu written pages
+28e89a8a4d6911a4fb9f031c25426a6b31373dce 2025-11-11 [UI] Implement achievement notification sound using Qt media player
+9bd164bda334c02f857466056419feb6cd9ffd06 2025-11-11 [Config] Default Windows to non-portable mode
+af26835e3537ac6dd06de75a8a385ebd3a6de2fc 2025-11-11 [Logging] Remove file logging from the UI process
+f2e0f4523197a99c8bcde9d39e0055cc7c8249d7 2025-11-11 [UI] Fix UTF8 path handling
+774d3e9565aca6ec6262373d332797d86bfde4b6 2025-11-11 [Build] Upgrade to clang 21
+b2f55aa1039f648d55294c7bfbcd9e292ae7e6da 2025-11-10 [Xam] Undo the damage to Linux networking code
+37b2ef925a0e9f8026de14fa965f8310d7a02e34 2025-11-10 [UI] Simple config dialog fixes
+2ff1805c88dc567898ee30a127a556e54a17b8c1 2025-11-10 [UI] Fix potential dangling references in string handling
+cfc36de8600d6d60529077b5bdb98f58760517ff 2025-11-10 [Testing] More compute shader tests
+d63156c1c935daa1cc646b2d08f6adae96161090 2025-11-09 [Testing] Initial gpu shader test framework implementation.
+2feb0117e932ef862d25f20f639c89f8f9978105 2025-11-09 [UI] Remove bad file paths and open file picker when trying to launch
+7140403ad1bd42def1bfd9a8c227a9b58475317d 2025-11-07 [Xam] Add missing XLIVEBASE message handlers from netplay
+d9679b7482f00c11dc82b7c7cbed6e544d0e138b 2025-11-07 [Xam] Make sure disc swapping validates inserted disc
+f4792a897dcbd3b454257a7ec988606fb8d47167 2025-11-07 [App] Make all file pickers default to last recently opened directory
+042cd9f147ac1eeec628dfc67c5668b236d8e533 2025-11-07 [Emulator] Fix disc swap crashes on Qt
+b8001c41855e5698c827ef4861f0619e1bcbaa7d 2025-11-06 [UI] Basic multi-disc support in game list UI
+3de6d4d891b0fc3ed3406dece4507ffdc9889335 2025-11-06 [UI] Implement patches dialog
+708a72e75340307b27b137e580ea2791c5a64f7f 2025-11-06 [Build] Ensure game-patches is included in build/release
+d5887f276eab094795e9f29d954d344ad81ad1d0 2025-11-05 [App] Workaround for SDL issues on Qt using controller hotkeys thread
+7f0a98f10e438d7111ee24142a0cbc0ac7055c78 2025-11-05 [Cleanup] Remove dead code
+dc2985f81970e126901eb817d331894c3130bb02 2025-11-04 [Config/UI] Add simple emulator settings dialog
+6b4aaabf04de7aea6acfcceea45cbfb4cccdb90c 2025-11-04 [Config/UI] Consolidate render_target_path* cvars
+06ddb74cd1357ecc330b496acc2d8a8f4b6d8390 2025-11-04 [UI] Fix issue with game override deletion and minor UI tweaks
+32f82f1d4235714f5b477e08fd9aec33f1ba3cb8 2025-11-04 [UI] Fix endianness issue with profile save dialog
+40c19a9085acaddec8104f837e822b1c05831e7f 2025-11-03 [XMA] Added SignalWork calls in XMASetInputBuffer{0,1}Valid
+ebf356187ea76a9ac3c49347a719cba9344e27f8 2025-11-03 [Kernel] Reduce some Kinect/camera related log spam
+1848f5bebf82475064325061b8d73d5e2ebe27ff 2025-11-03 [GPU] Remove log spam for empty region resolve issues.
+6785a3c87a82af2d18011ac58d656304675fd4f5 2025-11-03 [Debug] Downgrade some common asserts to log and proceed
+635c5fc3912bf7efba85825c01856357d94ead30 2025-11-03 [Vulkan] Don't try to create geometry shader for rectangle list
+26df8c6fb848305f10dff9e7a507344f259d548c 2025-11-03 [Vulkan] Use vertex_fetch_bitmap instead of vertex_bindings()
+dc2bc0fdb66883599872b35aca23d7eca79ab496 2025-11-03 [GPU] Ensure destination address is committed on readback resolve
+4b925cb4f287ba09daa5164c17de2a81ab40122e 2025-11-02 [App] Switch from launch_data.bin to launch_data.txt
+8ae3ff887ac26335edde20f487481d4d47246fb9 2025-11-02 [UI] Fix bad UTF8 related crashes in Qt string processing
+470cb50613586e9fd5a2082c9cd344c0a4b12097 2025-11-02 [Base] Use strtod on all compilers (including msvc)
+8c4e3e2e8c2eecf6170d158ddc503063a5c07c08 2025-11-02 [Debug] Make Windows debug build a console app
+80587818885675cb23a25358ff8fdb3503e4becb 2025-11-02 [Vulkan] Add semaphor reuse workaround and cvar
+b24c9ac8ef22667b58c7a9d268c646afb28f07e1 2025-11-01 [Build] Allow building with AVX support only on linux.
+c0a73b18bc1c23b6e7482b17b112a6a30039ef61 2025-11-01 [UI] Add DLC and Title Update entries to game list context menu
+d6c4ea7e1184cefc9ae1152b9fac0d0b920543de 2025-11-01 [UI] Add Saves browser to game list context menu
+99361c54e514b8df1f3bd23f4a4c34baa787cdb0 2025-11-01 [App] Ensure profile state is reloaded on child process exit.
+12bdb0a96b5ce1bab20fc770e96bb480159a40b3 2025-11-01 [Config] Save/restore cvar values when parsing game overrides
+8ade605b0a728b03d5c65a3d6ea2852cbc3efbce 2025-10-31 [GPU] Double-buffer readback_resolve.
+dcc7ccce8d78e9328db88569279e828c6c72bdbd 2025-10-31 [Build] Fix test and subproject builds
+e7ddc64a81e0c1631580d66ab8c75867bd797257 2025-10-30 [UI] Link to compat pages for master/canary from game list
+a2d6e919aa142f3874019c3d092def7596342efb 2025-10-29 [XMP] Ensure volume always set when driver created.
+c99ef5ab85fa8f5e9c045df0415293409cca886e 2025-10-29 [APU/XMP] Force SDL on Linux for XMP
+0e971bb33c48234b7362de726d714ed982b2b46c 2025-10-29 [UI] Implement Qt xmp player dialog
+e083f019c83a49681ca0fd1584fe5dc1a35bd24e 2025-10-29 [Xam/Net] XNetLogonGetTitleID
+126259fc56aa73e537928d1c4e731760612b6b48 2025-10-29 [XAM] Implemented XamUserGetAgeGroup
+2e2dd8073fcdbf987a58d35bfc6c6d59124d7ee4 2025-10-28 [Linux] Add cvars to enable mangohud and gamemode
+12ebb1e46dbe81615b9dfbc6e0afab36258a9d4f 2025-10-28 [Misc] Reduce logging
+26866aef9170130cf3d905d80959f949c1b207f4 2025-10-28 [UI] Implement per-game config override UI
+a1c36f2f1807bc31cf72af2edc35c6939cbeee47 2025-10-28 [UI] Move all the Qt stuff to src/xenia/ui
+582603188bff645d75cf838a5ab1d7a5396c5320 2025-10-28 [App] Implement per-game configs.
+35360e92b2d9a5937393129b2708d81990050879 2025-10-27 [Emulator] Delegate to UI thread instead of assert
+eeb65d6102bb06e47878cae44012debee356a269 2025-10-27 [Vulkan] Ensure descriptor sets always initialized for user_clip_planes
+7b1c15137ae2e334b8dd0ae4163291b313e299c3 2025-10-27 [UI] Achievement notification Qt version and enable by default.
+107d80230f5482ffc56833e16531ec9f24988c47 2025-10-27 [Config] Change user country and language cvars to strings
+9f8ea97fd368ef2bd19272b1efaf5907babf0ca7 2025-10-27 [Windows] bring back enable_rdrand_ntdll_patch hack
+e043a40f5ebcf35a70cac2659a6e57df535e1f0f 2025-10-27 [App] Fix auto-relaunching games with launch_data.bin
+91af62c6f89a0aeaa4fd895415f71a96510bf578 2025-10-27 [UI] Fix context menu, notification and post-processing dialog
+711a63749981f0c92c5be4753d6d151c450ae017 2025-10-26 [x64] Add software fallback for PACK_FLOAT16_4
+6263fb6dec71112adb382e7e09884d0bfd2b7e8a 2025-10-26 [x64] Fix AVX2 optimization path for VECTOR_SHL_V128
+3a1967e93224d17efa9fcfe76209b506139976eb 2025-10-26 [Tests] Fix broken xenia-cpu tests
+18335f6e0517b0dd3bd3d8504b1fedbf655fb80c 2025-10-25 [x64] Implement f32 arithmetic and tests
+8a0f23d42ac26b05d60f0721615f77f5c27107e7 2025-10-25 [Tests] Fix xenia-cpu-tests module
+6043651af85d8e501b830bae86db1958f541c0d2 2025-10-25 [x64] Remove AVX512 optimization for vrefp
+63d551889ab6b237bc3b73e8526436a9e7829aae 2025-10-25 [x64] Fix AVX512 optimization path for vadduws
+6a92e325ba5591df334aee6b51d5bff3b673f5e2 2025-10-25 [Tests] Add support for running cpu-ppc tests with intel-sde
+06c3e339ada22c79c08546a74b4e33c2c5671b72 2025-10-25 [UI] Move AchievementDialogQt from app to ui where it belongs
+b2c51e0a099fb9294ed88bf1ee4f6089cf980e22 2025-10-24 Revert "[XAM/XMP] - XMP Improvements"
+879f8c193bffea366b2f4e6b950874dcb9d3097a 2025-10-23 [XboxKrnl] Remove artificial 512MB virtual memory limit
+c6e571f0a69496e06c62ba48f912c410523653e4 2025-10-23 [Vulkan/SpirV] Reduce float precision to 21 bits.
+cde9f99f770d4baab213864e6cbd49e231c88190 2025-10-22 [Vulkan] Go back to Spv 1.0 default shaders
+f395c775f529956c4aa12563d05e1069e5a99e43 2025-10-22 [Vulkan] Add flag controlled inline spirv optimization
+4779f74e23166daea24f44d2b569cfc673156217 2025-10-22 [Vulkan] Add flag to control spirv background optimization
+7803acc3dfd9c00060053aff65bdbc173cf9e106 2025-10-22 [XAM/XMP] - XMP Improvements
+c01d6e3abb46fa379a8ac18ddd8143cd51c9f721 2025-10-22 [UI] Make games with no known path open a file browser
+005357043df77cec865f131298c2ceb1f9c7b596 2025-10-22 [Kernel] Quick exit on TerminateTitle
+fdb8e4d5933f9d916d9787a529447ada194fc158 2025-10-22 [UI] Replace achievement UI with Qt version
+97f116314a595a0bf3ac4df59543d0ede786b2e1 2025-10-22 [UI] Qt post-processing dialog visual fixes
+8c56219e5276059482a194e8e7eccef4c85af716 2025-10-22 [UI] Add clear button to the search bar
+ef5d527c1ee115e453c4ced9f578cbe9ae4d9bc2 2025-10-22 [App] Remove ImGui injection in UI process
+97a32805fd515bd7e6d44d3b965297d7c9cad8a0 2025-10-22 [App] Move discord initialization to only happen in game process
+3bfcf8ca700643746d93e8a29e5ec1641741eb94 2025-10-21 [Vulkan] Add support for user clip planes
+c006482253c58cf2c7d1cf19922be66164b37de2 2025-10-20 [Lint] fix lint issues with imported commits
+c5b649134b099d12772ef4283c3b455e7611f802 2025-10-20 setup r[2] constant value, only used by HV afaik
+6f464b6343fcc73d43b08927cb4b22ea8ce20803 2025-10-20 corrected the ordering of AppendHex functions for logging
+240446ae3d1551d428ad31fe0ea5220b61133743 2025-10-20 [GPU] Add SIMD optimized CTX1 texture decompression
+16d68c8166f09cc4a73a694136e49dac4cb642cf 2025-10-20 [PPC/Debug] use the optimized string formatting methods
+0d7cca7d2fd7a45e92d36860debb8d8901f48955 2025-10-20 [Kernel] add optimized uint32/uint64 appending methods to stringbuffer.
+1cc0d98246e89d26bcc5c2cffbd66ade1a1f6a8a 2025-10-20 [x64/Debug] Fix TrapDebugPrint to properly terminate string
+91e4b26ea8168657f1c8c4f8f6c357d950dbe717 2025-10-20 [Kernel] Implement per-process TLS allocation
+2df54e4ebf4061d0b7afed692b22a4aee146be8e 2025-10-20 [Kernel] Initialize TimestampBundle at boot
+1e8541c65734aa3bd43176f271c745bae47a13c9 2025-10-20 [XThread] Fix TLS pointer bug
+53ca2876f86e39a45cb7bd39c9c007a6330faddc 2025-10-20 [XboxKrnl] Ensure X_STATUS_MUTANT_NOT_OWNED is properly returned
+f9b613570d173deb3c56fe04a8f8eb6ca48b7191 2025-10-19 [Testing] Ensure memory is fully initialized for stwcx test
+bed060a3d8c52e4b85b9285b3e151e8e6c646cd0 2025-10-19 [Testing] Add more instruction tests
+e227f3b37d4b78a934cf50ffef3b9b2d2991e655 2025-10-19 [Testing] Fix tests to use opcode mnemonics
+bc102366e95de3fabfa58429847ecdf196962093 2025-10-19 [Testing] Fix vsel128 and vnor128 tests
+79cefcd54a2cc43387331a3897f19a233e2d97e8 2025-10-19 [CPU/PPC] Implement and fix FPSCR-related instructions
+a6cb06afc23ffe9f9ee1b4812262047d5f7fa094 2025-10-19 [CPU/PPC] Add Linux workaround for fdiv instruction format
+1524f81d27faa73d123118db0d618ad0cda196f1 2025-10-19 [CPU/PPC] Implement mcrxr instruction
+35764c4c30007991e354601154556a97b7f27edf 2025-10-19 [CPU/PPC] Fix mfvscr/mtvscr instruction format
+676f01edfa811cf933731de061bfdce89b30414b 2025-10-19 [CPU/PPC] Add VX128_2 VC field support for vperm128
+8d135f28c7d2a153922f8978b839a401efad813f 2025-10-19 [CPU] Fix ppc-opcode-gen script and regen the opcodes
+df4eb522afa606318f3bfd31164ed565772cedc1 2025-10-19 [Testing] Add a lot more missing instruction tests
+1e1a9d58bc7aedbae87ee77d6579b7e3f91daa0f 2025-10-19 [CPU] Set VSCR NJ (non-Java) bit
+0b4e91fbbe57104e663ae9c202921c4576c2de97 2025-10-19 Revert "[UI] Set ImGUI clipboard functions to GTK implementations"
+eb44ce3ed28ca51250bbcbda252339f3a9a8caf9 2025-10-18 [CPU] Correctly zero extend instead of sign extending
+bcd73923a28d19e209f0d495189fde5f3b72365a 2025-10-18 [Testing] Add some lvx* tests
+577cd18134e09ef363f11d266ad26e89353496f8 2025-10-17 [UI] make xma_decoder config dialog option a proper value selector
+3f1f6c9055c245bb9949e7bc15a793b44e5c1a35 2025-10-17 [Vulkan] Auto-detect spv 1.5 at runtime and fall back to 1.0
+08d018748a3677710c40be64b371d8359b96a68a 2025-10-17 [Vulkan] Add cvar to override spv version
+8390ff478d64394dd3ca902da5c04a760572af46 2025-10-17 [CPU] Check for null when returning machine code ptr
+b08ddc8329700911345e4a1b23f5387d03a2bb3e 2025-10-17 [CPU] Fix off by one in bsearch
+eb1729494495c2154e2fab40deed8161044e0c86 2025-10-17 [Xboxkrnl/Audio] Implement XAudioQueryDriverPerformance
+64c59d3d05e48d5ed87fe33ef3e9bebb5cb6a03d 2025-10-17 [APU] fix potential semaphore leak on invalid client index
+9a6082fd47f131dc1d3b9cae218dd7243fae1a79 2025-10-17 [Vulkan] Use spirv version based on device capabilities
+4350091117bfadc4da698e31e7eb07727b0b5cc1 2025-10-17 [Build] Remove gtk deps
+d111615ee4d3f02b0ed6e891124c19e1f34bf193 2025-10-16 [XMA] Add fake xma decoder for testing
+c9f2bbab8abfc9a59b685f148a58ef3b6ce0fb37 2025-10-15 [x64/Linux] More return __m128i by value in xmm0 rather than pointer
+0ae6af0f8435d5af428a94866d1fe06cad0bc1b2 2025-10-15 [x64] Zero extend on mov to 8bit register
+d6e2368c555193ce3bf21a14e6ea3af050e7c92f 2025-10-15 [x64/Linux] Return __m128i by value in xmm0 rather than a pointer
+624f675d66d151894e342bb7b5b4390b67831e5d 2025-10-15 [x64/Linux] Ensure EmitHostToGuestThunk saves rsi
+bfae7a7a12ccfade9dbfeb446180494e5785b2c2 2025-10-15 [XboxKrnl/Threading] Small improvements in return values
+035e708c27f458c3dd591b48c90252901177599d 2025-10-15 [Threads] Ensure proper RTTI/vtable emission for PosixWaitHandle
+76071242d7effc6069a4658cfddb6f1cdfcee6ea 2025-10-15 [Posix Threading] Robust mutexes
+4e98e633e8efebe39f892ef43002931b5d0fdb24 2025-10-15 [Posix Threads] Refactored condition variables from static to per-instance members and replaced deadlock-prone predicate-based WaitMultiple with polling using try_lock.
+6ee59580087e6357e342788bedb94520537b0685 2025-10-15 [Memory] Commit all memory at once rather than a loop
+075283d850c074d07080c8792a9255d2003732f2 2025-10-15 [Threading] Signal handler / self-suspension improvements
+0b23eaa0896d209e5421c151bc9de57920a850a3 2025-10-14 [Testing] Add missing control instruction tests
+cc2f315ab27ba663e2a24fe01d257061fb2378ff 2025-10-14 [Testing] Add missing ALU instruction tests
+546c8c39a92749aaae3730c5ca473d6c8d66c759 2025-10-14 [Testing] Add vpkpx tests
+dde06d2d8088cdf6d36d525674e3a46b6cb67081 2025-10-14 [Testing] Add vlogefp tests
+dfd050c014469ca17712828204a1cc18625db3c0 2025-10-14 [Testing] Add more tests for logic, conversion and fp instructions
+40f423315dd973909e5b323fb38d996d3a397dcf 2025-10-14 [Testing] add more arithmetic instruction tests
+a392af884f7bdfc37551cb6dc127f2f580ba2fed 2025-10-14 [PPC] vsubcuw is actually implemented, enable it
+288984279e955e21552c1861a442653dd7ef8dfd 2025-10-14 [Testing] Add missing avg and min/max tests
+1a2bd46a2a531a6f8bef4753c903b1234265725e 2025-10-14 [Testing] add missing saturate arithmetic tests
+94afa95c90c82682bcbca4322c190e2b9b23ea83 2025-10-14 [Testing] add missing integer and rotation tests
+fa2eaf323f92cfd8f8a37fbd495496aded79a0d8 2025-10-14 [x64] Fix vector mask issue and add missing tests
+6c8d3adcde4e77b8ffac3310e69dfc8dfb2c3e0e 2025-10-14 [Testing] Get tests running (dirty hack for linux)
+b3d508d566058ff03de3af1d1e021759d0208fd6 2025-10-14 [Build] Remove Qt deps from kernel
+91ee517898d653c4252bddf164bb2c0c63d456d6 2025-10-13 [Kernel/Xboxkrnl] Check allocate ranges and avoid raw pointer access
+9183dbf0529d2c66c01f41ac11e904fc63048746 2025-10-13 [Kernel] Ensure file mutex is initialized
+34634201d357d68456ef6570496e72f7aa3b2a9c 2025-10-13 Revert xbyak
+4dd03fa6df0a0035bdf42fdf066403e99b9b8cbf 2025-10-12 [Kernel] Thread suspend for posix to match windows semantics
+513ce2e4b5144f5d640dc835fb9e16a679793ece 2025-10-12 [Kernel] ReleaseSemaphore for Posix to match Windows semantics
+ceb328035a770e18b2b2b1c3c0844a1147809417 2025-10-12 [XSocket] add missing sockopt mappings
+f86e27f2f1b2a5068ceb5cbd6e8d17067f354ce4 2025-10-12 [UI] Switch to green-ish theme
+0eda1204163dd3a60353c39eb2291a1f3b4252ad 2025-10-12 [UI] Show played and achievement unlock using local time
+7f257a8546eae4e76e0c97a73ba516dc0f948e2c 2025-10-12 Update glslang to 16.0.0 and introduce compat layer
+0700188968221ca290770d4897ade89ca755f1a5 2025-10-12 Workaround for glslang 11.6.0+ change in accesschain semantics
+25fbfe41fffda536d9071fec9b1729709022368b 2025-10-10 Add cvar templates to support advanced and human readable fields.
+071be4566d3713888f0062e31e80cb58306530ec 2025-10-10 [UI] Achievements and game list improvements for Qt
+ad70eb6240a561e879427489d1758b9e5c36ebf0 2025-10-10 [UI] Profile editing for Qt
+3e5b3580dfb8bbd1e009ee7763a145d4857b6e43 2025-10-10 [UI] Surface corrupted dashboard gpds in game list and allow removal
+6a6339974485263ed39ac350994a3f0daaf466cc 2025-10-10 [UI] rework game list from recent titles to dashboard gpd + user icons
+eea4949d84d628abf242edbf9dfcf48fd9a3f472 2025-10-09 [UI] Replace emojis with proper icons and clean up UI more
+1c0ec20fae3bcbfd560f21d7ae371bc7b65556b9 2025-10-09 [UI] Massive Qt overhaul, still WIP
+e54f5237d35ecfd4bb6c6f738e44a19ca495441f 2025-10-09 [UI] Ensure mouse auto-hide works regardless of full screen
+837a065f3a7dcf63646d580182e5827c29fc14b3 2025-10-08 [UI] fix post-processing dialog close button
+e51e368c108f2de2a84922bf7305a61a74ce8008 2025-10-08 [UI] Implement post-processing dialog in Qt
+d0a2a408e64e55a307fd74c8bf46396f6c8ac361 2025-10-08 [Cleanup] remove unused headers
+f13a11c2e2127f0f6fa4ac0e2011842d65a65cea 2025-10-08 [UI] Separate UI and game processes and add a game list
+567bd0001695f4c6a3b94df10aca9ff4a12e7b3a 2025-10-08 Prevent pausing on guest exception unless debug is enabled to get the actual crash dump
+15db457e1035d18bab74652f246e6cdef044919e 2025-10-08 Fix potential buffer overflow in posix memory handling
+0358edb58e62747499647336538d4082af600c34 2025-10-08 [UI] Improve file picker performance under wine
+ee8b833da7fa3941fece5f80b806cfaa6c399384 2025-10-08 Update discord app id
+1103ab598c23efbe3ef8f4a7e60e945e4abb0d33 2025-10-08 Improve error handling in graphics memory init
+626f143a84ab18c2887f0fec3c821c452856b6cf 2025-10-08 [UI] Ensure install dialog shows for all packages and cancel works
+e522d05e87fe2f9241ef8310c2079264305f5860 2025-10-08 [UI] Implement Qt based file install dialog
+0cd3a758a9796fb8566ecae9ae8ecd41b4c5811b 2025-10-07 [UI] switch to Qt menu bar over native
+a742eae62bd4331fea4295751c04dbdcde82e567 2025-10-07 [UI] Allow installing multiple files
+9cf4f9a836770f5cac6530dba4c6626113791b47 2025-10-07 [UI] Use Qt's file picker on wine
+be14e7123726f6f78e3e76a1676df7aa9862d3cc 2025-10-07 [UI] Fix numpad hotkey handling for cpu scaling in Qt
+cc5cd2d7b03627f817bee156ba9edd2e688cef1e 2025-10-07 [UI] Hide mouse even in windowed mode
+a46dc88a57f985877ed86cb2e8b31b36927a8873 2025-10-07 [Build] Ensure qt stuff is deployed with debug build
+568062cf9d60d52ab3a43ffcd2f7cc43d35bfbb8 2025-10-07 [Kernel] Implement XFileAllocationInformation
+755ef33dd5fa3ff43e9c2708c5183af9f4230983 2025-10-07 [Memory] Ensure writecombine buffers are writable
+424a72864b9a1e7756dba9fa8137ae1f7fca1f7d 2025-10-06 Replace exception handling with setjmp/longjmp to handle guest exceptions
+cf19fa5077880204ca485afc7085a6315aa14cc5 2025-10-06 Fix config dialog d3d12 render path
+838e18cb3e569c2d578da05869a8bec90ec5e04f 2025-10-05 [UI] Use native file picker by default
+6202cf06d529bc6a581387ab0df1f8caa43343aa 2025-10-05 [UI] Add app icon using QT resources
+ad47dcd0a35764c9ee631c0780a6d7d7c14ff2e8 2025-10-05 [UI] Use game icon as the app icon -- fix regression introduced by Qt
+596a741988078815ca23b1ccd9e359a95ed097de 2025-10-04 Stop building xenia-gpu-shader-compiler unless subprojects included
+92f5b712d058df83629a68d2c28a1108516c983b 2025-10-04 [UI] Clean up windows native and gtk files
+213dcc2675806bf1e61291dd6ed0bb897c8d2fff 2025-10-04 [UI] Convert to Qt
+eff0ee1ecb536cafb825c2614fc96fc7badfc920 2025-10-03 Fix regression with vsync timing on Windows introduced in 11ee3fa
+7f631aa9545a9d21b1114b364baf91d08e1052e2 2025-10-03 Add Linux socket support and ensure binding low ports is remapped.
+72c4104ec6797e1d782e90dded4235df81867c87 2025-10-01 Return UTC instead of local to avoid timezone issues
+ee31a7c66cd1df0a2cb3db108a983a965d61d823 2025-09-30 Regen spirv and fix build.py
+027b25b7a3e3e98c88c665745b56f84dcd47350c 2025-09-30 Normalize file paths to use forward slashes on Linux.
+198ed5efece15afcb6ae318b452e030e37aca1be 2025-09-29 Update title to show apu and remove the giant vulkan incomplete warning
+a545f52554e954856bb0657d4bb4f2bfeb9e5fa6 2025-09-29 Avoid alignment related assert
+33c3248b44c67eccf286c0f0f5c0bf8096a4d308 2025-09-29 Keep threads from trying to suspend themselves on Linux
+f035700edc2401294725d1be5a733ae19d4fcceb 2025-09-29 Remove devkit memory access assert and replace with warning
+92bf599272b7bf07e49834b34c98b29927d9aa4b 2025-09-29 Ensure stack allocations maintain 16-byte alignment for AVX instructions
+386c85190fcd9e0cd3315d0e58161f142e35b89c 2025-09-29 Ensure scalar fallback matches sse path
+e8b49d60be8c9384c17789112ef6ca35a378239a 2025-09-29 Implement readback_resolve for vulkan
+4ae54ec13383426b0935da7525ef7d9222f771d1 2025-09-28 Add alsa apu on linux
+11ee3fa58735e4c21cbb133ad959e3caa0dbe2f0 2025-09-27 Simplify vsync handling and ensure it works correctly on Linux.
+d157c9c8fe4f010ab3cdd087906d14f959a2099d 2025-09-27 Fix some kernel threading issues
+7ea203f009c28e7ccc7ae1e7d5007cee291d3b23 2025-09-25 Recompile dxcb with optimizations
+7aaf889974135aa05c71529cde5960bc314acc75 2025-09-25 Reduce some log spam
+ac5cb4fcdc09e244c65d95ce0c7496de269050b4 2025-09-25 Ensure ArrayStride decorations aren't reused. This causes invalid explicit layout decorations in spirv optimization
+fee7157176c235da71404db28251b2959923a8c4 2025-09-23 Move spirv optimization to a background thread
+e3961718a8b589e46f7500254d2d3c1124e49710 2025-09-23 Vulkan pipeline cache thread pool
+2fb557d001be4c02069062d30fbe05ea3c155dd8 2025-09-22 Upgrade to xbyak v7.30 and fix compilation and runtime issues
+f930f0548e3377a179f7cc20c1984cd369a20678 2025-09-22 Remove some log spam
+23d1b4882071b378f389c4cf5f730aa1b9f63f0c 2025-09-22 Enable spirv runtime shader optimization using spirv-tools
+60a8d4f933c08abfe5175465eb83b718c61abf28 2025-09-22 Rebuild vulkan shaders with latest spirv tools and an extra optimization pass
+eeedec674b15a4c11379124b9917f4d1fad69ccc 2025-09-22 Fix config dialog file browse cvars
+1362423da1664a78bb66a7b0a00e41176e261fe1 2025-09-21 Add settings config dialog
+534b257bc58e40937e7d534b703f3e459c260faa 2025-09-21 Fix menu hotkeys on Linux
+b11d194c44531cf8842bc9ca57a18e083c7a16f6 2025-09-21 Xenia Canary -> Xenia Edge
+57ce1e884a33f352f1dae7a75a4cdb11d3ed03b8 2025-09-21 Add Patch Manager dialog
+a12910e9535e7b7540b3a6f808135fe21bc8af61 2025-09-17 Fix up FSI rendering path   - EDRAM scaling and tile dimension scaling   - Resolution scaling inversion and coordinate division by scale factor   - Added center pixel check to prevent duplicate exports   - Reverted texture_cache.cc change (don't need to touch that file)
+1e67bd53acb7df2881a15720fd4182b9030c9065 2025-09-17 Add resolution scaling support to Vulkan backend.
+3866f8174b36287a64d06344efbb0f9c8c43b0a3 2025-08-25 [App] Only link to GDBStub on Windows
+a29924ec64543cbfefcbfeedddbbc9ca12b71af1 2025-08-25 [GDBStub] Fix other threads running while paused, log-spam fixes.
+26f25c98382065a7a8f61034459aa6862f17d388 2025-08-25 [GDBStub] Make stub Windows-only
+1043cd8452d6bf581098861b20f7c8850f9c379c 2025-08-25 [GDBStub] Fix potential mutex deadlock and log-spam issue
+9ca0f513f7589d7bc4991a811bbc0c3c80badde2 2025-08-25 [GDBStub] Fix const mixup, set debug socket to inaddr_any for remote debugging
+ac9f913b011174331dfdaed90a0b28ea438690c7 2025-08-25 [App] Update gdbstub setting description
+730a782e09d9d7ccd9e1f1ce8c318433cdb6ace6 2025-08-25 [GDBStub] Forward `DbgPrint` & `DmSendNotificationString` messages
+beb642ff0c2c1736822a548de5657b2f6df201da 2025-08-25 [GDBStub] Fix debugger showing invalid symbols after pausing/continuing
+d3f7db293bc1c11e77059b2f0cc834abab6cf159 2025-08-25 [GDBStub] Return error for code / unimpl. reg writes, small fixups
+0401029f707484556ee928c139562c327dab997a 2025-08-25 [GDBStub] Provide exception type to debugger
+6c4393efed5f20fdf3d4d94c010cce24ccf72fd0 2025-08-25 [GDBStub] Add RegisterWriteAll
+19f1dc79f8de807db7bd41a40db010cc475c8a7d 2025-08-25 [GDBStub] Allow register writes, disable ctx promotion for --debug
+9dc6eb25d53e573d964255a13e5f27dcf565a0f3 2025-08-25 [GDBStub] Add MemoryWrite, extra checks in memory cmds
+d32cb0cb69aa46f7007dcae7fe3adc914baee32b 2025-08-25 [GDBStub] Remove duplicated code, minor fixups
+3dec621b666aad176ad900c1f83d3ada0fe88e79 2025-08-25 [GDBStub] Use main thread as default thread ID
+042e6c3ad2a42243a7db8781bf5c39202960a02e 2025-08-25 [GDBStub] Add memory map, MSR/FPSCR, handle Kill request
+cfd59c998c8d6dd4605e15ac7c5d12aed1985866 2025-08-25 [GDBStub] Use xe::SocketServer instead of winsock, allow detaching
+ab009e10b238fffbbf645c3d5d9ef5293a73d3cc 2025-08-25 [GDBStub] Prevent adding BP if other BP shares same host addr
+c4cc075bdbc28925a96802e57a86a1e197cdbe40 2025-08-25 [Debug] Processor: breakpoint address fixes
+e37ad0b9f77a14ee2022e5266c7118076b4385d7 2025-08-25 [Debug] GDBStub: add info for each command
+5987130616acaf6fd93f29ff49260e72d1e797ef 2025-08-25 [Debug] Add PoC GDBStub server, fix breakpoints

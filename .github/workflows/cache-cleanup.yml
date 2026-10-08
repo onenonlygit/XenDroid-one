@@ -2,7 +2,7 @@ name: Cache cleanup
 
 on:
   workflow_run:
-    workflows: [XenDroid]
+    workflows: [XenDroid One]
     types: [completed]
   workflow_dispatch:
 

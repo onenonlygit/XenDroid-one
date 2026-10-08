@@ -6,6 +6,12 @@ cmake_minimum_required(VERSION 3.30.3)
 
 project(xendroid LANGUAGES C CXX ASM)
 
+# Native compilers otherwise use Ninja's CPU-count default independently of
+# Gradle --max-workers. Bound memory pressure on standard CI/cloud runners.
+set_property(GLOBAL APPEND PROPERTY JOB_POOLS xone_compile=4 xone_link=1)
+set(CMAKE_JOB_POOL_COMPILE xone_compile)
+set(CMAKE_JOB_POOL_LINK xone_link)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 

@@ -1,277 +1,101 @@
-name: XenDroid
+name: XenDroid One
 on:
   pull_request:
-    branches: main
-    
+    branches: [main]
   push:
-    branches: main 
-
+    branches: [main]
+  workflow_dispatch:
 permissions:
-  contents: write
-  actions:  write
-
+  contents: read
+concurrency:
+  group: xendroid-one-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  build-arm64_v8a:
+  arm64:
     runs-on: ubuntu-24.04
-
-    container:
-      image: ghcr.io/cirruslabs/android-sdk:35
-
-    # Allow to use gradle wrapper from xenia
+    permissions:
+      contents: write
     env:
-      ANDROID_PLATFORM: android-35
       ANDROID_NDK_VERSION: 29.0.14206865
-
-      # Gradle tuning
       GRADLE_OPTS: -Dorg.gradle.daemon=false
-
-      # Native compile cache
-      USE_CCACHE: 'true'
-      CCACHE_BASEDIR: ${{ github.workspace }}
-      CCACHE_COMPILERCHECK: content
-
     steps:
-
-    - name: Check APK keystore
-      run: |
-        if [ -z "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" ]; then
-          echo "::error::ANDROID_KEYSTORE_BASE64 secret is not configured."
-          exit 1
-        fi
-
-    ##################################################################
-    # Checkout
-    ##################################################################
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        submodules: recursive
-        fetch-depth: 1
-
-    - name: Configure Git
-      run: |
-        git config --global --add safe.directory "$GITHUB_WORKSPACE"
-
-    ##################################################################
-    # System tools
-    ##################################################################
-    - name: Install tools
-      run: |
-        apt-get update
-        apt-get install -y ninja-build python3 glslang-tools spirv-tools
-
-
-    ##################################################################
-    # Cache Gradle
-    ##################################################################
-    - name: Cache Gradle
-      uses:  gradle/actions/setup-gradle@v4
-      with:
-        gradle-home-cache-strict-match: false
-        validate-wrappers: false
-
-
-    ##################################################################
-    # Android SDK / NDK
-    ##################################################################
-    - name: Cache NDK + CMake
-      uses: actions/cache@v4
-      with:
-        path: |
-          /opt/android-sdk-linux/ndk/${{ env.ANDROID_NDK_VERSION }}
-          /opt/android-sdk-linux/cmake/3.30.3
-        key: sdk-ndk${{ env.ANDROID_NDK_VERSION }}-cmake3.30.3
-
-    - name: Install Android NDK
-      run: |
-        export ANDROID_SDK_ROOT=/opt/android-sdk-linux
-
-        yes | sdkmanager --licenses
-
-        if [ ! -d "$ANDROID_SDK_ROOT/ndk/$ANDROID_NDK_VERSION" ]; then
-          sdkmanager "ndk;$ANDROID_NDK_VERSION"
-        fi
-
-        echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
-        echo "ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/$ANDROID_NDK_VERSION" >> $GITHUB_ENV
-
-    ##################################################################  
-    # CMake Install
-    ##################################################################
-    - name: Install CMake
-      run: |
-        export ANDROID_SDK_ROOT=/opt/android-sdk-linux
-
-        if [ ! -d "$ANDROID_SDK_ROOT/cmake/3.30.3" ]; then
-            sdkmanager "cmake;3.30.3"
-        fi
-
-        echo "CMAKE_HOME=$ANDROID_SDK_ROOT/cmake/3.30.3" >> $GITHUB_ENV
-
-    ##################################################################
-    # local.properties
-    ##################################################################
-    - name: Generate local.properties
-      run: |
-        echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-
-    ##################################################################
-    # Restore keystore
-    ##################################################################
-    - name: Decode keystore
-      run: |
-        if [ -z "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" ]; then
-          echo "::error::ANDROID_KEYSTORE_BASE64 secret is not configured."
-          exit 1
-        fi
-
-        echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > release.keystore
-
-        if [ ! -s release.keystore ]; then
-          echo "::error::Failed to decode keystore or keystore is empty."
-          exit 1
-        fi
-
-    - name: Check signing secrets
-      run: |
-        if [ ! -n "${{ secrets.KEY_ALIAS }}" ]; then
-          echo "::error::Failed to fetch key alias."
-          exit 1
-        fi
-
-        if [ ! -n "${{ secrets.KEYSTORE_PASSWORD }}" ]; then
-          echo "::error::Failed to fetch keystore password."
-          exit 1
-        fi
-
-        if [ ! -n "${{ secrets.KEY_PASSWORD }}" ]; then
-          echo "::error::Failed to fetch key password."
-          exit 1
-        fi
-
-    ##################################################################
-    # Gradle properties
-    #################################################################
-    - name: Generate gradle.properties
-      run: |
-        cat > gradle.properties <<EOF
-        org.gradle.jvmargs=-Xmx4g -Dfile.encoding=UTF-8
-        org.gradle.parallel=true
-        org.gradle.caching=true
-        org.gradle.configuration-cache=true
-
-        android.useAndroidX=true
-        android.nonTransitiveRClass=true
-        EOF
-
-    ##################################################################
-    # Native compile cache (ccache)
-    ##################################################################
-    - name: ccache
-      uses: hendrikmuhs/ccache-action@v1.2
-      with:
-        key: ${{ runner.os }}-ndk${{ env.ANDROID_NDK_VERSION }}-arm64
-        max-size: 2G
-
-    - name: Get Git hash
-      id: git
-      run: echo "hash=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-
-    ##################################################################
-    # Build
-    ##################################################################
-    - name: Build Release APK
-      run: |
-        chmod +x gradlew
-
-        ./gradlew assembleRelease \
-          -PgitHash=${{ steps.git.outputs.hash }} \
-          --build-cache \
-          --parallel \
-          --max-workers=$(nproc) \
-          --no-daemon
-
-    ##################################################################
-    # Sign APK
-    ##################################################################
-    - name: Sign APK
-      run: |
-        APK=$(find . -name "*release*.apk" | head -n 1)
-
-        "$ANDROID_SDK_ROOT/build-tools/35.0.0/apksigner" sign \
-          --ks release.keystore \
-          --ks-key-alias "${{ secrets.KEY_ALIAS }}" \
-          --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
-          --key-pass pass:${{ secrets.KEY_PASSWORD }} \
-          "$APK"
-
-    - name: Verify Signature
-      run: |
-        APK=$(ls app/build/outputs/apk/release/*.apk)
-
-        "$ANDROID_SDK_ROOT/build-tools/35.0.0/apksigner" verify "$APK"
-
-    ##################################################################
-    # Artifact naming
-    ##################################################################
-    - name: Compute SHA
-      id: vars
-      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-
-    - name: Rename APK
-      run: |
-        APK=$(ls app/build/outputs/apk/release/*.apk)
-        mv "$APK" "XenDroid_Release_${{ steps.vars.outputs.sha_short }}.apk"
-
-    ##################################################################
-    # Delete old artifacts if needed
-    ##################################################################
-    - name: Delete oldest artifacts
-      uses: actions/github-script@v7
-      with:
-        script: |
-          const { owner, repo } = context.repo;
-
-          const artifacts = await github.paginate(
-            github.rest.actions.listArtifactsForRepo,
-            {
-              owner,
-              repo,
-              per_page: 100
-            }
-          );
-
-          // Ordina dal più vecchio al più recente
-          artifacts.sort(
-            (a, b) => new Date(a.created_at) - new Date(b.created_at)
-          );
-          
-          if (artifacts.length >= 2) {
-            for (const artifact of artifacts.slice(0, 2)) {
-              core.info(`Deleting artifact: ${artifact.name}`);
-
-              await github.rest.actions.deleteArtifact({
-                owner,
-                repo,
-                artifact_id: artifact.id
-              });
-            }
-          } else {
-            core.info("Less than 2 artifacts found, nothing to delete.");
-          }
-
-    - name: Upload artifact
-      if: github.event_name != 'push' || github.ref != 'refs/heads/main'
-      uses: actions/upload-artifact@v4
-      with:
-        name: XenDroid_Release_${{ steps.vars.outputs.sha_short }}
-        path: XenDroid_Release_${{ steps.vars.outputs.sha_short }}.apk
-
-    - name: Create GitHub Release
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      uses: softprops/action-gh-release@v2
-      with:
-        tag_name: XenDroid-${{ steps.vars.outputs.sha_short }}
-        name: XenDroid ${{ steps.vars.outputs.sha_short }}
-        generate_release_notes: true
-        files: XenDroid_Release_${{ steps.vars.outputs.sha_short }}.apk
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          submodules: false
+          persist-credentials: false
+      - name: Initialize pinned dependencies
+        run: |
+          # Android does not need desktop SDKs or sample/media submodules.
+          python3 tools/one/init_submodules.py
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: '21.0.12+8'
+      - name: Install host tools and pinned Android toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y glslang-tools spirv-tools ninja-build
+          sdkmanager 'platforms;android-35' 'build-tools;35.0.0' \
+            "ndk;$ANDROID_NDK_VERSION" 'cmake;3.30.3' 'platform-tools'
+          printf 'sdk.dir=%s\ncmake.dir=%s/cmake/3.30.3\n' "$ANDROID_SDK_ROOT" "$ANDROID_SDK_ROOT" > local.properties
+      - name: Check ARM64 vector instruction semantics
+        run: |
+          python3 -m pip install unicorn==2.1.4
+          export ANDROID_NDK_HOME="$ANDROID_SDK_ROOT/ndk/$ANDROID_NDK_VERSION"
+          python3 tools/one/test_neon_permute.py
+      - name: Set increasing release versions
+        run: |
+          echo "XONE_VERSION=0.1.${GITHUB_RUN_NUMBER}" >> "$GITHUB_ENV"
+          echo "XONE_CODE=$((100000 + GITHUB_RUN_NUMBER * 2))" >> "$GITHUB_ENV"
+      - name: Build ARM64 and run frontend unit tests
+        run: |
+          ./gradlew :app:assembleRelease :app:testReleaseUnitTest \
+            -PxoneVersionCode="$XONE_CODE" -PxoneVersionName="$XONE_VERSION-rc1" \
+            --no-daemon --max-workers=4
+      - name: Retain unsigned PR output
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: XenDroid-One-unsigned-ARM64
+          path: app/build/outputs/apk/release/app-release-unsigned.apk
+      - name: Sign two consecutive releases with the persistent identity
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          XONE_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          XONE_STORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          XONE_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          umask 077
+          export XONE_KEYSTORE="$RUNNER_TEMP/xendroid-one.p12"
+          trap 'rm -f "$XONE_KEYSTORE"' EXIT
+          test -n "$ANDROID_KEYSTORE_BASE64" || { echo 'Persistent signing secrets are required'; exit 1; }
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$XONE_KEYSTORE"
+          mkdir -p dist
+          FIRST="dist/XenDroid-One-v$XONE_VERSION-rc1-arm64.apk"
+          FINAL="dist/XenDroid-One-v$XONE_VERSION-arm64.apk"
+          python3 tools/one/sign_apk.py app/build/outputs/apk/release/app-release-unsigned.apk "$FIRST"
+          ./gradlew :app:assembleRelease -PxoneVersionCode="$((XONE_CODE + 1))" \
+            -PxoneVersionName="$XONE_VERSION" --no-daemon --max-workers=4
+          python3 tools/one/sign_apk.py app/build/outputs/apk/release/app-release-unsigned.apk "$FINAL"
+          python3 tools/one/validate_apk.py "$FINAL" --previous "$FIRST" \
+            --expected-cert "$(cat docs/one/release-certificate.sha256)" --output dist/validation.json
+          sha256sum dist/*.apk > dist/SHA256SUMS
+      - name: Retain signed builds and verification
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: XenDroid-One-signed-ARM64-${{ env.XONE_VERSION }}
+          path: dist/
+      - name: Publish versioned release
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          printf 'ARM64 release built from %s.\n\n<!-- xendroid-one-version-code:%s -->\n\nSee docs/one for core scope, backup instructions and unverified device tests.\n' \
+            "$GITHUB_SHA" "$((XONE_CODE + 1))" > "$RUNNER_TEMP/release-notes.md"
+          gh release create "v$XONE_VERSION" "dist/XenDroid-One-v$XONE_VERSION-arm64.apk" \
+            dist/validation.json dist/SHA256SUMS --target "$GITHUB_SHA" \
+            --title "XenDroid One $XONE_VERSION" --notes-file "$RUNNER_TEMP/release-notes.md"

@@ -1,3 +1,27 @@
+# XenDroid One
+
+Personal ARM64 Android fork for RP6 testing. Release package remains
+`xendroid.compose`; visible name is XenDroid One. Original launch activities,
+frontend intents, storage names and credits are retained.
+
+**Core scope:** inherited XenDroid/Edge base plus four reviewed recent Edge
+backports. A full refresh to current Edge is **not yet complete**. No Dante's
+Inferno performance/playability claim has been made.
+
+- [Core scope and upgrade ledger](docs/one/CORE_UPGRADE.md)
+- [Back up BEFORE uninstalling the original](docs/one/BACKUP_AND_INSTALL.md)
+- [Signing identity, recovery and repeatable builds](docs/one/SIGNING_AND_BUILDS.md)
+- [Dante's Inferno testing checklist](docs/one/DANTES_INFERNO.md)
+
+Only install XenDroid One releases matching the public certificate in
+`docs/one/release-certificate.sha256`. Private signing material is never in source.
+The automated workflow must be configured with the owner's persistent secrets.
+
+---
+
+The following is the preserved upstream README and attribution. Its original
+release links refer to upstream, not this fork's signing identity.
+
 <p align="center">
        <img height="256px" src="app/src/main/assets/XenDroid_foreground.png"/>
     </a>
