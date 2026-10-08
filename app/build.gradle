@@ -30,6 +30,10 @@ android {
         // 29+ matches :emulator-core (native ELF TLS in libe.so).
         minSdk 29
         targetSdk 35
+        ndk {
+            // Also filter transitive AndroidX JNI binaries, not just core CMake.
+            abiFilters 'arm64-v8a'
+        }
         versionCode = (project.findProperty("xoneVersionCode") ?: "1001").toString().toInteger()
         versionName = (project.findProperty("xoneVersionName") ?: "0.1.0").toString()
         

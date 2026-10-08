@@ -29,7 +29,8 @@ def inspect(apk, sdk, ndk, expected_cert=None):
     pkg, code, version = package.groups()
     assert pkg == 'xendroid.compose', pkg
     assert "application-label:'XenDroid One'" in badging, 'Wrong visible name'
-    assert "native-code: 'arm64-v8a'" in badging, 'Wrong ABI set'
+    native_line = next(line for line in badging.splitlines() if line.startswith('native-code:'))
+    assert native_line.strip() == "native-code: 'arm64-v8a'", 'Wrong ABI set'
     manifest = run(str(bt/'aapt'), 'dump', 'xmltree', str(apk), 'AndroidManifest.xml')
     for required in ['xendroid.compose.MainActivity', 'xendroid.compose.EmulatorHostActivity',
                      'xendroid.intent.action.xendroid', 'android.intent.action.MAIN',
