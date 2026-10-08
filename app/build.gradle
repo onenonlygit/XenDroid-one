@@ -30,8 +30,8 @@ android {
         // 29+ matches :emulator-core (native ELF TLS in libe.so).
         minSdk 29
         targetSdk 35
-        versionCode 1
-        versionName project.findProperty("gitHash") ?: "unknown"
+        versionCode = (project.findProperty("xoneVersionCode") ?: "1001").toString().toInteger()
+        versionName = (project.findProperty("xoneVersionName") ?: "0.1.0").toString()
         
     }
 

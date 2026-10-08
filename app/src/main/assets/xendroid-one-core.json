@@ -1,0 +1,12 @@
+{
+  "xendroid_baseline": "779680ade075d2d2a4c589c6a8d57a8e26c116c0",
+  "edge_base": "84cf209221160590768f615a0369a9c4a1456bbf",
+  "edge_reference": "669b4266f5682e5169d42552fdf64f02880652a4",
+  "integration": "selective-backports; full latest Edge tree not integrated",
+  "backports": [
+    "a5532a0d193130af1b5dd821c8c83daec27f6d11",
+    "e1e4851f7a1fba0c1ed3583f2faeb776cf763895",
+    "1b0e9d00ea33e6148c3429234e44e8c364edbd7d",
+    "968f1ef45921cff8794cbc0305bdf388c8dc3178"
+  ]
+}

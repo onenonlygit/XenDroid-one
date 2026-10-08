@@ -56,7 +56,7 @@ sealed class UpdateResult {
 
 interface GithubApi {
 
-    @GET("repos/rfandango/XenDroid/releases/latest")
+    @GET("repos/onenonlygit/xendroid-one/releases/latest")
     suspend fun latestRelease(): GithubRelease
 }
 
@@ -119,13 +119,9 @@ suspend fun checkForUpdates(): UpdateResult {
 
     Log.d("Updater", "Current: $currentHash")
 
-    val latestHash = release.tagName
-        .removePrefix("XenDroid-")
-        .trim()
-
-    Log.d("Updater", "Latest: $latestHash")
-
-    return if (currentHash != latestHash) {
+    // Only this fork's release metadata can advertise an update. Compare
+    // Android versionCodes so older releases never prompt a downgrade.
+    return if (isNewerRelease(release.changelog, BuildConfig.VERSION_CODE)) {
         UpdateResult.Available(release)
     } else {
         UpdateResult.Latest(currentHash)
@@ -163,7 +159,7 @@ fun UpdateDialog(
             .verticalScroll(rememberScrollState())
             ) {
                 Text(
-                    "A new update for XenDroid is available."
+                    "A new update for XenDroid One is available."
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))

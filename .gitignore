@@ -168,3 +168,12 @@ emulator-core/src/main/cpp/xenia/third_party/snappy/Makefile
 .worktrees/
 
 app/src/debug/jniLibs/
+# Personal release signing: private material must never enter source history.
+*.p12
+*.jks
+*.keystore
+signing-private/
+signing.properties
+credentials.json
+dist/
+__pycache__/
