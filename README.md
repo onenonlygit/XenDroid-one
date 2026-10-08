@@ -2,7 +2,7 @@
 
 Personally maintained, **AI-assisted** ARM64 Android fork by [onenonlygit](https://github.com/onenonlygit), for Retroid Pocket 6 testing. Engineering, build-system work and documentation were developed with AI assistance and reviewed with the available build and static checks. This fork is independent of the original XenDroid and Xenia maintainers; original licenses, history and credits are preserved.
 
- Release package remains
+Release package remains
 `xendroid.compose`; visible name is XenDroid One. Original launch activities,
 frontend intents, storage names and credits are retained.
 
@@ -10,7 +10,9 @@ frontend intents, storage names and credits are retained.
 backports. A full refresh to current Edge is **not yet complete**. No Dante's
 Inferno performance/playability claim has been made.
 
-- [Download XenDroid One releases](https://github.com/onenonlygit/XenDroid-one/releases)
+- **[Download v0.1.0 signed ARM64 APK (ZIP)](https://github.com/onenonlygit/XenDroid-one/raw/a36416000af35a428cc238ee8e5eeb87d59d7959/XenDroid-One-v0.1.0-arm64.zip)** — extract the ZIP, then install the APK on your RP6.
+- [Build details and verification](https://github.com/onenonlygit/XenDroid-one/blob/one/build-v0.1.0/BUILD_DOWNLOAD.md)
+- [GitHub releases](https://github.com/onenonlygit/XenDroid-one/releases) — release-page publication pending; use the verified ZIP above.
 - [Core scope and upgrade ledger](docs/one/CORE_UPGRADE.md)
 - [Back up BEFORE uninstalling the original](docs/one/BACKUP_AND_INSTALL.md)
 - [Signing identity, recovery and repeatable builds](docs/one/SIGNING_AND_BUILDS.md)
