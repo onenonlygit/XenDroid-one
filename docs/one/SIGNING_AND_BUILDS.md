@@ -23,7 +23,7 @@ release, included in an APK or copied into build logs.
 
 ## GitHub setup (owner action required)
 
-Create/fork `onenonlygit/xendroid-one`, preserving original XenDroid history.
+The personal AI-assisted fork is `onenonlygit/XenDroid-one`, retaining original XenDroid history.
 Under Settings > Secrets and variables > Actions, create encrypted repository
 secrets:
 
