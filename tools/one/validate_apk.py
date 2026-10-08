@@ -39,7 +39,8 @@ def inspect(apk, sdk, ndk, expected_cert=None):
     cert = re.search(r'Signer #1 certificate SHA-256 digest: ([0-9a-f]+)', signature).group(1)
     if expected_cert:
         assert cert == expected_cert.strip().lower().replace(':', ''), 'Unexpected signing identity'
-    assert 'Verified using v2 scheme (APK Signature Scheme v2): true' in signature
+    # With minSdk 29, apksigner may verify only v3 even when v2 is present.
+    assert re.search(r'Verified using v[23] scheme \(APK Signature Scheme v[23]\): true', signature)
     run(str(bt/'zipalign'), '-c', '4', str(apk))
     libs = {}
     readelf = ndk/'toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-readelf'

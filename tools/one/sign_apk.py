@@ -20,7 +20,8 @@ try:
     subprocess.run([str(bt/'zipalign'), '-f', '4', str(a.unsigned), str(aligned)], check=True)
     subprocess.run([str(bt/'apksigner'), 'sign', '--ks', os.environ['XONE_KEYSTORE'],
         '--ks-key-alias', os.environ['XONE_KEY_ALIAS'], '--ks-pass', 'env:XONE_STORE_PASSWORD',
-        '--key-pass', 'env:XONE_KEY_PASSWORD', '--out', str(a.output), str(aligned)], check=True)
+        '--key-pass', 'env:XONE_KEY_PASSWORD', '--v4-signing-enabled', 'false',
+        '--out', str(a.output), str(aligned)], check=True)
     subprocess.run([str(bt/'apksigner'), 'verify', '--verbose', '--print-certs', str(a.output)], check=True)
 finally:
     aligned.unlink(missing_ok=True)
